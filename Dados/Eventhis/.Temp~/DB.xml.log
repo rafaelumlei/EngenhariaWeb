@@ -1,0 +1,123 @@
+[25 Nov 2011 15:31:24] Building database metadata model
+[25 Nov 2011 15:31:24] Properties: {partialRefresh=false, processColumnsUsingSelect=, outputPath=C:\WebRatio\WebRatio Personal 6.1.1\workspace\Eventhis\.Temp~\DB.xml, schemaRegex=null, readProcedures=null, includeViews=true, derby.system.home=C:\WebRatio\WebRatio Personal 6.1.1\workspace\.metadata\.plugins\com.webratio.commons.db\derby, includePrimaryKeys=true, url=jdbc:mysql://127.0.0.1:3306/eventos, eventSocketClient=com.webratio.commons.net.EventSocketClient@c3c749, includeTables=true, username=root, tableRegex=null, outputLogPath=C:\WebRatio\WebRatio Personal 6.1.1\workspace\Eventhis\.Temp~\DB.xml.log, includeForeignKeys=false, retrieveAllNames=false, readIndexes=null, driverClass=com.mysql.jdbc.Driver, tablesToRefresh=, eventSocketPort=63804, includeSynonyms=true, metaDataProviderClass=com.webratio.commons.db.metadata.MySQLMetaDataProvider}
+[25 Nov 2011 15:31:24] URL: jdbc:mysql://127.0.0.1:3306/eventos
+[25 Nov 2011 15:31:24] Product name: MySQL
+[25 Nov 2011 15:31:24] Product version: 5.5.16
+[25 Nov 2011 15:31:24] Driver name: MySQL-AB JDBC Driver
+[25 Nov 2011 15:31:24] Driver version: mysql-connector-java-5.1.18 ( Revision: tonci.grgin@oracle.com-20110930151701-jfj14ddfq48ifkfq )
+[25 Nov 2011 15:31:24] Driver major version: 5
+[25 Nov 2011 15:31:24] Driver minor version: 1
+[25 Nov 2011 15:31:24] Identifier quote string: 1
+[25 Nov 2011 15:31:24] Retrieving schemas
+[25 Nov 2011 15:31:24] Retrieving [TABLE, VIEW, SYNONYM] for schema ''
+[25 Nov 2011 15:31:24]   Found 'comentario' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found 'evento' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found 'group' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found 'group_module' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found 'module' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found 'newsletter' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found 'newsletter_evento' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found 'tipo' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found 'user' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found 'user_group' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found 'utilizador' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found 'utilizador_evento_2' [type = TABLE]
+[25 Nov 2011 15:31:24] Retrieving columns for 'comentario' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found column: idcomentario [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: titulo [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: texto [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: dtcom [type = TIME][SQL/XOPEN type = 92][size = 8][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: utilizador_iduser [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: evento_idevento [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Nov 2011 15:31:24] Retrieving primary keys for 'comentario' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found primary key column: idcomentario
+[25 Nov 2011 15:31:24] Retrieving columns for 'evento' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found column: idevento [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: dtfim [type = TIME][SQL/XOPEN type = 92][size = 8][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: dtinicio [type = TIME][SQL/XOPEN type = 92][size = 8][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: titulo [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: descricao [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: lat [type = DOUBLE][SQL/XOPEN type = 8][size = 22][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: lon [type = DOUBLE][SQL/XOPEN type = 8][size = 22][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: tipo_idtipo [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: utilizador_iduser [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Nov 2011 15:31:24] Retrieving primary keys for 'evento' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found primary key column: idevento
+[25 Nov 2011 15:31:24] Retrieving columns for 'group' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: groupname [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: module_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Nov 2011 15:31:24] Retrieving primary keys for 'group' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found primary key column: oid
+[25 Nov 2011 15:31:24] Retrieving columns for 'group_module' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found column: group_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: module_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Nov 2011 15:31:24] Retrieving primary keys for 'group_module' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found primary key column: group_oid
+[25 Nov 2011 15:31:24]   Found primary key column: module_oid
+[25 Nov 2011 15:31:24] Retrieving columns for 'module' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: moduleid [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: modulename [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 Nov 2011 15:31:24] Retrieving primary keys for 'module' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found primary key column: oid
+[25 Nov 2011 15:31:24] Retrieving columns for 'newsletter' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found column: titulo [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: dtenvio [type = TIME][SQL/XOPEN type = 92][size = 8][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: nr [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Nov 2011 15:31:24] Retrieving primary keys for 'newsletter' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found primary key column: nr
+[25 Nov 2011 15:31:24] Retrieving columns for 'newsletter_evento' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found column: newsletter_nr [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: evento_idevento [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Nov 2011 15:31:24] Retrieving primary keys for 'newsletter_evento' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found primary key column: newsletter_nr
+[25 Nov 2011 15:31:24]   Found primary key column: evento_idevento
+[25 Nov 2011 15:31:24] Retrieving columns for 'tipo' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found column: idtipo [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: nome [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 Nov 2011 15:31:24] Retrieving primary keys for 'tipo' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found primary key column: idtipo
+[25 Nov 2011 15:31:24] Retrieving columns for 'user' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: username [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: password [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: email [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: group_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Nov 2011 15:31:24] Retrieving primary keys for 'user' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found primary key column: oid
+[25 Nov 2011 15:31:24] Retrieving columns for 'user_group' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found column: user_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: group_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Nov 2011 15:31:24] Retrieving primary keys for 'user_group' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found primary key column: user_oid
+[25 Nov 2011 15:31:24]   Found primary key column: group_oid
+[25 Nov 2011 15:31:24] Retrieving columns for 'utilizador' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found column: iduser [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: email [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: nome [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: hpassword [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: lat [type = DOUBLE][SQL/XOPEN type = 8][size = 22][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: lon [type = DOUBLE][SQL/XOPEN type = 8][size = 22][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: foto [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[25 Nov 2011 15:31:24] Retrieving primary keys for 'utilizador' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found primary key column: iduser
+[25 Nov 2011 15:31:24] Retrieving columns for 'utilizador_evento_2' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found column: utilizador_iduser [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Nov 2011 15:31:24]   Found column: evento_idevento [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[25 Nov 2011 15:31:24] Retrieving primary keys for 'utilizador_evento_2' [type = TABLE]
+[25 Nov 2011 15:31:24]   Found primary key column: utilizador_iduser
+[25 Nov 2011 15:31:24]   Found primary key column: evento_idevento
+[25 Nov 2011 15:31:24] Retrieving auto-increment columns for 'comentario' [type = TABLE]
+[25 Nov 2011 15:31:24] Retrieving auto-increment columns for 'evento' [type = TABLE]
+[25 Nov 2011 15:31:24] Retrieving auto-increment columns for 'group' [type = TABLE]
+[25 Nov 2011 15:31:24] Retrieving auto-increment columns for 'group_module' [type = TABLE]
+[25 Nov 2011 15:31:24] Retrieving auto-increment columns for 'module' [type = TABLE]
+[25 Nov 2011 15:31:24] Retrieving auto-increment columns for 'newsletter' [type = TABLE]
+[25 Nov 2011 15:31:24] Retrieving auto-increment columns for 'newsletter_evento' [type = TABLE]
+[25 Nov 2011 15:31:24] Retrieving auto-increment columns for 'tipo' [type = TABLE]
+[25 Nov 2011 15:31:24] Retrieving auto-increment columns for 'user' [type = TABLE]
+[25 Nov 2011 15:31:24] Retrieving auto-increment columns for 'user_group' [type = TABLE]
+[25 Nov 2011 15:31:24] Retrieving auto-increment columns for 'utilizador' [type = TABLE]
+[25 Nov 2011 15:31:24] Retrieving auto-increment columns for 'utilizador_evento_2' [type = TABLE]
+[25 Nov 2011 15:31:24] Database connection closed

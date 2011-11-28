@@ -1,0 +1,15 @@
+<WebModel xmlns:layout="http://www.webratio.com/2006/WebML/Layout" defaultLocale="lcl1" layout:style="WRDefault" control="Ni4wQ291bnRyeUlTT0N0eFBhcmFtR3JvdXBDdHhQYXJhbUxhbmd1YWdlSVNPQ3R4UGFyYW1Vc2VyQ3R4UGFyYW0=" baseVersion="6.0">
+  <Locale id="lcl1" country="US" language="en">
+    <PatternConfiguration type="boolean" pattern="yes|no"/>
+    <PatternConfiguration type="decimal" useNumberPattern="false" maxDecimal="3" minDecimal="0" minInteger="1" useThousandSeparator="true"/>
+    <PatternConfiguration type="date" pattern="M/d/yy"/>
+    <PatternConfiguration type="float" useNumberPattern="false" maxDecimal="3" minDecimal="0" minInteger="1" useThousandSeparator="true"/>
+    <PatternConfiguration type="integer" useNumberPattern="false" minInteger="1" useThousandSeparator="true"/>
+    <PatternConfiguration type="time" pattern="h:mm:ss a"/>
+    <PatternConfiguration type="timestamp" pattern="M/d/yy h:mm:ss a"/>
+  </Locale>
+  <ContextParameter id="UserCtxParam" name="UserCtxParam" entity="User" type="entity"/>
+  <ContextParameter id="GroupCtxParam" name="GroupCtxParam" entity="Group" type="entity"/>
+  <ContextParameter id="LanguageISOCtxParam" name="LanguageISOCtxParam" type="string"/>
+  <ContextParameter id="CountryISOCtxParam" name="CountryISOCtxParam" type="string"/>
+</WebModel>

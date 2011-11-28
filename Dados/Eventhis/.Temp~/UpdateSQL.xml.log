@@ -1,0 +1,57 @@
+[25 Nov 2011 15:31:22] DEBUG Executing SQL script
+[25 Nov 2011 15:31:22] INFO ================================================================================
+[25 Nov 2011 15:31:22] INFO outputPath= 'C:\WebRatio\WebRatio Personal 6.1.1\workspace\Eventhis\.Temp~\UpdateSQL.xml'
+[25 Nov 2011 15:31:22] INFO onError= 'continue'
+[25 Nov 2011 15:31:22] INFO statementSeparator= ';'
+[25 Nov 2011 15:31:22] INFO derby.system.home= 'C:\WebRatio\WebRatio Personal 6.1.1\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[25 Nov 2011 15:31:22] INFO password= ''
+[25 Nov 2011 15:31:22] INFO url= 'jdbc:mysql://127.0.0.1:3306/eventos'
+[25 Nov 2011 15:31:22] INFO username= 'root'
+[25 Nov 2011 15:31:22] INFO autoCommit= 'false'
+[25 Nov 2011 15:31:22] INFO outputLogPath= 'C:\WebRatio\WebRatio Personal 6.1.1\workspace\Eventhis\.Temp~\UpdateSQL.xml.log'
+[25 Nov 2011 15:31:22] INFO driverClass= 'com.mysql.jdbc.Driver'
+[25 Nov 2011 15:31:22] INFO encoding= ''
+[25 Nov 2011 15:31:22] INFO eventSocketPort= '63801'
+[25 Nov 2011 15:31:22] INFO sqlScript= 'C:\WebRatio\WebRatio Personal 6.1.1\workspace\Eventhis\.Temp~\UpdateSQL.sql'
+[25 Nov 2011 15:31:22] INFO ================================================================================
+[25 Nov 2011 15:31:22] INFO Connecting to the Database...
+[25 Nov 2011 15:31:22] INFO Database connection estabilished
+[25 Nov 2011 15:31:22] INFO transaction isolation: 4
+[25 Nov 2011 15:31:22] DEBUG ================================================================================
+[25 Nov 2011 15:31:22] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Personal 6.1.1\workspace\Eventhis\.Temp~\UpdateSQL.sql
+[25 Nov 2011 15:31:22] DEBUG Executing statement:  create table `group` ( `oid`  integer  not null, `groupname`  varchar(255), primary key (`oid`) )
+[25 Nov 2011 15:31:22] DEBUG Executing statement:    create table `module` ( `oid`  integer  not null, `moduleid`  varchar(255), `modulename`  varchar(255), primary key (`oid`) )
+[25 Nov 2011 15:31:22] DEBUG Executing statement:    create table `user` ( `oid`  integer  not null, `username`  varchar(255), `password`  varchar(255), `email`  varchar(255), primary key (`oid`) )
+[25 Nov 2011 15:31:23] DEBUG Executing statement:    create table `newsletter` ( `titulo`  varchar(255), `dtenvio`  time, `nr`  integer  not null, primary key (`nr`) )
+[25 Nov 2011 15:31:23] DEBUG Executing statement:    create table `tipo` ( `idtipo`  integer  not null, `nome`  varchar(255), primary key (`idtipo`) )
+[25 Nov 2011 15:31:23] DEBUG Executing statement:    create table `utilizador` ( `iduser`  integer  not null, `email`  varchar(255), `nome`  varchar(255), `hpassword`  varchar(255), `lat`  double precision, `lon`  double precision, `foto`  varchar(255), primary key (`iduser`) )
+[25 Nov 2011 15:31:23] DEBUG Executing statement:    create table `comentario` ( `idcomentario`  integer  not null, `titulo`  varchar(255), `texto`  varchar(255), `dtcom`  time, primary key (`idcomentario`) )
+[25 Nov 2011 15:31:23] DEBUG Executing statement:    create table `evento` ( `idevento`  integer  not null, `dtfim`  time, `dtinicio`  time, `titulo`  varchar(255), `descricao`  varchar(255), `lat`  double precision, `lon`  double precision, primary key (`idevento`) )
+[25 Nov 2011 15:31:23] DEBUG Executing statement:    alter table `group`  add column  `module_oid`  integer
+[25 Nov 2011 15:31:23] DEBUG Executing statement:  alter table `group`   add index fk_group_module (`module_oid`), add constraint fk_group_module foreign key (`module_oid`) references `module` (`oid`)
+[25 Nov 2011 15:31:23] DEBUG Executing statement:    create table `group_module` ( `group_oid`  integer not null, `module_oid`  integer not null, primary key (`group_oid`, `module_oid`) )
+[25 Nov 2011 15:31:23] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_group (`group_oid`), add constraint fk_group_module_group foreign key (`group_oid`) references `group` (`oid`)
+[25 Nov 2011 15:31:23] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_module (`module_oid`), add constraint fk_group_module_module foreign key (`module_oid`) references `module` (`oid`)
+[25 Nov 2011 15:31:23] DEBUG Executing statement:    alter table `user`  add column  `group_oid`  integer
+[25 Nov 2011 15:31:23] DEBUG Executing statement:  alter table `user`   add index fk_user_group (`group_oid`), add constraint fk_user_group foreign key (`group_oid`) references `group` (`oid`)
+[25 Nov 2011 15:31:23] DEBUG Executing statement:    create table `user_group` ( `user_oid`  integer not null, `group_oid`  integer not null, primary key (`user_oid`, `group_oid`) )
+[25 Nov 2011 15:31:23] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_user (`user_oid`), add constraint fk_user_group_user foreign key (`user_oid`) references `user` (`oid`)
+[25 Nov 2011 15:31:23] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_group (`group_oid`), add constraint fk_user_group_group foreign key (`group_oid`) references `group` (`oid`)
+[25 Nov 2011 15:31:23] DEBUG Executing statement:    alter table `evento`  add column  `tipo_idtipo`  integer
+[25 Nov 2011 15:31:23] DEBUG Executing statement:  alter table `evento`   add index fk_evento_tipo (`tipo_idtipo`), add constraint fk_evento_tipo foreign key (`tipo_idtipo`) references `tipo` (`idtipo`)
+[25 Nov 2011 15:31:23] DEBUG Executing statement:    alter table `comentario`  add column  `utilizador_iduser`  integer
+[25 Nov 2011 15:31:23] DEBUG Executing statement:  alter table `comentario`   add index fk_comentario_utilizador (`utilizador_iduser`), add constraint fk_comentario_utilizador foreign key (`utilizador_iduser`) references `utilizador` (`iduser`)
+[25 Nov 2011 15:31:23] DEBUG Executing statement:    alter table `comentario`  add column  `evento_idevento`  integer
+[25 Nov 2011 15:31:23] DEBUG Executing statement:  alter table `comentario`   add index fk_comentario_evento (`evento_idevento`), add constraint fk_comentario_evento foreign key (`evento_idevento`) references `evento` (`idevento`)
+[25 Nov 2011 15:31:23] DEBUG Executing statement:    alter table `evento`  add column  `utilizador_iduser`  integer
+[25 Nov 2011 15:31:23] DEBUG Executing statement:  alter table `evento`   add index fk_evento_utilizador (`utilizador_iduser`), add constraint fk_evento_utilizador foreign key (`utilizador_iduser`) references `utilizador` (`iduser`)
+[25 Nov 2011 15:31:23] DEBUG Executing statement:    create table `utilizador_evento_2` ( `utilizador_iduser`  integer not null, `evento_idevento`  integer not null, primary key (`utilizador_iduser`, `evento_idevento`) )
+[25 Nov 2011 15:31:23] DEBUG Executing statement:  alter table `utilizador_evento_2`   add index fk_utilizador_evento_2_utiliza (`utilizador_iduser`), add constraint fk_utilizador_evento_2_utiliza foreign key (`utilizador_iduser`) references `utilizador` (`iduser`)
+[25 Nov 2011 15:31:23] DEBUG Executing statement:  alter table `utilizador_evento_2`   add index fk_utilizador_evento_2_evento (`evento_idevento`), add constraint fk_utilizador_evento_2_evento foreign key (`evento_idevento`) references `evento` (`idevento`)
+[25 Nov 2011 15:31:23] DEBUG Executing statement:    create table `newsletter_evento` ( `newsletter_nr`  integer not null, `evento_idevento`  integer not null, primary key (`newsletter_nr`, `evento_idevento`) )
+[25 Nov 2011 15:31:23] DEBUG Executing statement:  alter table `newsletter_evento`   add index fk_newsletter_evento_newslette (`newsletter_nr`), add constraint fk_newsletter_evento_newslette foreign key (`newsletter_nr`) references `newsletter` (`nr`)
+[25 Nov 2011 15:31:23] DEBUG Executing statement:  alter table `newsletter_evento`   add index fk_newsletter_evento_evento (`evento_idevento`), add constraint fk_newsletter_evento_evento foreign key (`evento_idevento`) references `evento` (`idevento`)
+[25 Nov 2011 15:31:23] DEBUG ================================================================================
+[25 Nov 2011 15:31:23] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[25 Nov 2011 15:31:23] INFO Database connection closed
+[25 Nov 2011 15:31:23] DEBUG Total time: 1022 milliseconds
