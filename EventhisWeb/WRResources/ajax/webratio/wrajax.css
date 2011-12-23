@@ -1,0 +1,206 @@
+.ajaxDiv {
+	display: inline
+}
+
+.ajaxNotificationDiv {
+	position: fixed;
+	top: 0; left: 0; right: 0; z-index: 1000;
+	background-color: red;
+	text-align: center;
+	color: white;
+}
+
+.ajaxNotificationDiv div {
+	border: 1ex solid red;
+	margin: 0;
+	background-color: #555555;
+	text-align: center;
+	font-size: 70%; font-weight: bold;
+}
+
+.ajaxNotificationDiv div:first-child ~ div {
+	border-top: 0;
+}
+
+.ajaxNotificationDiv div pre {
+	padding: .5ex;
+	margin: 1px; margin-top: 0;
+	overflow: auto;
+	background-color: #EEEEEE;
+	text-align: left;
+	font-size: 140%; font-weight: normal;
+	color: #000000;
+}
+
+.ajaxNotificationDiv div.ajaxExceptionTrace pre {
+	height: 8em;
+}
+
+.ajaxNotificationDiv div.ajaxResponseText pre {
+	height: 16em;
+}
+
+/* Table Kit CSS Classes */
+
+.sortcol {
+	cursor: pointer;
+	padding-right: 20px;
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+.sortasc {
+	background-color: #DDFFAC;
+	background-image: url(../tablekit/up.gif);
+}
+.sortdesc {
+	background-color: #B9DDFF;
+	background-image: url(../tablekit/down.gif);
+}
+.nosort {
+	cursor: default;
+}
+
+.urg1, .urg2, .urg3, .urg4, .urg5 {
+	padding: 3px;
+	text-align: center;
+	border: 1px solid #333;
+	width: 3em;
+}
+
+.urg1 {
+	background-color: #FFFACD;
+}
+.urg2 {
+	background-color: #FFD700;
+}
+.urg3 {
+	background-color: #FFA500;
+}
+.urg4 {
+	background-color: #E13E00;
+}
+.urg5 {
+	background-color: Red;
+}
+
+th.resize-handle-active {
+	cursor: e-resize;
+}
+
+div.resize-handle {
+	cursor: e-resize;
+	width: 2px;
+	border-right: 1px dashed #1E90FF;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+*.carpe_horizontal_slider_display_combo {
+	clear: left;
+	margin: 0;
+}
+*.carpe_vertical_slider_display_combo {
+	float: left;
+	margin: 0;
+}
+*.carpe_horizontal_slider_track {
+	background-color: #bbb;
+	color: #333;
+	width: 120px;
+	float: left;
+	margin: 0;
+	line-height: 0px;
+	font-size: 0px;
+	text-align: left;
+	padding: 4px;
+	border: 1px solid;
+	border-color: #ddd #999 #999 #ddd;
+}
+*.carpe_vertical_slider_track {
+	background-color: #bbb;
+	color: #333;
+	padding: 3px 6px 15px 6px;
+	width: 24px;
+	height: 100px;
+	border: 1px solid;
+	border-color: #ddd #999 #999 #ddd;
+}
+*.carpe_horizontal_slider_track *.carpe_slider_slit {
+	background-color: #333;
+	color: #ccc;
+	width: 110px;
+	height: 2px;
+	margin: 4px 4px 2px 4px;
+	line-height: 0px;
+	position: absolute;
+	z-index: 1;
+	border: 1px solid;
+	border-color: #999 #ddd #ddd #999;
+}
+*.carpe_vertical_slider_track *.carpe_slider_slit {
+	background-color: #000;
+	color: #333;
+	width: 2px;
+	height: 100px;
+	position: absolute;
+	margin: 4px 10px 4px 10px;
+	padding: 4px 0 1px 0;
+	line-height: 0px;
+	font-size: 0;
+	border: 1px solid;
+	border-color: #666 #ccc #ccc #666;
+}
+*.carpe_horizontal_slider_track *.carpe_slider {
+	width: 16px;
+	background-color: #666;
+	color: #333;
+	position: relative;
+	margin: 0;
+	height: 8px;
+	z-index: 1;
+	line-height: 0px;
+	font-size: 0px;
+	text-align: left;
+	border: 2px solid;
+	border-color: #999 #333 #333 #999;
+}
+*.carpe_vertical_slider_track *.carpe_slider {
+	width: 20px;
+	background-color: #666;
+	color: #333;
+	position: relative;
+	margin: 0;
+	height: 8px;
+	z-index: 1;
+	line-height: 0px;
+	font-size: 0px;
+	text-align: left;
+	border: 2px solid;
+	border-color: #999 #333 #333 #999;
+}
+*.carpe_slider_display_holder {
+	background-color: #bbb;
+	color: #333;
+	width: 34px;
+	margin: 0;
+	float: left;
+	padding: 0 2px 0 0;
+	height: 20px;
+	text-align: right;
+	border: 1px solid;
+	border-color: #ddd #999 #999 #ddd;
+}
+.carpe_slider_display {
+	background-color: #bbb;
+	color: #333;
+	padding: 3px 1px 0 0;
+	width: 30px;
+	text-align: right;
+	font-size: 11px;
+	line-height: 10px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-weight: bold;
+	border: 0;
+	cursor: default;
+}

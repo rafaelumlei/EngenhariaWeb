@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntryUnitService" name="Pesquisar Eventos">
+  <FormFields>
+    <Field id="fld26" name="Evento" type="string" subType="" localized="false"></Field>
+    <SelectionField id="sfld2" name="TipoEvento" type="string" subType="" value="" localized="false" splitOutput="">
+      <Slot id="sfld2_label" label="true" output="false"/>
+      <Slot id="sfld2_output" label="false" output="true"/>
+    </SelectionField>
+  </FormFields>
+  <WRValidation links="ln1"/>
+</Descriptor>
+ 

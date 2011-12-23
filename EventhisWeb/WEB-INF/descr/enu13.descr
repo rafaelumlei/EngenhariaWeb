@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntryUnitService" name="Zona">
+  <FormFields>
+    <Field id="fld36" name="Latitude" type="float" subType="" localized="true"></Field>
+    <Field id="fld37" name="Longitude" type="float" subType="" localized="true"></Field>
+  </FormFields>
+  <WRValidation links="ln36"/>
+</Descriptor>
+ 

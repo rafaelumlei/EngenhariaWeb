@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-cascade="none" default-access="property" default-lazy="true" auto-import="true">
+  <class name="com.webratio.webapp.Evento" table="`evento`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="idevento" column="`idevento`" type="java.lang.Integer">
+      <generator class="com.webratio.rtx.hibernate.MaxPlusOneIncrementGenerator"/>
+    </id>
+    <property name="dtfim" column="`dtfim`" type="java.sql.Timestamp" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="dtinicio" column="`dtinicio`" type="java.sql.Timestamp" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="titulo" column="`titulo`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="descricao" column="`descricao`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="lat" column="`lat`" type="java.lang.Double" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="lon" column="`lon`" type="java.lang.Double" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="proxnewsletter" column="`proxnewsletter`" type="java.lang.Boolean" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <many-to-one name="eventoToTipo" class="com.webratio.webapp.Tipo" update="true" insert="true" not-found="exception" unique="false" optimistic-lock="true" embed-xml="true">
+      <column name="`tipo_idtipo`"/>
+    </many-to-one>
+    <set name="eventoToComentario" inverse="true" mutable="true" sort="unsorted" optimistic-lock="true" embed-xml="true">
+      <key on-delete="noaction">
+        <column name="`evento_idevento`"/>
+      </key>
+      <one-to-many class="com.webratio.webapp.Comentario" not-found="exception" embed-xml="true"/>
+    </set>
+    <many-to-one name="eventoToUtilizador" class="com.webratio.webapp.Utilizador" update="true" insert="true" not-found="exception" unique="false" optimistic-lock="true" embed-xml="true">
+      <column name="`utilizador_oid`"/>
+    </many-to-one>
+    <set name="foimarcado" table="`favoritos`" inverse="true" mutable="true" sort="unsorted" optimistic-lock="true" embed-xml="true">
+      <key on-delete="noaction">
+        <column name="`evento_idevento`"/>
+      </key>
+      <many-to-many class="com.webratio.webapp.Utilizador" not-found="exception" embed-xml="true" unique="false">
+        <column name="`utilizador_oid`"/>
+      </many-to-many>
+    </set>
+    <set name="eventoToNewsletter" inverse="true" mutable="true" sort="unsorted" optimistic-lock="true" embed-xml="true">
+      <key on-delete="noaction">
+        <column name="`evento_idevento`"/>
+      </key>
+      <one-to-many class="com.webratio.webapp.Newsletter" not-found="exception" embed-xml="true"/>
+    </set>
+  </class>
+  <!-- mapping for relationship 'EventoToTipo[role2]' -->
+  <class entity-name="Rel_Evento_to_eventoToTipo" table="`evento`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="source_idevento" column="`idevento`" type="java.lang.Integer"/>
+    <property name="target_idtipo" column="`tipo_idtipo`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+  <!-- mapping for relationship 'EventoToComentario[role5]' -->
+  <class entity-name="Rel_Evento_to_eventoToComentario" table="`comentario`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="target_idcomentario" column="`idcomentario`" type="java.lang.Integer"/>
+    <property name="source_idevento" column="`evento_idevento`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+  <!-- mapping for relationship 'EventoToUtilizador[role8]' -->
+  <class entity-name="Rel_Evento_to_eventoToUtilizador" table="`evento`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="source_idevento" column="`idevento`" type="java.lang.Integer"/>
+    <property name="target_oid" column="`utilizador_oid`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+  <!-- mapping for relationship 'foimarcado[role12]' -->
+  <class entity-name="Rel_Evento_to_foimarcado" table="`favoritos`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <composite-id mapped="false" unsaved-value="undefined">
+      <key-property name="source_idevento" column="`evento_idevento`" type="java.lang.Integer"/>
+      <key-property name="target_oid" column="`utilizador_oid`" type="java.lang.Integer"/>
+    </composite-id>
+  </class>
+  <!-- mapping for relationship 'EventoToNewsletter[role14]' -->
+  <class entity-name="Rel_Evento_to_eventoToNewsletter" table="`newsletter`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="target_nr" column="`nr`" type="java.lang.Integer"/>
+    <property name="source_idevento" column="`evento_idevento`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+</hibernate-mapping>

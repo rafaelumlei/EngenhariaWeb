@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-cascade="none" default-access="property" default-lazy="true" auto-import="true">
+  <class name="com.webratio.webapp.Comentario" table="`comentario`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="idcomentario" column="`idcomentario`" type="java.lang.Integer">
+      <generator class="com.webratio.rtx.hibernate.MaxPlusOneIncrementGenerator"/>
+    </id>
+    <property name="titulo" column="`titulo`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="texto" column="`texto`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="dtcom" column="`dtcom`" type="java.sql.Timestamp" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <many-to-one name="comentarioToUtilizador" class="com.webratio.webapp.Utilizador" update="true" insert="true" not-found="exception" unique="false" optimistic-lock="true" embed-xml="true">
+      <column name="`utilizador_oid`"/>
+    </many-to-one>
+    <many-to-one name="comentarioToEvento" class="com.webratio.webapp.Evento" update="true" insert="true" not-found="exception" unique="false" optimistic-lock="true" embed-xml="true">
+      <column name="`evento_idevento`"/>
+    </many-to-one>
+  </class>
+  <!-- mapping for relationship 'ComentarioToUtilizador[role4]' -->
+  <class entity-name="Rel_Comentario_to_comentarioToUtilizador" table="`comentario`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="source_idcomentario" column="`idcomentario`" type="java.lang.Integer"/>
+    <property name="target_oid" column="`utilizador_oid`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+  <!-- mapping for relationship 'ComentarioToEvento[role6]' -->
+  <class entity-name="Rel_Comentario_to_comentarioToEvento" table="`comentario`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="source_idcomentario" column="`idcomentario`" type="java.lang.Integer"/>
+    <property name="target_idevento" column="`evento_idevento`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+</hibernate-mapping>

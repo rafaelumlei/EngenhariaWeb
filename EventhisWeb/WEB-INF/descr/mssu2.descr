@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.MultiMessageUnitService" name="Bem Vindo">
+  <Message xml:space="preserve">Bem Vindo Utilizador</Message>
+</Descriptor>
+ 

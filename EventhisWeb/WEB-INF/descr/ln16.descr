@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>lgu4</Target>
+  <Secure>false</Secure>
+  <SourcePage>page5</SourcePage>
+  <Source>enu6</Source>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <ChangesAlternative>true</ChangesAlternative>
+  <TargetContextParameters/>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <ManualContextPropagations>
+    <ManualContextPropagation targetParam="lgu4.username" sourceUnit="enu6" sourceParam="fld34"/>
+    <ManualContextPropagation targetParam="lgu4.password" sourceUnit="enu6" sourceParam="fld35"/>
+  </ManualContextPropagations>
+  <PreservedContextParams>
+    <Params>lgu4.username|lgu4.password|lgu4.rememberCredentials</Params>
+  </PreservedContextParams>
+</Descriptor>
+ 

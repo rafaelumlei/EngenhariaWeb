@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.CreateUnitService" name="CriarComentario">
+  <Entity>ent4</Entity>
+  <BulkInsert>false</BulkInsert>
+  <SkipBlankRecords>false</SkipBlankRecords>
+  <Field param="cru3.att15" type="integer" attribute="att15">idcomentario</Field>
+  <Field param="cru3.att16" type="string" attribute="att16">titulo</Field>
+  <Field param="cru3.att17" type="text" attribute="att17">texto</Field>
+  <Field param="cru3.att18" type="timestamp" attribute="att18">dtcom</Field>
+  <Association name="comentarioToUtilizador" direct="true" inverseName="utilizadorToComentario" oneToOne="false">
+    <QueryInput id="oid" param="cru3.role4.userOID" type="integer"/>
+    <Query>from Utilizador _e where _e.oid = :oid</Query>
+  </Association>
+  <Association name="comentarioToEvento" direct="true" inverseName="eventoToComentario" oneToOne="false">
+    <QueryInput id="idevento" param="cru3.role6.att19" type="integer"/>
+    <Query>from Evento _e where _e.idevento = :idevento</Query>
+  </Association>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <Secure>false</Secure>
+    <StartsTransaction>false</StartsTransaction>
+    <CheckPermission>true</CheckPermission>
+    <Localized>false</Localized>
+    <MasterPage/>
+    <ParentContainer>sv4</ParentContainer>
+    <PermissionElement>sv4</PermissionElement>
+    <OperationParams>
+      <Params>cru3.role6.att19|sp|link|var3|var4|var1|cru3.att15|cru3.role4.userOID|cru3.att16|cru3.att17|cru3.att18|osp|kcond5.att19</Params>
+    </OperationParams>
+    <SessionContextInits></SessionContextInits>
+    <SecondaryIncomingLinks>ln45|ln51|ln3</SecondaryIncomingLinks>
+    <OutgoingLinks>
+      <Link resultCode="success">oln6</Link>
+      <Link resultCode="error">kln7</Link>
+    </OutgoingLinks>
+    <NavigationAncestors>sv4</NavigationAncestors>
+    <ModelName>CriarComentario</ModelName>
+  </WRParameterService>
+</Descriptor>
+ 

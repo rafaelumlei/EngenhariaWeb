@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Pesquisar Eventos">
+  <SiteView>sv2</SiteView>
+  <Secure>false</Secure>
+  <SecureFormAction>false</SecureFormAction>
+  <Localized>false</Localized>
+  <ParentContainer>sv2</ParentContainer>
+  <CheckPermission>false</CheckPermission>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <SessionContextInits></SessionContextInits>
+  <ManualLinks>
+    <ManualLink>ln7</ManualLink>
+    <ManualLink>ln27</ManualLink>
+    <ManualLink>pwu2att21</ManualLink>
+  </ManualLinks>
+  <PageContextInitServices/>
+  <PageContextInits>
+    <PageContextInit target="sfld3_presel" value="$$NULL$$"/>
+  </PageContextInits>
+  <NonContextualIncomingLinks>page4|page4.redirect|page4.link|page4.link.redirect</NonContextualIncomingLinks>
+  <UnitIncomingLinks>ln7|pwu2att21</UnitIncomingLinks>
+  <LinkSequence>ln10</LinkSequence>
+  <PageContextPropagations link="ln10">
+    <PageContextPropagation targetParam="sfld3_label" sourceUnit="seu3" sourceParam="att7Array"/>
+    <PageContextPropagation targetParam="sfld3_output" sourceUnit="seu3" sourceParam="att6Array"/>
+  </PageContextPropagations>
+  <UnitComputations refreshFormAllLinks="page4|page4.redirect|page4.link|page4.link.redirect|impl|impl.redirect">
+    <UnitComputation unit="enu4" formBased="true">
+      <RefreshForm link="ln10"/>
+    </UnitComputation>
+    <UnitComputation unit="seu3"></UnitComputation>
+    <UnitComputation unit="pwu2" formBased="true">
+      <RefreshForm link="ln7"/>
+      <RefreshForm link="pwu2att21"/>
+    </UnitComputation>
+  </UnitComputations>
+  <InitTrees>
+    <Node unit="seu3">
+      <Node unit="enu4" fromLink="ln10">
+        <Node unit="pwu2" fromLink="ln7">
+          <Node unit="pwu2" fromLink="pwu2att21"/>
+        </Node>
+      </Node>
+    </Node>
+  </InitTrees>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="enu4" preservedByForm="true">sfld3_label</PageParam>
+      <PageParam unit="enu4" preservedByForm="true">sfld3_output</PageParam>
+      <PageParam unit="enu4" preservedByForm="true">sfld3_presel</PageParam>
+      <PageParam unit="pwu2" preservedByForm="false">pwu2.current.att19</PageParam>
+      <PageParam unit="pwu2" preservedByForm="false">acond2</PageParam>
+      <PageParam unit="pwu2" preservedByForm="false">acond10</PageParam>
+      <PageParam unit="pwu2" preservedByForm="false">pwu2.block</PageParam>
+      <PageParam unit="pwu2" preservedByForm="false">pwu2.blockFactor</PageParam>
+      <PageParam unit="pwu2" preservedByForm="false">pwu2.blockWindow</PageParam>
+      <PageParam unit="pwu2" preservedByForm="false">pwu2.sortCriteria</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>osp</PageParam>
+    </PageParams>
+    <NavigationAncestors>sv2</NavigationAncestors>
+    <ModelName>Pesquisar Eventos</ModelName>
+  </WRParameterService>
+</Descriptor>
+ 

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-cascade="none" default-access="property" default-lazy="true" auto-import="true">
+  <class name="com.webratio.webapp.Grupo" table="`grupo`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="oid" column="`oid`" type="java.lang.Integer">
+      <generator class="com.webratio.rtx.hibernate.MaxPlusOneIncrementGenerator"/>
+    </id>
+    <property name="groupName" column="`groupname`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <set name="users" table="`user_group`" inverse="true" mutable="true" sort="unsorted" optimistic-lock="true" embed-xml="true">
+      <key on-delete="noaction">
+        <column name="`grupo_oid`"/>
+      </key>
+      <many-to-many class="com.webratio.webapp.Utilizador" not-found="exception" embed-xml="true" unique="false">
+        <column name="`utilizador_oid`"/>
+      </many-to-many>
+    </set>
+    <set name="defaultUsers" inverse="true" mutable="true" sort="unsorted" optimistic-lock="true" embed-xml="true">
+      <key on-delete="noaction">
+        <column name="`grupo_oid`"/>
+      </key>
+      <one-to-many class="com.webratio.webapp.Utilizador" not-found="exception" embed-xml="true"/>
+    </set>
+    <many-to-one name="defaultModule" class="com.webratio.webapp.Module" update="true" insert="true" not-found="exception" unique="false" optimistic-lock="true" embed-xml="true">
+      <column name="`module_oid`"/>
+    </many-to-one>
+    <set name="modules" table="`group_module`" inverse="false" mutable="true" sort="unsorted" optimistic-lock="true" embed-xml="true">
+      <key on-delete="noaction">
+        <column name="`grupo_oid`"/>
+      </key>
+      <many-to-many class="com.webratio.webapp.Module" not-found="exception" embed-xml="true" unique="false">
+        <column name="`module_oid`"/>
+      </many-to-many>
+    </set>
+  </class>
+  <!-- mapping for relationship 'users[Group2User]' -->
+  <class entity-name="Rel_Grupo_to_users" table="`user_group`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <composite-id mapped="false" unsaved-value="undefined">
+      <key-property name="source_oid" column="`grupo_oid`" type="java.lang.Integer"/>
+      <key-property name="target_oid" column="`utilizador_oid`" type="java.lang.Integer"/>
+    </composite-id>
+  </class>
+  <!-- mapping for relationship 'defaultUsers[DefaultGroup2User]' -->
+  <class entity-name="Rel_Grupo_to_defaultUsers" table="`utilizador`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="target_oid" column="`oid`" type="java.lang.Integer"/>
+    <property name="source_oid" column="`grupo_oid`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+  <!-- mapping for relationship 'defaultModule[Group2DefaultModule]' -->
+  <class entity-name="Rel_Grupo_to_defaultModule" table="`grupo`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="source_oid" column="`oid`" type="java.lang.Integer"/>
+    <property name="target_oid" column="`module_oid`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+  <!-- mapping for relationship 'modules[Group2Module]' -->
+  <class entity-name="Rel_Grupo_to_modules" table="`group_module`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <composite-id mapped="false" unsaved-value="undefined">
+      <key-property name="source_oid" column="`grupo_oid`" type="java.lang.Integer"/>
+      <key-property name="target_oid" column="`module_oid`" type="java.lang.Integer"/>
+    </composite-id>
+  </class>
+</hibernate-mapping>

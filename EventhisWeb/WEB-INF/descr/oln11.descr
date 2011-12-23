@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>xou1</Target>
+  <Secure>false</Secure>
+  <Source>slu1</Source>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <ChangesAlternative>false</ChangesAlternative>
+  <TargetContextParameters/>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <ManualContextPropagations>
+    <ManualContextPropagation targetParam="acond7" sourceUnit="slu1" sourceParam="map(slp2)"/>
+    <ManualContextPropagation targetParam="acond6" sourceUnit="slu1" sourceParam="map(slp1)"/>
+    <ManualContextPropagation targetParam="acond9" sourceUnit="slu1" sourceParam="map(slp4)"/>
+    <ManualContextPropagation targetParam="acond8" sourceUnit="slu1" sourceParam="map(slp3)"/>
+  </ManualContextPropagations>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+</Descriptor>

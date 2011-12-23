@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.SolicitUnitService" name="Area">
+  <SolicitUnit operation="Area" nsURI="">
+    <SolicitParameter id="slp1" xmlSchema="" name="LatMenor" xsdType="float[SimpleType]"/>
+    <SolicitParameter id="slp2" xmlSchema="" name="LatMaior" xsdType="float[SimpleType]"/>
+    <SolicitParameter id="slp3" xmlSchema="" name="LonMenor" xsdType="float[SimpleType]"/>
+    <SolicitParameter id="slp4" xmlSchema="" name="LonMaior" xsdType="float[SimpleType]"/>
+  </SolicitUnit>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <Secure>false</Secure>
+    <StartsTransaction>false</StartsTransaction>
+    <CheckPermission>false</CheckPermission>
+    <Localized>false</Localized>
+    <MasterPage/>
+    <ParentContainer>port1</ParentContainer>
+    <OperationParams>
+      <Params>eru1.soapEnvelope|rsu1.attachmentCids|acond6|eru1.faultMessage|rsu1.soapEnvelope|rsu1.attachmentBlobs|acond9|acond7|eru1.faultException|acond8</Params>
+    </OperationParams>
+    <SessionContextInits></SessionContextInits>
+    <OutgoingLinks>
+      <Link resultCode="success">oln11</Link>
+      <Link resultCode="error">kln10</Link>
+    </OutgoingLinks>
+    <NavigationAncestors/>
+    <ModelName>Area</ModelName>
+  </WRParameterService>
+</Descriptor>
+ 

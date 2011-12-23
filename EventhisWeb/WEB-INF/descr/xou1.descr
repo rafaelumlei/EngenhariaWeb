@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.XMLOutUnitService" name="EventosParaXml">
+  <XMLOutUnit name="EventosParaXml" id="xou1" oldDocStyle="false">
+    <OutEntity entity="ent5" name="Eventos" useNames="false" duration="persistent">
+      <MaxResults/>
+      <Query entity="ent5">
+        <Input id="p0" param="acond6" type="float" implied="false" expandStyle="aggregate" function="min" attribute="att24"/>
+        <Input id="p1" param="acond7" type="float" implied="false" expandStyle="aggregate" function="max" attribute="att24"/>
+        <Input id="p2" param="acond8" type="float" implied="false" expandStyle="aggregate" function="min" attribute="att25"/>
+        <Input id="p3" param="acond9" type="float" implied="false" expandStyle="aggregate" function="max" attribute="att25"/>
+        <Output id="att19" name="idevento"/>
+        <Output id="att25" name="lon"/>
+        <Output id="att24" name="lat"/>
+        <Output id="att22" name="titulo"/>
+        <Output id="role2$att6" name="eventoToTipo_idtipo" useId="true"/>
+        <HQL>select a_evento.idevento, a_evento.lon, a_evento.lat, a_evento.titulo, a_tipo_role2.idtipo from Evento a_evento left join a_evento.eventoToTipo a_tipo_role2
+          <Where defaultPolicy="fill" allImplied="false">(({[p0]a_evento.lat &gt; ?})) and (({[p1]a_evento.lat &lt; ?})) and (({[p2]a_evento.lon &gt; ?})) and (({[p3]a_evento.lon &lt; ?}))</Where>
+        </HQL>
+      </Query>
+    </OutEntity>
+  </XMLOutUnit>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <Secure>false</Secure>
+    <StartsTransaction>false</StartsTransaction>
+    <CheckPermission>false</CheckPermission>
+    <Localized>false</Localized>
+    <MasterPage/>
+    <ParentContainer>port1</ParentContainer>
+    <OperationParams>
+      <Params>eru1.soapEnvelope|rsu1.attachmentCids|eru1.faultMessage|acond6|rsu1.soapEnvelope|rsu1.attachmentBlobs|acond9|eru1.faultException|acond7|acond8</Params>
+    </OperationParams>
+    <SessionContextInits></SessionContextInits>
+    <OutgoingLinks>
+      <Link resultCode="success">oln12</Link>
+      <Link resultCode="error">kln11</Link>
+    </OutgoingLinks>
+    <NavigationAncestors/>
+    <ModelName>EventosParaXml</ModelName>
+  </WRParameterService>
+</Descriptor>
+ 

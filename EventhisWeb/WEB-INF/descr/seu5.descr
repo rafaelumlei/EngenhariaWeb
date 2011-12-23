@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="Utilizadores para enviar o email">
+  <MaxResults/>
+  <Query entity="User">
+    <Output id="userOID" name="oid"/>
+    <Output id="email" name="email"/>
+    <Output id="att30" name="nome"/>
+    <HQL>select a_utilizador.oid, a_utilizador.email, a_utilizador.nome from Utilizador a_utilizador</HQL>
+  </Query>
+</Descriptor>
+ 

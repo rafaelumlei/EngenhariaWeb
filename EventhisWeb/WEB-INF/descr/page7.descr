@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Erro Enviar Email">
+  <SiteView>sv1</SiteView>
+  <Secure>false</Secure>
+  <SecureFormAction>false</SecureFormAction>
+  <Localized>false</Localized>
+  <ParentContainer>sv1</ParentContainer>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv1</PermissionElement>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <SessionContextInits></SessionContextInits>
+  <ManualLinks>
+    <ManualLink>ln44</ManualLink>
+  </ManualLinks>
+  <PageContextInitServices/>
+  <PageContextInits></PageContextInits>
+  <NonContextualIncomingLinks>page7|page7.redirect|page7.link|page7.link.redirect|kln4|kln4.redirect</NonContextualIncomingLinks>
+  <UnitIncomingLinks/>
+  <LinkSequence/>
+  <UnitComputations refreshFormAllLinks="page7|page7.redirect|page7.link|page7.link.redirect|impl|impl.redirect|kln4|kln4.redirect">
+    <UnitComputation unit="mssu3"></UnitComputation>
+  </UnitComputations>
+  <InitTrees>
+    <Node unit="mssu3"/>
+  </InitTrees>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <LinkIdRequired>false</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="mssu3" preservedByForm="false">mssu3.shownMessages</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>osp</PageParam>
+    </PageParams>
+    <NavigationAncestors>sv1</NavigationAncestors>
+    <ModelName>Erro Enviar Email</ModelName>
+  </WRParameterService>
+</Descriptor>
+ 

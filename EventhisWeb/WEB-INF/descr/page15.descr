@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="P&#225;gina do Evento">
+  <SiteView>sv2</SiteView>
+  <Secure>false</Secure>
+  <SecureFormAction>false</SecureFormAction>
+  <Localized>false</Localized>
+  <ParentContainer>sv2</ParentContainer>
+  <CheckPermission>false</CheckPermission>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <SessionContextInits></SessionContextInits>
+  <ManualLinks>
+    <ManualLink>ln59</ManualLink>
+  </ManualLinks>
+  <PageContextInitServices/>
+  <PageContextInits></PageContextInits>
+  <NonContextualIncomingLinks>page15|page15.redirect|page15.link|page15.link.redirect</NonContextualIncomingLinks>
+  <UnitIncomingLinks>ln26|ln27</UnitIncomingLinks>
+  <LinkSequence>ln33</LinkSequence>
+  <PageContextPropagations link="ln33">
+    <PageContextPropagation targetParam="rcond3.att19" sourceUnit="dau3" sourceParam="data.att19"/>
+  </PageContextPropagations>
+  <UnitComputations refreshFormAllLinks="page15|page15.redirect|page15.link|page15.link.redirect|impl|impl.redirect|ln26|ln27">
+    <UnitComputation unit="dau3"></UnitComputation>
+    <UnitComputation unit="pwu4" formBased="true">
+      <RefreshFormAll link="ln26"/>
+      <RefreshFormAll link="ln26.redirect"/>
+      <RefreshFormAll link="ln27"/>
+      <RefreshFormAll link="ln27.redirect"/>
+      <RefreshForm link="ln33"/>
+    </UnitComputation>
+  </UnitComputations>
+  <InitTrees>
+    <Node unit="dau3" accessLinks="ln26 ln27">
+      <Node unit="pwu4" fromLink="ln33"/>
+    </Node>
+  </InitTrees>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="dau3" preservedByForm="false" access="true">kcond3.att19</PageParam>
+      <PageParam unit="pwu4" preservedByForm="false">pwu4.current.att15</PageParam>
+      <PageParam unit="pwu4" preservedByForm="false">rcond3.att19</PageParam>
+      <PageParam unit="pwu4" preservedByForm="false">pwu4.block</PageParam>
+      <PageParam unit="pwu4" preservedByForm="false">pwu4.blockFactor</PageParam>
+      <PageParam unit="pwu4" preservedByForm="false">pwu4.blockWindow</PageParam>
+      <PageParam unit="pwu4" preservedByForm="false">pwu4.sortCriteria</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>osp</PageParam>
+    </PageParams>
+    <NavigationAncestors>sv2</NavigationAncestors>
+    <ModelName>P&#225;gina do Evento</ModelName>
+  </WRParameterService>
+</Descriptor>
+ 

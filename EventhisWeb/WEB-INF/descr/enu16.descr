@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntryUnitService" name="Novo Evento">
+  <FormFields>
+    <Field id="fld41" name="T&#237;tulo" type="string" subType="" localized="false"></Field>
+    <Field id="fld42" name="Descri&#231;&#227;o" type="text" subType="" localized="false"></Field>
+    <Field id="fld43" name="Fim" type="timestamp" subType="" localized="true"></Field>
+    <Field id="fld44" name="&#205;nicio" type="timestamp" subType="" localized="true"></Field>
+    <Field id="fld45" name="Latitude" type="float" subType="" localized="true"></Field>
+    <Field id="fld46" name="Longitude" type="float" subType="" localized="true"></Field>
+    <Field id="fld36" name="ProximaNewsltter" type="boolean" subType="" localized="true"></Field>
+    <SelectionField id="sfld4" name="Tipo do Evento" type="string" subType="" value="" localized="false" splitOutput="">
+      <Slot id="sfld4_label" label="true" output="false"/>
+      <Slot id="sfld4_output" label="false" output="true"/>
+    </SelectionField>
+  </FormFields>
+  <WRValidation links="ln50">
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="sfld4" id="mnd1" name="Todos os eventos devem ter um tipo" condition=""/>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld41" id="mnd4" name="Todos os eventos devem ter um titulo" condition=""/>
+    <ValueLengthValidationRule service="com.webratio.units.validation.ValueLengthValidationRuleService" elementId="fld41" id="vl3" name="O t&#237;tulo de um evento t&#234;m um tamanho m&#237;nimo" condition="" customErrorMessage="true">
+      <Predicate>min</Predicate>
+      <Value>5</Value>
+    </ValueLengthValidationRule>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld42" id="mnd2" name="Todos os eventos devem ter uma descri&#231;&#227;o" condition=""/>
+    <ValueLengthValidationRule service="com.webratio.units.validation.ValueLengthValidationRuleService" elementId="fld42" id="vl2" name="A descri&#231;&#227;o t&#234;m tamanho m&#237;nimo" condition="" customErrorMessage="true">
+      <Predicate>min</Predicate>
+      <Value>40</Value>
+    </ValueLengthValidationRule>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld43" id="mnd5" name="Todos os eventos t&#234;m um final" condition=""/>
+    <CompareValidationRule service="com.webratio.units.validation.CompareValidationRuleService" elementId="fld43" id="cmp2" name="A data de final deve ser maior do que a de &#237;nicio" condition="" customErrorMessage="true">
+      <Predicate>gt</Predicate>
+      <ValueField>fld44</ValueField>
+    </CompareValidationRule>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld44" id="mnd3" name="Todos os eventos t&#234;m &#237;nicio" condition=""/>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld45" id="mnd6" name="Todos os eventos t&#234;m uma latitude" condition=""/>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld46" id="mnd7" name="Todos os eventos t&#234;m uma longitude" condition=""/>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld36" id="mnd27" name="obrigat&#243;rio" condition="" customErrorMessage="true"/>
+  </WRValidation>
+</Descriptor>
+ 

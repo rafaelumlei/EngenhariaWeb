@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="P&#225;gina Edi&#231;&#227;o de Evento">
+  <SiteView>sv4</SiteView>
+  <Secure>false</Secure>
+  <SecureFormAction>false</SecureFormAction>
+  <Localized>false</Localized>
+  <ParentContainer>sv4</ParentContainer>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv4</PermissionElement>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <SessionContextInits></SessionContextInits>
+  <ManualLinks>
+    <ManualLink activatedOperation="dlu1">ln18</ManualLink>
+    <ManualLink activatedOperation="mfu1">ln24</ManualLink>
+    <ManualLink>ln39</ManualLink>
+  </ManualLinks>
+  <PageContextInitServices/>
+  <PageContextInits>
+    <PageContextInit target="sfld1_presel" value="$$NULL$$"/>
+  </PageContextInits>
+  <NonContextualIncomingLinks>page1|page1.redirect|page1.link|page1.link.redirect|kln3|kln3.redirect|kln2|kln2.redirect</NonContextualIncomingLinks>
+  <UnitIncomingLinks>ln8</UnitIncomingLinks>
+  <LinkSequence>ln32</LinkSequence>
+  <PageContextPropagations link="ln32">
+    <PageContextPropagation targetParam="sfld1_label" sourceUnit="seu7" sourceParam="att7Array"/>
+    <PageContextPropagation targetParam="sfld1_output" sourceUnit="seu7" sourceParam="att6Array"/>
+  </PageContextPropagations>
+  <UnitComputations refreshFormAllLinks="page1|page1.redirect|page1.link|page1.link.redirect|impl|impl.redirect|kln3|kln3.redirect|kln2|kln2.redirect|ln8">
+    <UnitComputation unit="enu1" formBased="true">
+      <RefreshFormAll link="ln8"/>
+      <RefreshForm link="ln32"/>
+      <RefreshForm link="ln8"/>
+    </UnitComputation>
+    <UnitComputation unit="seu7"></UnitComputation>
+  </UnitComputations>
+  <InitTrees>
+    <Node unit="enu1" accessLinks="ln8"/>
+    <Node unit="seu7">
+      <Node unit="enu1" fromLink="ln32" accessLinks="ln8"/>
+    </Node>
+  </InitTrees>
+  <Variables>
+    <Variable id="var6" name="idevento" type="" unitId="" parameter="" value=""/>
+  </Variables>
+  <Conditions></Conditions>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="enu1" preservedByForm="true" access="true">fld15_slot</PageParam>
+      <PageParam unit="enu1" preservedByForm="true" access="true">fld16_slot</PageParam>
+      <PageParam unit="enu1" preservedByForm="true" access="true">fld17_slot</PageParam>
+      <PageParam unit="enu1" preservedByForm="true" access="true">fld18_slot</PageParam>
+      <PageParam unit="enu1" preservedByForm="true" access="true">fld24_slot</PageParam>
+      <PageParam unit="enu1" preservedByForm="true" access="true">fld25_slot</PageParam>
+      <PageParam unit="enu1" preservedByForm="true" access="true">sfld1_label</PageParam>
+      <PageParam unit="enu1" preservedByForm="true" access="true">sfld1_output</PageParam>
+      <PageParam unit="enu1" preservedByForm="true" access="true">sfld1_presel</PageParam>
+      <PageParam>par80</PageParam>
+      <PageParam>par138</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>osp</PageParam>
+    </PageParams>
+    <NavigationAncestors>sv4</NavigationAncestors>
+    <ModelName>P&#225;gina Edi&#231;&#227;o de Evento</ModelName>
+  </WRParameterService>
+</Descriptor>

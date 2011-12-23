@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.db.AuthenticationService" name="Authentication Service">
+  <Database>db1</Database>
+  <CryptAlgorithm/>
+  <LoginQuery>SELECT u.oid, g.oid, m.moduleID FROM Utilizador u LEFT JOIN u.defaultGroup g LEFT JOIN g.defaultModule m WHERE u.userName = :userName and (u.password = :password or (u.password is null and safe_cast(:password) is null))</LoginQuery>
+</Descriptor>

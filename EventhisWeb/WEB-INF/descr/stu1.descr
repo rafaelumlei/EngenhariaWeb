@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.session.rtx.SetUnitService" name="SetUserID">
+  <ContextParameters>UserCtxParam</ContextParameters>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <Secure>false</Secure>
+    <ParentContainer>sv4</ParentContainer>
+    <CheckPermission>true</CheckPermission>
+    <PermissionElement>sv4</PermissionElement>
+    <!-- operation parameters -->
+    <OperationParams>
+      <OperationParam>stu1.UserCtxParam</OperationParam>
+    </OperationParams>
+    <SessionContextInits/>
+    <SecondaryIncomingLinks/>
+    <OutgoingLinks/>
+  </WRParameterService>
+</Descriptor>

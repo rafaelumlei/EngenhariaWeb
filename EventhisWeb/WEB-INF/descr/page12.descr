@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="P&#225;gina de Registo">
+  <SiteView>sv2</SiteView>
+  <Secure>false</Secure>
+  <SecureFormAction>false</SecureFormAction>
+  <Localized>false</Localized>
+  <ParentContainer>sv2</ParentContainer>
+  <CheckPermission>false</CheckPermission>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <SessionContextInits></SessionContextInits>
+  <ManualLinks>
+    <ManualLink activatedOperation="cru2">ln9</ManualLink>
+    <ManualLink>ln58</ManualLink>
+  </ManualLinks>
+  <PageContextInitServices/>
+  <PageContextInits></PageContextInits>
+  <NonContextualIncomingLinks>page12|page12.redirect|page12.link|page12.link.redirect|ln17</NonContextualIncomingLinks>
+  <UnitIncomingLinks>kln5</UnitIncomingLinks>
+  <LinkSequence/>
+  <UnitComputations refreshFormAllLinks="page12|page12.redirect|page12.link|page12.link.redirect|impl|impl.redirect|ln17|ln17.redirect|kln5|kln5.redirect">
+    <UnitComputation unit="enu5" formBased="true">
+      <RefreshFormAll link="kln5"/>
+      <RefreshForm link="kln5"/>
+    </UnitComputation>
+  </UnitComputations>
+  <InitTrees>
+    <Node unit="enu5" accessLinks="kln5"/>
+  </InitTrees>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam>link</PageParam>
+      <PageParam>osp</PageParam>
+    </PageParams>
+    <NavigationAncestors>sv2</NavigationAncestors>
+    <ModelName>P&#225;gina de Registo</ModelName>
+  </WRParameterService>
+</Descriptor>
+ 

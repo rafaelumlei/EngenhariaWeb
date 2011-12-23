@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+  <session-factory>
+    <!-- Database connection settings -->
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306/eventos</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password"/>
+    <property name="webratio.connection.cryptedPassword"/>
+    <!-- JDBC connection pool (use the built-in) -->
+    <property name="connection.pool_size">5</property>
+    <property name="connection.provider_class">com.webratio.rtx.hibernate.DBCPConnectionProvider</property>
+    <property name="webratio.format_number">?1</property>
+    <property name="webratio.format_date">date_format(?1, '%Y-%m-%d')</property>
+    <property name="webratio.format_time">date_format(?1, '%H:%i:%S')</property>
+    <property name="webratio.format_timestamp">concat(date_format(?1, '%Y-%m-%d %H:%i:%S'), '.0')</property>
+    <property name="webratio.interval_to_seconds">time_to_sec(timediff(?2, ?1))</property>
+    <property name="webratio.extract_time">?1</property>
+    <!-- SQL dialect -->
+    <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+    <!-- Enable Hibernate's automatic session context management -->
+    <property name="current_session_context_class">thread</property>
+    <!-- Disable the second-level cache  -->
+    <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+    <!-- Echo all executed SQL to stdout -->
+    <property name="show_sql">false</property>
+    <property name="format_sql">true</property>
+    <mapping resource="com/webratio/webapp/Utilizador.hbm.xml"/>
+    <mapping resource="com/webratio/webapp/Grupo.hbm.xml"/>
+    <mapping resource="com/webratio/webapp/Module.hbm.xml"/>
+    <mapping resource="com/webratio/webapp/Newsletter.hbm.xml"/>
+    <mapping resource="com/webratio/webapp/Tipo.hbm.xml"/>
+    <mapping resource="com/webratio/webapp/Comentario.hbm.xml"/>
+    <mapping resource="com/webratio/webapp/Evento.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

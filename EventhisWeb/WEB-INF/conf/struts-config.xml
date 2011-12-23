@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+  <form-beans type="org.apache.struts.action.ActionFormBean">
+    <form-bean name="baseFormBean" type="com.webratio.struts.WRPageFormBean">
+      <form-property name="lastURL" type="java.lang.String"/>
+    </form-bean>
+    <form-bean name="page6FormBean" extends="baseFormBean">
+      <form-property name="fld37" type="java.lang.String"/>
+      <form-property name="ln21" type="java.lang.String"/>
+      <form-property name="enu7" type="java.lang.String"/>
+    </form-bean>
+    <form-bean name="page5FormBean" extends="baseFormBean">
+      <form-property name="fld34" type="java.lang.String"/>
+      <form-property name="fld35" type="java.lang.String"/>
+      <form-property name="ln16" type="java.lang.String"/>
+      <form-property name="ln17" type="java.lang.String"/>
+      <form-property name="enu6" type="java.lang.String"/>
+    </form-bean>
+    <form-bean name="page12FormBean" extends="baseFormBean">
+      <form-property name="fld19" type="java.lang.String"/>
+      <form-property name="fld20" type="java.lang.String"/>
+      <form-property name="fld21" type="java.lang.String"/>
+      <form-property name="fld22" type="java.lang.String"/>
+      <form-property name="fld23" type="java.lang.String"/>
+      <form-property name="fld6" type="java.lang.String"/>
+      <form-property name="fld6_locale" type="java.lang.String"/>
+      <form-property name="fld7" type="java.lang.String"/>
+      <form-property name="fld7_locale" type="java.lang.String"/>
+      <form-property name="fld8" type="java.lang.String"/>
+      <form-property name="fld8_locale" type="java.lang.String"/>
+      <form-property name="fld9" type="java.lang.String"/>
+      <form-property name="fld9_locale" type="java.lang.String"/>
+      <form-property name="fld28" type="java.lang.String"/>
+      <form-property name="ln9" type="java.lang.String"/>
+      <form-property name="enu5" type="java.lang.String"/>
+    </form-bean>
+    <form-bean name="page11FormBean" extends="baseFormBean">
+      <form-property name="fld32" type="java.lang.String"/>
+      <form-property name="fld32_locale" type="java.lang.String"/>
+      <form-property name="fld33" type="java.lang.String"/>
+      <form-property name="fld33_locale" type="java.lang.String"/>
+      <form-property name="fld10" type="java.lang.String"/>
+      <form-property name="fld11" type="java.lang.String"/>
+      <form-property name="ln23" type="java.lang.String"/>
+      <form-property name="enu11" type="java.lang.String"/>
+      <form-property name="mciu1Checked" type="java.lang.String[]"/>
+      <form-property name="ln26" type="java.lang.String"/>
+    </form-bean>
+    <form-bean name="page4FormBean" extends="baseFormBean">
+      <form-property name="fld31" type="java.lang.String"/>
+      <form-property name="sfld3" type="java.lang.String"/>
+      <form-property name="sfld3List" type="java.lang.String[]"/>
+      <form-property name="sfld3LabelList" type="java.lang.String[]"/>
+      <form-property name="ln7" type="java.lang.String"/>
+      <form-property name="enu4" type="java.lang.String"/>
+    </form-bean>
+    <form-bean name="page15FormBean" extends="baseFormBean"/>
+    <form-bean name="page18FormBean" extends="baseFormBean">
+      <form-property name="fld41" type="java.lang.String"/>
+      <form-property name="fld42" type="java.lang.String"/>
+      <form-property name="fld43" type="java.lang.String"/>
+      <form-property name="fld43_locale" type="java.lang.String"/>
+      <form-property name="fld44" type="java.lang.String"/>
+      <form-property name="fld44_locale" type="java.lang.String"/>
+      <form-property name="fld45" type="java.lang.String"/>
+      <form-property name="fld45_locale" type="java.lang.String"/>
+      <form-property name="fld46" type="java.lang.String"/>
+      <form-property name="fld46_locale" type="java.lang.String"/>
+      <form-property name="fld36" type="java.lang.String"/>
+      <form-property name="fld36_locale" type="java.lang.String"/>
+      <form-property name="sfld4" type="java.lang.String"/>
+      <form-property name="sfld4List" type="java.lang.String[]"/>
+      <form-property name="sfld4LabelList" type="java.lang.String[]"/>
+      <form-property name="ln50" type="java.lang.String"/>
+      <form-property name="enu16" type="java.lang.String"/>
+    </form-bean>
+    <form-bean name="page1FormBean" extends="baseFormBean">
+      <form-property name="fld15" type="java.lang.String"/>
+      <form-property name="fld16" type="java.lang.String"/>
+      <form-property name="fld17" type="java.lang.String"/>
+      <form-property name="fld17_locale" type="java.lang.String"/>
+      <form-property name="fld18" type="java.lang.String"/>
+      <form-property name="fld18_locale" type="java.lang.String"/>
+      <form-property name="fld24" type="java.lang.String"/>
+      <form-property name="fld24_locale" type="java.lang.String"/>
+      <form-property name="fld25" type="java.lang.String"/>
+      <form-property name="fld25_locale" type="java.lang.String"/>
+      <form-property name="sfld1" type="java.lang.String"/>
+      <form-property name="sfld1List" type="java.lang.String[]"/>
+      <form-property name="sfld1LabelList" type="java.lang.String[]"/>
+      <form-property name="ln18" type="java.lang.String"/>
+      <form-property name="ln24" type="java.lang.String"/>
+      <form-property name="ln39" type="java.lang.String"/>
+      <form-property name="enu1" type="java.lang.String"/>
+    </form-bean>
+    <form-bean name="page16FormBean" extends="baseFormBean">
+      <form-property name="fld39" type="java.lang.String"/>
+      <form-property name="fld40" type="java.lang.String"/>
+      <form-property name="ln46" type="java.lang.String"/>
+      <form-property name="enu15" type="java.lang.String"/>
+    </form-bean>
+    <form-bean name="page3FormBean" extends="baseFormBean">
+      <form-property name="fld26" type="java.lang.String"/>
+      <form-property name="sfld2" type="java.lang.String"/>
+      <form-property name="sfld2List" type="java.lang.String[]"/>
+      <form-property name="sfld2LabelList" type="java.lang.String[]"/>
+      <form-property name="ln1" type="java.lang.String"/>
+      <form-property name="enu3" type="java.lang.String"/>
+    </form-bean>
+    <form-bean name="page9FormBean" extends="baseFormBean">
+      <form-property name="mciu3Checked" type="java.lang.String[]"/>
+      <form-property name="ln43" type="java.lang.String"/>
+    </form-bean>
+    <form-bean name="page2FormBean" extends="baseFormBean">
+      <form-property name="fld1" type="java.lang.String"/>
+      <form-property name="fld2" type="java.lang.String"/>
+      <form-property name="fld3" type="java.lang.String"/>
+      <form-property name="fld4" type="java.lang.String"/>
+      <form-property name="fld5" type="java.lang.String"/>
+      <form-property name="fld5_locale" type="java.lang.String"/>
+      <form-property name="fld12" type="java.lang.String"/>
+      <form-property name="fld12_locale" type="java.lang.String"/>
+      <form-property name="fld13" type="java.lang.String"/>
+      <form-property name="fld13_locale" type="java.lang.String"/>
+      <form-property name="fld14" type="java.lang.String"/>
+      <form-property name="fld14_locale" type="java.lang.String"/>
+      <form-property name="fld27" type="java.lang.String"/>
+      <form-property name="ln13" type="java.lang.String"/>
+      <form-property name="enu2" type="java.lang.String"/>
+    </form-bean>
+    <form-bean name="page17FormBean" extends="baseFormBean">
+      <form-property name="mciu4Checked" type="java.lang.String[]"/>
+      <form-property name="ln42" type="java.lang.String"/>
+      <form-property name="ln2" type="java.lang.String"/>
+    </form-bean>
+    <form-bean name="loginFormBean" type="com.webratio.struts.LoginFormBean"/>
+  </form-beans>
+  <global-exceptions>
+    <exception type="com.webratio.rtx.RTXPermissionException" handler="com.webratio.struts.exceptions.RTXPermissionExceptionHandler" key="none" path="/WRGenericError.jsp"/>
+    <exception type="java.lang.Throwable" handler="com.webratio.struts.exceptions.GenericExceptionHandler" key="none" path="/WRGenericError.jsp"/>
+  </global-exceptions>
+  <global-forwards type="org.apache.struts.action.ActionForward">
+    <forward name="start" path="/index.jsp"/>
+    <forward name="pageUnknown" path="/pageUnknown.jsp"/>
+    <forward name="soapFault" path="/soapFault.do"/>
+    <forward name="restFault" path="/restFault.do"/>
+  </global-forwards>
+  <action-mappings type="org.apache.struts.action.ActionMapping">
+    <!-- PAGE ACTIONS -->
+    <action path="/page_*" type="com.webratio.struts.actions.PageAction" name="{1}FormBean" scope="session" validate="false" parameter="{1}"/>
+    <action path="/form_*" type="com.webratio.struts.actions.PageFormAction" name="{1}FormBean" scope="session" validate="true" input="/restore_{1}.do" parameter="{1}"/>
+    <action path="/restore_*" type="com.webratio.struts.actions.RestoreContextAction" name="{1}FormBean" scope="session" input="/{1}.do" validate="false" parameter="{1}"/>
+    <!-- OPERATION ACTIONS -->
+    <action path="/operation_*" type="com.webratio.struts.actions.OperationAction" name="{1}" parameter="{1}"/>
+    <action path="/slu1" type="com.webratio.struts.actions.SOAPSolicitAction" parameter="slu1"/>
+    <action path="/eru1" type="com.webratio.struts.actions.SOAPErrorResponseAction" parameter="eru1"/>
+    <action path="/rsu1" type="com.webratio.struts.actions.SOAPResponseAction" parameter="rsu1"/>
+    <!-- WEB SERVICE ACTIONS -->
+    <action path="/wsdl" type="com.webratio.struts.actions.WSDLAction" parameter="/wsdl">
+      <set-property key="elements" value="wsv1|port1"/>
+    </action>
+    <action path="/soapFault" type="com.webratio.struts.actions.SOAPFaultAction" parameter="/soapFault" name="soapFault"/>
+    <action path="/restFault" type="com.webratio.struts.actions.RESTFaultAction" parameter="/restFault" name="restFault"/>
+    <action path="/EventosService/wsdl" type="com.webratio.struts.actions.WSDLAction" parameter="/wsdl" scope="session" validate="false">
+      <set-property key="elements" value="wsv1|port1"/>
+    </action>
+    <action path="/EventosService/mostraeventos/Area" type="com.webratio.struts.actions.RESTSolicitAction" parameter="slu1">
+      <forward name="genericError" path="/restFault.do"/>
+      <forward path="/xou1.do" name="success"/>
+    </action>
+    <!-- OTHER ACTIONS -->
+    <action path="/luceneIndexer" type="com.webratio.struts.actions.LuceneIndexerAction" parameter="/luceneIndexer"/>
+    <action name="loginFormBean" path="/prepareLogin" type="com.webratio.struts.actions.PrepareLoginAction"/>
+    <action name="loginFormBean" path="/loginAction" type="com.webratio.struts.actions.LoginAction"/>
+  </action-mappings>
+  <message-resources factory="com.webratio.struts.WRPropertyMessageResourcesFactory" parameter="ApplicationResources|en|US" null="false"/>
+</struts-config>

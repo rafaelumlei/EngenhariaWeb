@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Criar Evento">
+  <SiteView>sv4</SiteView>
+  <Secure>false</Secure>
+  <SecureFormAction>false</SecureFormAction>
+  <Localized>false</Localized>
+  <ParentContainer>sv4</ParentContainer>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv4</PermissionElement>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <SessionContextInits>
+    <SessionContextToPageInit source="UserCtxParam" target="gtu4.UserCtxParam"/>
+  </SessionContextInits>
+  <ManualLinks>
+    <ManualLink activatedOperation="cru4">ln50</ManualLink>
+    <ManualLink>ln52</ManualLink>
+    <ManualLink activatedOperation="lou3">ln54</ManualLink>
+  </ManualLinks>
+  <PageContextInitServices/>
+  <PageContextInits>
+    <PageContextInit target="sfld4_presel" value="$$NULL$$"/>
+  </PageContextInits>
+  <NonContextualIncomingLinks>page18|page18.redirect|page18.link|page18.link.redirect|ln49|kln8|kln8.redirect</NonContextualIncomingLinks>
+  <UnitIncomingLinks/>
+  <LinkSequence>ln48|ln41</LinkSequence>
+  <PageContextPropagations link="ln41">
+    <PageContextPropagation targetParam="cru4.role8.userOID" sourceUnit="gtu4" sourceParam="gtu4.UserCtxParam"/>
+  </PageContextPropagations>
+  <PageContextPropagations link="ln48">
+    <PageContextPropagation targetParam="sfld4_label" sourceUnit="seu6" sourceParam="att7Array"/>
+    <PageContextPropagation targetParam="sfld4_output" sourceUnit="seu6" sourceParam="att6Array"/>
+  </PageContextPropagations>
+  <UnitComputations refreshFormAllLinks="page18|page18.redirect|page18.link|page18.link.redirect|impl|impl.redirect|ln49|kln8|kln8.redirect">
+    <UnitComputation unit="enu16" formBased="true">
+      <RefreshForm link="ln48"/>
+    </UnitComputation>
+    <UnitComputation unit="seu6"></UnitComputation>
+    <UnitComputation unit="gtu4"></UnitComputation>
+  </UnitComputations>
+  <InitTrees>
+    <Node unit="gtu4" contextParameters="UserCtxParam" type="get">
+      <Node unit="cru4" fromLink="ln41"/>
+    </Node>
+    <Node unit="seu6">
+      <Node unit="enu16" fromLink="ln48"/>
+    </Node>
+  </InitTrees>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="enu16" preservedByForm="true">sfld4_label</PageParam>
+      <PageParam unit="enu16" preservedByForm="true">sfld4_output</PageParam>
+      <PageParam unit="enu16" preservedByForm="true">sfld4_presel</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>osp</PageParam>
+    </PageParams>
+    <NavigationAncestors>sv4</NavigationAncestors>
+    <ModelName>Criar Evento</ModelName>
+  </WRParameterService>
+</Descriptor>

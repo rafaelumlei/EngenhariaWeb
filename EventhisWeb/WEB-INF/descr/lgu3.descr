@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.session.rtx.db.LoginUnitService" name="LoginUnit">
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <Secure>false</Secure>
+    <StartsTransaction>false</StartsTransaction>
+    <CheckPermission>false</CheckPermission>
+    <Localized>false</Localized>
+    <MasterPage/>
+    <ParentContainer>area1</ParentContainer>
+    <OperationParams>
+      <Params>lgu3.password|sp|lgu3.rememberCredentials|link|osp|lgu3.username</Params>
+    </OperationParams>
+    <SessionContextInits></SessionContextInits>
+    <OutgoingLinks></OutgoingLinks>
+    <NavigationAncestors>sv2|area1</NavigationAncestors>
+    <ModelName>LoginUnit</ModelName>
+  </WRParameterService>
+</Descriptor>

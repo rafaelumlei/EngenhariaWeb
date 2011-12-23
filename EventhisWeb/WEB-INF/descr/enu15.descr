@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntryUnitService" name="Novo Comentario">
+  <FormFields>
+    <Field id="fld39" name="T&#237;tulo" type="string" subType="" localized="false"></Field>
+    <Field id="fld40" name="Corpo" type="text" subType="" localized="false"></Field>
+  </FormFields>
+  <WRValidation links="ln46">
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld39" id="mnd19" name="obrigat&#243;rio" condition=""/>
+    <ValueLengthValidationRule service="com.webratio.units.validation.ValueLengthValidationRuleService" elementId="fld39" id="vl4" name="Limite m&#237;nimo para o tamanho do t&#237;tulo" condition="" customErrorMessage="true">
+      <Predicate>min</Predicate>
+      <Value>5</Value>
+    </ValueLengthValidationRule>
+    <MandatoryValidationRule service="com.webratio.units.validation.MandatoryValidationRuleService" elementId="fld40" id="mnd18" name="obrigat&#243;rio" condition=""/>
+    <ValueLengthValidationRule service="com.webratio.units.validation.ValueLengthValidationRuleService" elementId="fld40" id="vl5" name="Limite m&#237;nimo para o tamanho do corpo" condition="" customErrorMessage="true">
+      <Predicate>min</Predicate>
+      <Value>20</Value>
+    </ValueLengthValidationRule>
+  </WRValidation>
+</Descriptor>
+ 

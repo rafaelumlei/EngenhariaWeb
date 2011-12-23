@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>page4</Target>
+  <Secure>false</Secure>
+  <SourcePage>page4</SourcePage>
+  <Source>enu4</Source>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>false</StartPageIdRequiredByTarget>
+  <ChangesAlternative>false</ChangesAlternative>
+  <TargetContextParameters/>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <ManualContextPropagations>
+    <ManualContextPropagation targetParam="acond2" sourceUnit="enu4" sourceParam="fld31"/>
+    <ManualContextPropagation targetParam="acond10" sourceUnit="enu4" sourceParam="sfld3"/>
+  </ManualContextPropagations>
+  <PreservedContextParams>
+    <Params>pwu2.block|pwu2.blockFactor|pwu2.blockWindow|pwu2.sortCriteria</Params>
+  </PreservedContextParams>
+</Descriptor>
+ 

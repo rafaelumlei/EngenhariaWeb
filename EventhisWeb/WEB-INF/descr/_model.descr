@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.ModelService" crc="Ni4wR1BTQ291bnRyeUlTT0N0eFBhcmFtR3JvdXBDdHhQYXJhbUxhbmd1YWdlSVNPQ3R4UGFyYW1Vc2VyQ3R4UGFyYW0=">
+  <WebRatioVersion>6.1.1</WebRatioVersion>
+  <WebRatioBuildId>201110131330</WebRatioBuildId>
+  <PackageName>com.webratio.webapp</PackageName>
+  <TransformerFactoryClass/>
+  <VolatileKeyPolicy/>
+  <Entity id="User" name="Utilizador" className="Utilizador" superEntity="" database="db1" duration="persistent">
+    <Attribute id="userOID" key="true" name="oid" fieldName="oid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="userName" key="false" name="userName" fieldName="userName" type="string" javaType="java.lang.String"/>
+    <Attribute id="password" key="false" name="password" fieldName="password" type="password" javaType="java.lang.String"/>
+    <Attribute id="email" key="false" name="email" fieldName="email" type="string" javaType="java.lang.String"/>
+    <Attribute id="att30" key="false" name="nome" fieldName="nome" type="string" javaType="java.lang.String"/>
+    <Attribute id="att32" key="false" name="foto" fieldName="foto" type="string" javaType="java.lang.String"/>
+    <Attribute id="att33" key="false" name="lat1" fieldName="lat1" type="float" javaType="java.lang.Double"/>
+    <Attribute id="att34" key="false" name="lon1" fieldName="lon1" type="float" javaType="java.lang.Double"/>
+    <Attribute id="att8" key="false" name="lat2" fieldName="lat2" type="float" javaType="java.lang.Double"/>
+    <Attribute id="att9" key="false" name="lon2" fieldName="lon2" type="float" javaType="java.lang.Double"/>
+    <OutgoingRoles>User2Group|User2DefaultGroup|role3|role7|role11</OutgoingRoles>
+    <InverseRoles>role3|role7</InverseRoles>
+  </Entity>
+  <Entity id="Group" name="Grupo" className="Grupo" superEntity="" database="db1" duration="persistent">
+    <Attribute id="groupOID" key="true" name="oid" fieldName="oid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="groupName" key="false" name="groupName" fieldName="groupName" type="string" javaType="java.lang.String"/>
+    <OutgoingRoles>Group2User|DefaultGroup2User|Group2DefaultModule|Group2Module</OutgoingRoles>
+    <InverseRoles>Group2User|DefaultGroup2User</InverseRoles>
+  </Entity>
+  <Entity id="Module" name="Module" className="Module" superEntity="" database="db1" duration="persistent">
+    <Attribute id="moduleOID" key="true" name="oid" fieldName="oid" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="moduleID" key="false" name="moduleID" fieldName="moduleID" type="string" javaType="java.lang.String"/>
+    <Attribute id="moduleName" key="false" name="moduleName" fieldName="moduleName" type="string" javaType="java.lang.String"/>
+    <OutgoingRoles>DefaultModule2Group|Module2Group</OutgoingRoles>
+    <InverseRoles>DefaultModule2Group|Module2Group</InverseRoles>
+  </Entity>
+  <Entity id="ent1" name="Newsletter" className="Newsletter" superEntity="" database="db1" duration="persistent">
+    <Attribute id="att2" key="false" name="titulo" fieldName="titulo" type="string" javaType="java.lang.String"/>
+    <Attribute id="att4" key="false" name="dtenvio" fieldName="dtenvio" type="timestamp" javaType="java.sql.Timestamp"/>
+    <Attribute id="att5" key="true" name="nr" fieldName="nr" type="integer" javaType="java.lang.Integer"/>
+    <OutgoingRoles>role13</OutgoingRoles>
+    <InverseRoles/>
+  </Entity>
+  <Entity id="ent2" name="Tipo" className="Tipo" superEntity="" database="db1" duration="persistent">
+    <Attribute id="att6" key="true" name="idtipo" fieldName="idtipo" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att7" key="false" name="nome" fieldName="nome" type="string" javaType="java.lang.String"/>
+    <OutgoingRoles>role1</OutgoingRoles>
+    <InverseRoles>role1</InverseRoles>
+  </Entity>
+  <Entity id="ent4" name="Comentario" className="Comentario" superEntity="" database="db1" duration="persistent">
+    <Attribute id="att15" key="true" name="idcomentario" fieldName="idcomentario" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att16" key="false" name="titulo" fieldName="titulo" type="string" javaType="java.lang.String"/>
+    <Attribute id="att17" key="false" name="texto" fieldName="texto" type="text" javaType="java.lang.String" clob="" clobFieldName="textoCLOB"/>
+    <Attribute id="att18" key="false" name="dtcom" fieldName="dtcom" type="timestamp" javaType="java.sql.Timestamp"/>
+    <OutgoingRoles>role4|role6</OutgoingRoles>
+    <InverseRoles/>
+  </Entity>
+  <Entity id="ent5" name="Evento" className="Evento" superEntity="" database="db1" duration="persistent">
+    <Attribute id="att19" key="true" name="idevento" fieldName="idevento" type="integer" javaType="java.lang.Integer"/>
+    <Attribute id="att20" key="false" name="dtfim" fieldName="dtfim" type="timestamp" javaType="java.sql.Timestamp"/>
+    <Attribute id="att21" key="false" name="dtinicio" fieldName="dtinicio" type="timestamp" javaType="java.sql.Timestamp"/>
+    <Attribute id="att22" key="false" name="titulo" fieldName="titulo" type="string" javaType="java.lang.String"/>
+    <Attribute id="att23" key="false" name="descricao" fieldName="descricao" type="string" javaType="java.lang.String"/>
+    <Attribute id="att24" key="false" name="lat" fieldName="lat" type="float" javaType="java.lang.Double"/>
+    <Attribute id="att25" key="false" name="lon" fieldName="lon" type="float" javaType="java.lang.Double"/>
+    <Attribute id="att36" key="false" name="proxnewsletter" fieldName="proxnewsletter" type="boolean" javaType="java.lang.Boolean" trueValue="" falseValue=""/>
+    <OutgoingRoles>role2|role5|role8|role12|role14</OutgoingRoles>
+    <InverseRoles>role5|role12|role14</InverseRoles>
+  </Entity>
+  <Role id="User2Group" inverseId="Group2User" source="User" target="Group" maxCard="many" fieldName="groups" derived="false" database="db1" direct="true"/>
+  <Role id="Group2User" inverseId="User2Group" source="Group" target="User" maxCard="many" fieldName="users" derived="false" database="db1" direct="false"/>
+  <Role id="User2DefaultGroup" inverseId="DefaultGroup2User" source="User" target="Group" maxCard="1" fieldName="defaultGroup" derived="false" database="db1" direct="true"/>
+  <Role id="DefaultGroup2User" inverseId="User2DefaultGroup" source="Group" target="User" maxCard="many" fieldName="defaultUsers" derived="false" database="db1" direct="false"/>
+  <Role id="Group2DefaultModule" inverseId="DefaultModule2Group" source="Group" target="Module" maxCard="1" fieldName="defaultModule" derived="false" database="db1" direct="true"/>
+  <Role id="DefaultModule2Group" inverseId="Group2DefaultModule" source="Module" target="Group" maxCard="many" fieldName="defaultGroups" derived="false" database="db1" direct="false"/>
+  <Role id="Group2Module" inverseId="Module2Group" source="Group" target="Module" maxCard="many" fieldName="modules" derived="false" database="db1" direct="true"/>
+  <Role id="Module2Group" inverseId="Group2Module" source="Module" target="Group" maxCard="many" fieldName="groups" derived="false" database="db1" direct="false"/>
+  <Role id="role1" inverseId="role2" source="ent2" target="ent5" maxCard="many" fieldName="tipoToEvento" derived="false" database="db1" direct="false"/>
+  <Role id="role2" inverseId="role1" source="ent5" target="ent2" maxCard="1" fieldName="eventoToTipo" derived="false" database="db1" direct="true"/>
+  <Role id="role3" inverseId="role4" source="User" target="ent4" maxCard="many" fieldName="utilizadorToComentario" derived="false" database="db1" direct="false"/>
+  <Role id="role4" inverseId="role3" source="ent4" target="User" maxCard="1" fieldName="comentarioToUtilizador" derived="false" database="db1" direct="true"/>
+  <Role id="role5" inverseId="role6" source="ent5" target="ent4" maxCard="many" fieldName="eventoToComentario" derived="false" database="db1" direct="false"/>
+  <Role id="role6" inverseId="role5" source="ent4" target="ent5" maxCard="1" fieldName="comentarioToEvento" derived="false" database="db1" direct="true"/>
+  <Role id="role7" inverseId="role8" source="User" target="ent5" maxCard="many" fieldName="utilizadorToEvento" derived="false" database="db1" direct="false"/>
+  <Role id="role8" inverseId="role7" source="ent5" target="User" maxCard="1" fieldName="eventoToUtilizador" derived="false" database="db1" direct="true"/>
+  <Role id="role11" inverseId="role12" source="User" target="ent5" maxCard="many" fieldName="marca" derived="false" database="db1" direct="true"/>
+  <Role id="role12" inverseId="role11" source="ent5" target="User" maxCard="many" fieldName="foimarcado" derived="false" database="db1" direct="false"/>
+  <Role id="role13" inverseId="role14" source="ent1" target="ent5" maxCard="1" fieldName="newsletterToEvento" derived="false" database="db1" direct="true"/>
+  <Role id="role14" inverseId="role13" source="ent5" target="ent1" maxCard="many" fieldName="eventoToNewsletter" derived="false" database="db1" direct="false"/>
+  <WebModel defaultLoginPage="WRGenericLogin.jsp" defaultErrorPage="WRGenericError.jsp">
+    <SiteView id="sv1" homePage="page6" name="Administrador" home="false" protected="true" loginPage="WebRatio_Default.login.jsp" errorPage="WebRatio_Default.error.jsp"/>
+    <SiteView id="sv2" homePage="page11" name="Guests" home="true" loginPage="WebRatio_Default.login.jsp" errorPage="WebRatio_Default.error.jsp"/>
+    <SiteView id="sv4" homePage="page9" name="Registados" home="false" protected="true" loginPage="WebRatio_Default.login.jsp" errorPage="WebRatio_Default.error.jsp"/>
+  </WebModel>
+  <WebServicePorts>
+    <Port path="EventosService/mostraeventos" secure="false"/>
+  </WebServicePorts>
+  <SessionParameters>
+    <SessionParameter name="GPS" type="string">ctx1</SessionParameter>
+    <SessionParameter name="CountryISOCtxParam" type="string">CountryISOCtxParam</SessionParameter>
+    <SessionParameter name="GroupCtxParam" type="string">GroupCtxParam</SessionParameter>
+    <SessionParameter name="LanguageISOCtxParam" type="string">LanguageISOCtxParam</SessionParameter>
+    <SessionParameter name="UserCtxParam" type="string">UserCtxParam</SessionParameter>
+  </SessionParameters>
+  <Databases>
+    <Database id="db1" url="jdbc:mysql://localhost:3306/eventos" schema="" index="false" indexSchema=""/>
+  </Databases>
+  <ServiceDataProviders>
+    <SMTPServer id="smtp1" name="SMTP Server" url="https://mail.google.com/" port="25" username="rafaelumlei@gmail.com" cryptedPassword="true" password="ZG9tZWRpYTEz" _sel="t"/>
+  </ServiceDataProviders>
+  <GlobalPreservedParameters></GlobalPreservedParameters>
+  <DefaultFileEncoding/>
+  <Statistics units="58" pages="15"/>
+</Descriptor>

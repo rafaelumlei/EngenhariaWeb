@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Autentica&#231;&#227;o">
+  <SiteView>sv2</SiteView>
+  <Secure>false</Secure>
+  <SecureFormAction>false</SecureFormAction>
+  <Localized>false</Localized>
+  <ParentContainer>sv2</ParentContainer>
+  <CheckPermission>false</CheckPermission>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <SessionContextInits></SessionContextInits>
+  <ManualLinks>
+    <ManualLink activatedOperation="lgu4">ln16</ManualLink>
+    <ManualLink>ln17</ManualLink>
+    <ManualLink>ln19</ManualLink>
+  </ManualLinks>
+  <PageContextInitServices/>
+  <PageContextInits></PageContextInits>
+  <NonContextualIncomingLinks>page5|page5.redirect|page5.link|page5.link.redirect</NonContextualIncomingLinks>
+  <UnitIncomingLinks/>
+  <LinkSequence/>
+  <UnitComputations refreshFormAllLinks="page5|page5.redirect|page5.link|page5.link.redirect|impl|impl.redirect">
+    <UnitComputation unit="enu6" formBased="true"></UnitComputation>
+  </UnitComputations>
+  <InitTrees>
+    <Node unit="enu6"/>
+  </InitTrees>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam>link</PageParam>
+      <PageParam>osp</PageParam>
+    </PageParams>
+    <NavigationAncestors>sv2</NavigationAncestors>
+    <ModelName>Autentica&#231;&#227;o</ModelName>
+  </WRParameterService>
+</Descriptor>

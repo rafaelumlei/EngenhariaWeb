@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.ws.rtx.ErrorResponseUnitService" name="ErroProcessamentoEventos">
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <Secure>false</Secure>
+    <StartsTransaction>false</StartsTransaction>
+    <CheckPermission>false</CheckPermission>
+    <Localized>false</Localized>
+    <MasterPage/>
+    <ParentContainer>port1</ParentContainer>
+    <OperationParams>
+      <Params>eru1.soapEnvelope|eru1.faultMessage|eru1.faultException</Params>
+    </OperationParams>
+    <SessionContextInits></SessionContextInits>
+    <OutgoingLinks></OutgoingLinks>
+    <NavigationAncestors/>
+    <ModelName>ErroProcessamentoEventos</ModelName>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,94 @@
+/********************************************/
+/*                  GENERAL                 */
+/*  Default style rules for style elements  */
+/********************************************/
+
+/* Number values alignment */
+.integer, .float, .decimal {
+	text-align: right
+}
+
+/* Headers and attribute names */
+.header {
+	text-align: left;
+	padding: 3px;
+}
+
+.value,
+.valueAlternate,
+.valueCurrent,
+.valueCurrentAlternate  {
+  padding: 5px;
+}
+
+.button {
+  border: 1px solid #999;  
+  padding: 3px 8px;
+  background: #d1d1d1;
+}
+.button:hover {
+  border: 1px solid #999;  
+  padding: 3px 8px;
+  background: #e1e1e1;
+  text-decoration: underline;
+}
+
+/* Bullets */
+.bullet,
+.bulletCurrent,
+.bulletAlternate,
+.bulletCurrentAlternate {
+	width: 10px;
+	height: 10px;
+	background-image: url('../wr-images/icons/navigate_right_10.gif');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+/* Alternate rows */
+.rowAlternate {
+  background: #F0F0F0;
+}
+
+/* Rows of current elements */
+.rowCurrent,
+.rowCurrentAlternate {
+  background: #EBF0FF;
+}
+
+/* Ascending sort links */
+.sortAscending {
+	width: 16px;
+	height: 16px;
+	background-image: url('../wr-images/icons/sort_ascending.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+/* Descending sort links */
+.sortDescending {
+	width:16px;
+	height: 16px;
+	background-image: url('../wr-images/icons/sort_descending.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+/* "Select All" link */
+.selectAll {
+	width: 16px;
+	height: 16px;
+	background-image: url('../wr-images/icons/unSelectAll.gif');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+/* "Unselect All" link */
+.unSelectAll {
+	width: 16px;
+	height: 16px;
+	background-image: url('../wr-images/icons/selectAll.gif');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+

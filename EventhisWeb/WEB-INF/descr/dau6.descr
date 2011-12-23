@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.DataUnitService" name="UtilizadorAutenticado">
+  <Query entity="User">
+    <Input id="p0" param="kcond17.userOID" type="integer" implied="false" expandStyle="in"/>
+    <Output id="userOID" name="oid"/>
+    <Output id="att33" name="lat1"/>
+    <Output id="att32" name="foto"/>
+    <Output id="att34" name="lon1"/>
+    <Output id="email" name="email"/>
+    <Output id="att9" name="lon2"/>
+    <Output id="att8" name="lat2"/>
+    <Output id="att30" name="nome"/>
+    <Output id="password" name="password"/>
+    <HQL>select a_utilizador.oid, a_utilizador.lat1, a_utilizador.foto, a_utilizador.lon1, a_utilizador.email, a_utilizador.lon2, a_utilizador.lat2, a_utilizador.nome, a_utilizador.password from Utilizador a_utilizador
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_utilizador.oid in(?)}))</Where>
+    </HQL>
+  </Query>
+</Descriptor>

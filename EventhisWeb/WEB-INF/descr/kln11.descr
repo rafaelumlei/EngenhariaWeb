@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>eru1</Target>
+  <Secure>false</Secure>
+  <Source>xou1</Source>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <ChangesAlternative>false</ChangesAlternative>
+  <TargetContextParameters/>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <ManualContextPropagations>
+    <ManualContextPropagation targetParam="eru1.faultException" sourceUnit="xou1" sourceParam="exception"/>
+    <ManualContextPropagation targetParam="eru1.faultMessage" sourceUnit="xou1" sourceParam="errorMessage"/>
+    <ManualContextPropagation targetParam="eru1.soapEnvelope" sourceUnit="xou1" sourceParam="xmlDocument"/>
+  </ManualContextPropagations>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+</Descriptor>

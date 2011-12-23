@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.MultiChoiceIndexUnitService" name="MostrarEventos">
+  <MaxResults/>
+  <Query entity="ent5">
+    <Input id="p0" param="acond11" type="float" implied="false" expandStyle="aggregate" function="min" attribute="att24"/>
+    <Input id="p1" param="acond12" type="float" implied="false" expandStyle="aggregate" function="max" attribute="att24"/>
+    <Input id="p2" param="acond13" type="float" implied="false" expandStyle="aggregate" function="min" attribute="att25"/>
+    <Input id="p3" param="acond14" type="float" implied="false" expandStyle="aggregate" function="max" attribute="att25"/>
+    <Output id="att19" name="idevento"/>
+    <Output id="att23" name="descricao"/>
+    <Output id="att20" name="dtfim"/>
+    <Output id="att21" name="dtinicio"/>
+    <Output id="att24" name="lat"/>
+    <Output id="att25" name="lon"/>
+    <Output id="att22" name="titulo"/>
+    <HQL>select a_evento.idevento, a_evento.descricao, a_evento.dtfim, a_evento.dtinicio, a_evento.lat, a_evento.lon, a_evento.titulo from Evento a_evento
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_evento.lat &gt; ?})) and (({[p1]a_evento.lat &lt; ?})) and (({[p2]a_evento.lon &gt; ?})) and (({[p3]a_evento.lon &lt; ?}))</Where>order by a_evento.dtinicio desc
+    </HQL>
+  </Query>
+  <WRValidation links="ln26"/>
+</Descriptor>

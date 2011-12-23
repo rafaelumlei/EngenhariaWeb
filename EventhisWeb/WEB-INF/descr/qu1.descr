@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.QueryUnitService" name="Retirar Eventos Da Newsletter">
+  <Database>db1</Database>
+  <Language>SQL</Language>
+  <Mode>update</Mode>
+  <Results maxResults="" blockFactor="" blockWindow=""/>
+  <QueryText xml:space="preserve" _sel="t">update evento set proxnewsletter = false where idevento &gt; 0</QueryText>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <Secure>false</Secure>
+    <StartsTransaction>false</StartsTransaction>
+    <CheckPermission>true</CheckPermission>
+    <Localized>false</Localized>
+    <MasterPage/>
+    <ParentContainer>sv1</ParentContainer>
+    <PermissionElement>sv1</PermissionElement>
+    <OperationParams>
+      <Params>sp|link|osp|var2</Params>
+    </OperationParams>
+    <SessionContextInits></SessionContextInits>
+    <OutgoingLinks>
+      <Link resultCode="success">oln10</Link>
+    </OutgoingLinks>
+    <NavigationAncestors>sv1</NavigationAncestors>
+    <ModelName>Retirar Eventos Da Newsletter</ModelName>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLocalizationService">
+  <Storage type="file"/>
+  <Locale language="en" country="US" default="true">
+    <Pattern type="decimal">#,##0.###</Pattern>
+    <Pattern type="date">M/d/yy</Pattern>
+    <Pattern type="float">#,##0.###</Pattern>
+    <Pattern type="integer">#,##0</Pattern>
+    <Pattern type="number">#,##0.###</Pattern>
+    <Pattern type="time">h:mm:ss a</Pattern>
+    <Pattern type="timestamp">M/d/yy h:mm:ss a</Pattern>
+    <Pattern type="boolean">yes|no</Pattern>
+  </Locale>
+</Descriptor>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="EstadoFavorito">
+  <MaxResults/>
+  <Query entity="ent5">
+    <Input id="p0" param="acond3" type="integer" implied="false" expandStyle="in" attribute="userOID"/>
+    <Input id="p1" param="kcond2.att19" type="integer" implied="false" expandStyle="in"/>
+    <Output id="att19" name="idevento"/>
+    <Output id="att23" name="descricao"/>
+    <Output id="role12$userOID" name="foimarcado_oid" useId="true"/>
+    <Output id="count$role12$userOID" name="count_foimarcado_oid" useId="true"/>
+    <HQL>select a_evento.idevento, a_evento.descricao, a_utilizador_role12.oid, count(a_utilizador_role12.oid) from Evento a_evento left join a_evento.foimarcado a_utilizador_role12
+      <Where defaultPolicy="fill" allImplied="false">([(a_evento.idevento in( select a_evento_2.idevento from Evento a_evento_2 inner join a_evento_2.foimarcado s_Utilizador_role12 where ({[p0]s_Utilizador_role12.oid in(?)})))]) and (({[p1]a_evento.idevento in(?)}))</Where>group by a_evento.idevento, a_evento.descricao, a_utilizador_role12.oid
+    </HQL>
+  </Query>
+</Descriptor>

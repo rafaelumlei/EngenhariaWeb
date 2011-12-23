@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>page1</Target>
+  <Secure>false</Secure>
+  <SourcePage>page16</SourcePage>
+  <Source>dau4</Source>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>false</StartPageIdRequiredByTarget>
+  <ChangesAlternative>false</ChangesAlternative>
+  <TargetContextParameters/>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <ManualContextPropagations>
+    <ManualContextPropagation sourceUnit="dau4" targetParam="par80" sourceParam="data.att19"/>
+    <ManualContextPropagation targetParam="fld16_slot" sourceUnit="dau4" sourceParam="data.att23"/>
+    <ManualContextPropagation targetParam="fld17_slot" sourceUnit="dau4" sourceParam="data.att20"/>
+    <ManualContextPropagation targetParam="fld24_slot" sourceUnit="dau4" sourceParam="data.att24"/>
+    <ManualContextPropagation targetParam="fld25_slot" sourceUnit="dau4" sourceParam="data.att25"/>
+    <ManualContextPropagation targetParam="fld15_slot" sourceUnit="dau4" sourceParam="data.att22"/>
+    <ManualContextPropagation targetParam="fld18_slot" sourceUnit="dau4" sourceParam="data.att21"/>
+    <ManualContextPropagation sourceUnit="dau4" targetParam="par138" sourceParam="data.role8_userOID"/>
+  </ManualContextPropagations>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+</Descriptor>

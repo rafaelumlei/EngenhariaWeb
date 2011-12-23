@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.ConnectUnitService" name="MarcarFavorito">
+  <Role useHQL="false">role12</Role>
+  <Source id="ent5">
+    <Query entity="ent5">
+      <Input id="p0" param="kcond4.att19" type="integer" implied="false" expandStyle="in"/>
+      <HQL>from Evento a_evento
+        <Where defaultPolicy="fill" allImplied="false">(({[p0]a_evento.idevento in(?)}))</Where>
+      </HQL>
+    </Query>
+  </Source>
+  <Target id="User">
+    <Query entity="User">
+      <Input id="p0" param="kcond6.userOID" type="integer" implied="false" expandStyle="in"/>
+      <HQL>from Utilizador a_utilizador
+        <Where defaultPolicy="fill" allImplied="false">(({[p0]a_utilizador.oid in(?)}))</Where>
+      </HQL>
+    </Query>
+  </Target>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <Secure>false</Secure>
+    <StartsTransaction>false</StartsTransaction>
+    <CheckPermission>true</CheckPermission>
+    <Localized>false</Localized>
+    <MasterPage/>
+    <ParentContainer>sv4</ParentContainer>
+    <PermissionElement>sv4</PermissionElement>
+    <OperationParams>
+      <Params>kcond4.att19|sp|kcond6.userOID|link|osp|var3|var4|var1|kcond5.att19</Params>
+    </OperationParams>
+    <SessionContextInits></SessionContextInits>
+    <SecondaryIncomingLinks>ln61</SecondaryIncomingLinks>
+    <OutgoingLinks></OutgoingLinks>
+    <NavigationAncestors>sv4</NavigationAncestors>
+    <ModelName>MarcarFavorito</ModelName>
+  </WRParameterService>
+</Descriptor>
+ 
