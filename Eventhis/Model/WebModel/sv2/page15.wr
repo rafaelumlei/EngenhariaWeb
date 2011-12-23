@@ -1,0 +1,42 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="770" gr:y="164" id="sv2#page15" name="P&#225;gina do Evento" linkOrder="sv2#page15#ln59">
+  <ContentUnits>
+    <DataUnit gr:x="14" gr:y="0" id="sv2#page15#dau3" name="Evento" entity="ent5" displayAttributes="ent5#att22 ent5#att23 rel1#role2.ent2#att7 ent5#att21 ent5#att20 ent5#att24 ent5#att25">
+      <Selector id="sv2#page15#dau3#su6" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page15#dau3#su6#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#page15#dau3#ln33" name="Link33" to="sv2#page15#pwu4" type="transport" validate="true">
+        <LinkParameter id="sv2#page15#dau3#ln33#par58" name="idevento_RoleCondition3 [idevento]" source="data.ent5#att19" target="sv2#page15#pwu4#su9#rcond3.ent5#att19"/>
+      </Link>
+    </DataUnit>
+    <PowerIndexUnit gr:x="0" gr:y="140" id="sv2#page15#pwu4" name="Coment&#225;rios" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att16 ent4#att17">
+      <Selector id="sv2#page15#pwu4#su9" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#page15#pwu4#su9#rcond3" name="RoleCondition3" predicate="in" implied="false" role="rel3#role5"/>
+      </Selector>
+      <SortAttribute attribute="ent4#att18" order="descending"/>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#page15#dau3">
+          <layout:Attribute attribute="ent5#att22" label="T&#237;tulo"/>
+          <layout:Attribute attribute="ent5#att23" label="Descri&#231;&#227;o"/>
+          <layout:Attribute attribute="rel1#role2.ent2#att7" label="Tipo do Evento"/>
+          <layout:Attribute attribute="ent5#att21" label="&#205;nicio"/>
+          <layout:Attribute attribute="ent5#att20" label="Fim"/>
+          <layout:Attribute attribute="ent5#att24" label="Latitude"/>
+          <layout:Attribute attribute="ent5#att25" label="Longitude"/>
+        </layout:Unit>
+      </layout:Cell>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#page15#pwu4">
+          <layout:Attribute attribute="ent4#att16" label="T&#237;tulo"/>
+          <layout:Attribute attribute="ent4#att17" label="Corpo"/>
+        </layout:Unit>
+      </layout:Cell>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv2#page15#ln59" name="Voltar" to="sv2#page11" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-123,105,201,133"/>
+</Page>

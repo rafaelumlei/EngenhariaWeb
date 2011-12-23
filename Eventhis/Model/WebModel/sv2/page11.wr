@@ -1,0 +1,63 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page11" name="P&#225;gina Principal Guests" landmark="false" gr:x="354" gr:y="180">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="34" id="sv2#page11#enu11" name="Zona" linkOrder="sv2#page11#enu11#ln23" fieldOrder="sv2#page11#enu11#fld11 sv2#page11#enu11#fld32 sv2#page11#enu11#fld33 sv2#page11#enu11#fld10">
+      <Field id="sv2#page11#enu11#fld32" name="Latitude Maior" type="float" modifiable="true"/>
+      <Field id="sv2#page11#enu11#fld33" name="Longitude Menor" type="float" modifiable="true"/>
+      <Link id="sv2#page11#enu11#ln23" name="Seleccionar" to="sv2#page11#mciu1" type="normal" validate="true">
+        <LinkParameter id="sv2#page11#enu11#ln23#par53" name="Latitude_Latitude1" source="sv2#page11#enu11#fld11" target="sv2#page11#mciu1#su8#acond11"/>
+        <LinkParameter id="sv2#page11#enu11#ln23#par54" name="Latitude_Latitude2" source="sv2#page11#enu11#fld32" target="sv2#page11#mciu1#su8#acond12"/>
+        <LinkParameter id="sv2#page11#enu11#ln23#par55" name="Longitude_Longitude1" source="sv2#page11#enu11#fld33" target="sv2#page11#mciu1#su8#acond13"/>
+        <LinkParameter id="sv2#page11#enu11#ln23#par56" name="Longitude_Longitude2" source="sv2#page11#enu11#fld10" target="sv2#page11#mciu1#su8#acond14"/>
+      </Link>
+      <Field id="sv2#page11#enu11#fld10" name="Longitude Maior" type="string" modifiable="true"/>
+      <Field id="sv2#page11#enu11#fld11" name="Latitude Menor" type="string" modifiable="true"/>
+    </EntryUnit>
+    <MultiChoiceIndexUnit id="sv2#page11#mciu1" entity="ent5" displayAttributes="ent5#att23 ent5#att20 ent5#att21 ent5#att24 ent5#att25 ent5#att22" gr:x="222" gr:y="0" name="MostrarEventos" linkOrder="sv2#page11#mciu1#ln26">
+      <Selector id="sv2#page11#mciu1#su8" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#page11#mciu1#su8#acond11" attributes="ent5#att24" predicate="gt" booleanOperator="or" implied="false" name="Latitude1"/>
+        <AttributesCondition id="sv2#page11#mciu1#su8#acond12" attributes="ent5#att24" predicate="lt" booleanOperator="or" implied="false" name="Latitude2"/>
+        <AttributesCondition id="sv2#page11#mciu1#su8#acond13" attributes="ent5#att25" predicate="gt" booleanOperator="or" implied="false" name="Longitude1"/>
+        <AttributesCondition id="sv2#page11#mciu1#su8#acond14" attributes="ent5#att25" predicate="lt" booleanOperator="or" implied="false" name="Longitude2"/>
+      </Selector>
+      <Link id="sv2#page11#mciu1#ln26" name="Ver Evento Detalhado" to="sv2#page15#dau3" type="normal" validate="true">
+        <LinkParameter id="sv2#page11#mciu1#ln26#par57" name="idevento (Single Row)_KeyCondition3 [idevento]" source="data[].ent5#att19" target="sv2#page15#dau3#su6#kcond3.ent5#att19"/>
+      </Link>
+      <SortAttribute attribute="ent5#att21" order="descending"/>
+    </MultiChoiceIndexUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#page11#enu11">
+          <layout:Link link="sv2#page11#enu11#ln23"/>
+          <layout:Field field="sv2#page11#enu11#fld11"/>
+          <layout:Field field="sv2#page11#enu11#fld32"/>
+          <layout:Field field="sv2#page11#enu11#fld33"/>
+          <layout:Field field="sv2#page11#enu11#fld10"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#page11#mciu1">
+          <layout:Attribute attribute="ent5#att23"/>
+          <layout:Attribute attribute="ent5#att20"/>
+          <layout:Attribute attribute="ent5#att21"/>
+          <layout:Attribute attribute="ent5#att24"/>
+          <layout:Attribute attribute="ent5#att25"/>
+          <layout:Attribute attribute="ent5#att22"/>
+          <layout:Link link="sv2#page11#mciu1#ln26"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

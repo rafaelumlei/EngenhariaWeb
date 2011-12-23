@@ -1,0 +1,72 @@
+[20 Dez 2011 19:25:10] DEBUG Executing SQL script
+[20 Dez 2011 19:25:10] INFO ================================================================================
+[20 Dez 2011 19:25:10] INFO outputPath= 'C:\WebRatio\WebRatio Personal 6.1.1\workspace\Eventhis\.Temp~\SQL.xml'
+[20 Dez 2011 19:25:10] INFO onError= 'abort'
+[20 Dez 2011 19:25:10] INFO statementSeparator= ';'
+[20 Dez 2011 19:25:10] INFO derby.system.home= 'C:\WebRatio\WebRatio Personal 6.1.1\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[20 Dez 2011 19:25:10] INFO password= ''
+[20 Dez 2011 19:25:10] INFO url= 'jdbc:mysql://localhost:3306/eventos'
+[20 Dez 2011 19:25:10] INFO username= 'root'
+[20 Dez 2011 19:25:10] INFO autoCommit= 'false'
+[20 Dez 2011 19:25:10] INFO outputLogPath= 'C:\WebRatio\WebRatio Personal 6.1.1\workspace\Eventhis\.Temp~\SQL.xml.log'
+[20 Dez 2011 19:25:10] INFO driverClass= 'com.mysql.jdbc.Driver'
+[20 Dez 2011 19:25:10] INFO encoding= ''
+[20 Dez 2011 19:25:10] INFO eventSocketPort= '50110'
+[20 Dez 2011 19:25:10] INFO sqlScript= 'C:\WebRatio\WebRatio Personal 6.1.1\workspace\Eventhis\DBScripts\Mysql_111220_163228.sql'
+[20 Dez 2011 19:25:10] INFO ================================================================================
+[20 Dez 2011 19:25:10] INFO Connecting to the Database...
+[20 Dez 2011 19:25:10] INFO Database connection estabilished
+[20 Dez 2011 19:25:10] INFO transaction isolation: 4
+[20 Dez 2011 19:25:10] DEBUG ================================================================================
+[20 Dez 2011 19:25:10] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Personal 6.1.1\workspace\Eventhis\DBScripts\Mysql_111220_163228.sql
+[20 Dez 2011 19:25:10] DEBUG Executing statement:  create table `grupo` ( `oid`  integer  not null, `groupname`  varchar(255), primary key (`oid`) )
+[20 Dez 2011 19:25:10] DEBUG Executing statement:    create table `module` ( `oid`  integer  not null, `moduleid`  varchar(255), `modulename`  varchar(255), primary key (`oid`) )
+[20 Dez 2011 19:25:10] DEBUG Executing statement:    create table `utilizador` ( `oid`  integer  not null, `email`  varchar(255), `password`  varchar(255), `nome`  varchar(255), `foto`  varchar(255), `lat`  double precision, `lon`  double precision, `lat2`  double precision, `lon2`  double precision, `username`  varchar(255), primary key (`oid`) )
+[20 Dez 2011 19:25:10] DEBUG Executing statement:    create table `newsletter` ( `nr`  integer  not null, `titulo`  varchar(255), `dtenvio`  time, primary key (`nr`) )
+[20 Dez 2011 19:25:10] DEBUG Executing statement:    create table `tipo` ( `idtipo`  integer  not null, `nome`  varchar(255), primary key (`idtipo`) )
+[20 Dez 2011 19:25:10] DEBUG Executing statement:    create table `comentario` ( `idcomentario`  integer  not null, `titulo`  varchar(255), `texto`  varchar(255), `dtcom`  time, primary key (`idcomentario`) )
+[20 Dez 2011 19:25:10] DEBUG Executing statement:    create table `evento` ( `idevento`  integer  not null, `dtfim`  time, `dtinicio`  time, `titulo`  varchar(255), `descricao`  varchar(255), `lat`  double precision, `lon`  double precision, `proxnewsletter`  bit, primary key (`idevento`) )
+[20 Dez 2011 19:25:10] DEBUG Executing statement:    create table `login` ( `idlogin`  integer  not null, `datelogin`  varchar(255), `cookie`  bit, `expdate`  varchar(255), `stringsessao`  varchar(255), primary key (`idlogin`) )
+[20 Dez 2011 19:25:10] DEBUG Executing statement:    alter table `grupo`  add column  `module_oid`  integer
+[20 Dez 2011 19:25:10] DEBUG Executing statement:  alter table `grupo`   add index fk_grupo_module (`module_oid`), add constraint fk_grupo_module foreign key (`module_oid`) references `module` (`oid`)
+[20 Dez 2011 19:25:10] DEBUG Executing statement:  create index `idx_grupo_module` on `grupo`(`module_oid`)
+[20 Dez 2011 19:25:10] DEBUG Executing statement:    create table `group_module` ( `grupo_oid`  integer not null, `module_oid`  integer not null, primary key (`grupo_oid`, `module_oid`) )
+[20 Dez 2011 19:25:10] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_grupo (`grupo_oid`), add constraint fk_group_module_grupo foreign key (`grupo_oid`) references `grupo` (`oid`)
+[20 Dez 2011 19:25:10] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_module (`module_oid`), add constraint fk_group_module_module foreign key (`module_oid`) references `module` (`oid`)
+[20 Dez 2011 19:25:10] DEBUG Executing statement:  create index `idx_group_module_grupo` on `group_module`(`grupo_oid`)
+[20 Dez 2011 19:25:10] DEBUG Executing statement:  create index `idx_group_module_module` on `group_module`(`module_oid`)
+[20 Dez 2011 19:25:10] DEBUG Executing statement:    alter table `utilizador`  add column  `grupo_oid`  integer
+[20 Dez 2011 19:25:10] DEBUG Executing statement:  alter table `utilizador`   add index fk_utilizador_grupo (`grupo_oid`), add constraint fk_utilizador_grupo foreign key (`grupo_oid`) references `grupo` (`oid`)
+[20 Dez 2011 19:25:10] DEBUG Executing statement:  create index `idx_utilizador_grupo` on `utilizador`(`grupo_oid`)
+[20 Dez 2011 19:25:10] DEBUG Executing statement:    create table `user_group` ( `utilizador_oid`  integer not null, `grupo_oid`  integer not null, primary key (`utilizador_oid`, `grupo_oid`) )
+[20 Dez 2011 19:25:10] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_utilizador (`utilizador_oid`), add constraint fk_user_group_utilizador foreign key (`utilizador_oid`) references `utilizador` (`oid`)
+[20 Dez 2011 19:25:10] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_grupo (`grupo_oid`), add constraint fk_user_group_grupo foreign key (`grupo_oid`) references `grupo` (`oid`)
+[20 Dez 2011 19:25:10] DEBUG Executing statement:  create index `idx_user_group_utilizador` on `user_group`(`utilizador_oid`)
+[20 Dez 2011 19:25:10] DEBUG Executing statement:  create index `idx_user_group_grupo` on `user_group`(`grupo_oid`)
+[20 Dez 2011 19:25:10] DEBUG Executing statement:    alter table `evento`  add column  `tipo_idtipo`  integer
+[20 Dez 2011 19:25:10] DEBUG Executing statement:  alter table `evento`   add index fk_evento_tipo (`tipo_idtipo`), add constraint fk_evento_tipo foreign key (`tipo_idtipo`) references `tipo` (`idtipo`)
+[20 Dez 2011 19:25:11] DEBUG Executing statement:  create index `idx_evento_tipo` on `evento`(`tipo_idtipo`)
+[20 Dez 2011 19:25:11] DEBUG Executing statement:    alter table `comentario`  add column  `utilizador_oid`  integer
+[20 Dez 2011 19:25:11] DEBUG Executing statement:  alter table `comentario`   add index fk_comentario_utilizador (`utilizador_oid`), add constraint fk_comentario_utilizador foreign key (`utilizador_oid`) references `utilizador` (`oid`)
+[20 Dez 2011 19:25:11] DEBUG Executing statement:  create index `idx_comentario_utilizador` on `comentario`(`utilizador_oid`)
+[20 Dez 2011 19:25:11] DEBUG Executing statement:    alter table `comentario`  add column  `evento_idevento`  integer
+[20 Dez 2011 19:25:11] DEBUG Executing statement:  alter table `comentario`   add index fk_comentario_evento (`evento_idevento`), add constraint fk_comentario_evento foreign key (`evento_idevento`) references `evento` (`idevento`)
+[20 Dez 2011 19:25:11] DEBUG Executing statement:  create index `idx_comentario_evento` on `comentario`(`evento_idevento`)
+[20 Dez 2011 19:25:11] DEBUG Executing statement:    alter table `evento`  add column  `utilizador_oid`  integer
+[20 Dez 2011 19:25:11] DEBUG Executing statement:  alter table `evento`   add index fk_evento_utilizador (`utilizador_oid`), add constraint fk_evento_utilizador foreign key (`utilizador_oid`) references `utilizador` (`oid`)
+[20 Dez 2011 19:25:11] DEBUG Executing statement:  create index `idx_evento_utilizador` on `evento`(`utilizador_oid`)
+[20 Dez 2011 19:25:11] DEBUG Executing statement:    alter table `login`  add column  `utilizador_oid`  integer
+[20 Dez 2011 19:25:11] DEBUG Executing statement:  alter table `login`   add index fk_login_utilizador (`utilizador_oid`), add constraint fk_login_utilizador foreign key (`utilizador_oid`) references `utilizador` (`oid`)
+[20 Dez 2011 19:25:11] DEBUG Executing statement:  create index `idx_login_utilizador` on `login`(`utilizador_oid`)
+[20 Dez 2011 19:25:11] DEBUG Executing statement:    create table `favoritos` ( `utilizador_oid`  integer not null, `evento_idevento`  integer not null, primary key (`utilizador_oid`, `evento_idevento`) )
+[20 Dez 2011 19:25:11] DEBUG Executing statement:  alter table `favoritos`   add index fk_favoritos_utilizador (`utilizador_oid`), add constraint fk_favoritos_utilizador foreign key (`utilizador_oid`) references `utilizador` (`oid`)
+[20 Dez 2011 19:25:11] DEBUG Executing statement:  alter table `favoritos`   add index fk_favoritos_evento (`evento_idevento`), add constraint fk_favoritos_evento foreign key (`evento_idevento`) references `evento` (`idevento`)
+[20 Dez 2011 19:25:11] DEBUG Executing statement:  create index `idx_favoritos_utilizador` on `favoritos`(`utilizador_oid`)
+[20 Dez 2011 19:25:11] DEBUG Executing statement:  create index `idx_favoritos_evento` on `favoritos`(`evento_idevento`)
+[20 Dez 2011 19:25:11] DEBUG Executing statement:    alter table `newsletter`  add column  `evento_idevento`  integer
+[20 Dez 2011 19:25:11] DEBUG Executing statement:  alter table `newsletter`   add index fk_newsletter_evento (`evento_idevento`), add constraint fk_newsletter_evento foreign key (`evento_idevento`) references `evento` (`idevento`)
+[20 Dez 2011 19:25:11] DEBUG Executing statement:  create index `idx_newsletter_evento` on `newsletter`(`evento_idevento`)
+[20 Dez 2011 19:25:11] DEBUG ================================================================================
+[20 Dez 2011 19:25:11] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[20 Dez 2011 19:25:11] INFO Database connection closed
+[20 Dez 2011 19:25:11] DEBUG Total time: 1269 milliseconds

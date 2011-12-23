@@ -1,0 +1,60 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="264" gr:y="164" id="sv4#page9" name="P&#225;gina Principal Registados" linkOrder="sv4#page9#ln11 sv4#page9#ln40 sv4#page9#ln49 sv4#page9#ln29">
+  <ContentUnits>
+    <MultiChoiceIndexUnit id="sv4#page9#mciu3" name="MostrarEventos" gr:x="420" gr:y="0" entity="ent5" displayAttributes="ent5#att22 ent5#att23 ent5#att21 ent5#att20 ent5#att24 ent5#att25" linkOrder="sv4#page9#mciu3#ln43" customDescriptor="false">
+      <Selector id="sv4#page9#mciu3#su13" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv4#page9#mciu3#su13#acond20" name="Latitude Menor" attributes="ent5#att24" predicate="gt" booleanOperator="or" implied="false"/>
+        <AttributesCondition id="sv4#page9#mciu3#su13#acond21" name="LatitudeMaior" attributes="ent5#att24" predicate="lt" booleanOperator="or" implied="false"/>
+        <AttributesCondition id="sv4#page9#mciu3#su13#acond22" name="Longitude Menor" attributes="ent5#att25" predicate="gt" booleanOperator="or" implied="false"/>
+        <AttributesCondition id="sv4#page9#mciu3#su13#acond23" name="Longitude Maior" attributes="ent5#att25" predicate="lt" booleanOperator="or" implied="false"/>
+      </Selector>
+      <SortAttribute attribute="ent5#att21" order="descending"/>
+      <Link id="sv4#page9#mciu3#ln43" name="Ver Evento Detalhado" to="sv4#page16#dau4" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="162,2,-270,87;161,-84,-271,1"/>
+    </MultiChoiceIndexUnit>
+    <GetUnit gr:x="0" gr:y="30" id="sv4#page9#gtu3" name="GetLoggedUser" contextParameters="UserCtxParam">
+      <Link id="sv4#page9#gtu3#ln36" name="Link36" to="sv4#page9#dau2" type="transport" validate="true">
+        <LinkParameter id="sv4#page9#gtu3#ln36#par35" name="UserCtxParam.oid_KeyCondition11 [oid]" source="sv4#page9#gtu3.UserCtxParam" target="sv4#page9#dau2#su2#kcond11.userOID"/>
+      </Link>
+    </GetUnit>
+    <DataUnit gr:x="180" gr:y="20" id="sv4#page9#dau2" name="Dados Iniciais" entity="User" displayAttributes="User#att33 User#att8 User#att34 User#att9">
+      <Selector id="sv4#page9#dau2#su2" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#page9#dau2#su2#kcond11" name="KeyCondition11" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv4#page9#dau2#ln4" name="Link32" to="sv4#page9#mciu3" type="transport" validate="true">
+        <LinkParameter id="sv4#page9#dau2#ln4#par29" name="lat1_Latitude Menor" source="data.User#att33" target="sv4#page9#mciu3#su13#acond20"/>
+        <LinkParameter id="sv4#page9#dau2#ln4#par32" name="lat2_LatitudeMaior" source="data.User#att8" target="sv4#page9#mciu3#su13#acond21"/>
+        <LinkParameter id="sv4#page9#dau2#ln4#par33" name="lon2_Longitude Maior" source="data.User#att9" target="sv4#page9#mciu3#su13#acond23"/>
+        <LinkParameter id="sv4#page9#dau2#ln4#par34" name="lat1_Longitude Menor" source="data.User#att34" target="sv4#page9#mciu3#su13#acond22"/>
+      </Link>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv4#page9#mciu3">
+          <layout:Link link="sv4#page9#mciu3#ln43"/>
+          <layout:Attribute attribute="ent5#att22" label="T&#237;tulo"/>
+          <layout:Attribute attribute="ent5#att23" label="Descri&#231;&#227;o"/>
+          <layout:Attribute attribute="ent5#att21" label="&#205;nicio"/>
+          <layout:Attribute attribute="ent5#att20" label="Fim"/>
+          <layout:Attribute attribute="ent5#att24" label="Latitude"/>
+          <layout:Attribute attribute="ent5#att25" label="Longitude"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell>
+        <layout:Unit unitId="sv4#page9#dau2">
+          <layout:Attribute attribute="User#att33" label="Latitude Menor"/>
+          <layout:Attribute attribute="User#att8" label="Latitude Maior"/>
+          <layout:Attribute attribute="User#att34" label="Longitude Menor"/>
+          <layout:Attribute attribute="User#att9" label="Longitude Maior"/>
+        </layout:Unit>
+      </layout:Cell>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv4#page9#ln11" name="Log Out" to="sv4#lou3" type="normal" validate="true"/>
+  <Link id="sv4#page9#ln40" name="Ver Favoritos" to="sv4#page17" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="51,191,-7,-151"/>
+  <Link id="sv4#page9#ln49" name="Criar Evento" to="sv4#page18" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-188,232,72,-171"/>
+  <ConditionExpression id="sv4#page9#cexpr1" name="NaoMostrarInfoUser">
+    <TextValue xml:space="preserve">return false</TextValue>
+  </ConditionExpression>
+  <Link id="sv4#page9#ln29" name="Alterar Informa&#231;&#227;o de Registo" to="sv4#page2" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

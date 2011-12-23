@@ -1,0 +1,25 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="470" gr:y="400" id="sv1#page7" name="Erro Enviar Email" linkOrder="sv1#page7#ln44">
+  <ContentUnits>
+    <MultiMessageUnit id="sv1#page7#mssu3" name="Falhou" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">O Envio dos emails falhou.</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv1#page7#ln44" name="Voltar" to="sv1#page6" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-4,-85,-33,234"/>
+</Page>

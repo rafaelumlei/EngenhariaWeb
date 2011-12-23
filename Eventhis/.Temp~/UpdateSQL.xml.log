@@ -1,0 +1,27 @@
+[20 Dez 2011 16:07:15] DEBUG Executing SQL script
+[20 Dez 2011 16:07:15] INFO ================================================================================
+[20 Dez 2011 16:07:15] INFO outputPath= 'C:\WebRatio\WebRatio Personal 6.1.1\workspace\Eventhis\.Temp~\UpdateSQL.xml'
+[20 Dez 2011 16:07:15] INFO onError= 'continue'
+[20 Dez 2011 16:07:15] INFO statementSeparator= ';'
+[20 Dez 2011 16:07:15] INFO derby.system.home= 'C:\WebRatio\WebRatio Personal 6.1.1\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[20 Dez 2011 16:07:15] INFO password= ''
+[20 Dez 2011 16:07:15] INFO url= 'jdbc:mysql://localhost:3306/eventos'
+[20 Dez 2011 16:07:15] INFO username= 'root'
+[20 Dez 2011 16:07:15] INFO autoCommit= 'false'
+[20 Dez 2011 16:07:15] INFO outputLogPath= 'C:\WebRatio\WebRatio Personal 6.1.1\workspace\Eventhis\.Temp~\UpdateSQL.xml.log'
+[20 Dez 2011 16:07:15] INFO driverClass= 'com.mysql.jdbc.Driver'
+[20 Dez 2011 16:07:15] INFO encoding= ''
+[20 Dez 2011 16:07:15] INFO eventSocketPort= '63467'
+[20 Dez 2011 16:07:15] INFO sqlScript= 'C:\WebRatio\WebRatio Personal 6.1.1\workspace\Eventhis\.Temp~\UpdateSQL.sql'
+[20 Dez 2011 16:07:15] INFO ================================================================================
+[20 Dez 2011 16:07:15] INFO Connecting to the Database...
+[20 Dez 2011 16:07:15] INFO Database connection estabilished
+[20 Dez 2011 16:07:15] INFO transaction isolation: 4
+[20 Dez 2011 16:07:15] DEBUG ================================================================================
+[20 Dez 2011 16:07:15] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Personal 6.1.1\workspace\Eventhis\.Temp~\UpdateSQL.sql
+[20 Dez 2011 16:07:15] DEBUG Executing statement:  alter table `utilizador`  add column  `lat2`  double precision
+[20 Dez 2011 16:07:15] DEBUG Executing statement:  alter table `utilizador`  add column  `lon2`  double precision
+[20 Dez 2011 16:07:15] DEBUG ================================================================================
+[20 Dez 2011 16:07:16] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[20 Dez 2011 16:07:16] INFO Database connection closed
+[20 Dez 2011 16:07:16] DEBUG Total time: 1032 milliseconds

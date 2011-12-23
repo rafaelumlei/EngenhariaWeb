@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="web.launchType">
+<stringAttribute key="com.webratio.ide.debug.core.USE_CUSTOM_PROPERTIES" value=""/>
+<stringAttribute key="com.webratio.ide.debug.core.WEB_APPLICATION_HOST" value="localhost"/>
+<stringAttribute key="com.webratio.ide.debug.core.WEB_APPLICATION_NAME" value="Eventhis"/>
+<stringAttribute key="com.webratio.ide.debug.core.WEB_APPLICATION_PORT" value="8080"/>
+<stringAttribute key="com.webratio.ide.debug.core.WEB_APPLICATION_PREFERRED_DEBUG_PORT" value=""/>
+<stringAttribute key="com.webratio.ide.debug.core.WEB_PROJECT" value="Eventhis"/>
+</launchConfiguration>

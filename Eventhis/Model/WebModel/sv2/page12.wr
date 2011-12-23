@@ -1,0 +1,103 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page12" name="P&#225;gina de Registo" gr:x="130" gr:y="380" linkOrder="sv2#page12#ln58">
+  <ContentUnits>
+    <EntryUnit id="sv2#page12#enu5" name="Novo Utilizador" linkOrder="sv2#page12#enu5#ln9" gr:x="0" gr:y="0" fieldOrder="sv2#page12#enu5#fld22 sv2#page12#enu5#fld19 sv2#page12#enu5#fld21 sv2#page12#enu5#fld20 sv2#page12#enu5#fld28 sv2#page12#enu5#fld23 sv2#page12#enu5#fld6 sv2#page12#enu5#fld7 sv2#page12#enu5#fld8 sv2#page12#enu5#fld9">
+      <Field id="sv2#page12#enu5#fld19" name="Username " type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv2#page12#enu5#fld19#mnd17" name="obrigat&#243;rio"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page12#enu5#fld20" name="Password" type="password" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv2#page12#enu5#fld20#mnd9" name="obrigat&#243;rio"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page12#enu5#fld21" name="Email" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv2#page12#enu5#fld21#mnd16" name="obrigat&#243;rio"/>
+          <EMailValidationRule id="sv2#page12#enu5#fld21#email2" name="O campo email deve ser um email" errorMessage="O conte&#250;do do campo n&#227;o &#233; um email."/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page12#enu5#fld22" name="Nome" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv2#page12#enu5#fld22#mnd10" name="obrigat&#243;rio"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page12#enu5#fld23" name="Link Fotografia" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv2#page12#enu5#fld23#mnd13" name="obrigat&#243;rio"/>
+        </VRules>
+      </Field>
+      <Link id="sv2#page12#enu5#ln9" name="Sign Up" to="sv2#cru2" type="normal" validate="true">
+        <LinkParameter id="sv2#page12#enu5#ln9#par18" name="email_email" source="sv2#page12#enu5#fld21" target="sv2#cru2.email"/>
+        <LinkParameter id="sv2#page12#enu5#ln9#par19" name="foto_foto" source="sv2#page12#enu5#fld23" target="sv2#cru2.User#att32"/>
+        <LinkParameter id="sv2#page12#enu5#ln9#par20" name="2_Grupo.oid(defaultGroup)" target="sv2#cru2.User2DefaultGroup.groupOID" sourceValue="1"/>
+        <LinkParameter id="sv2#page12#enu5#ln9#par21" name="lat_lat" source="sv2#page12#enu5#fld6" target="sv2#cru2.User#att33"/>
+        <LinkParameter id="sv2#page12#enu5#ln9#par22" name="lon_lon" source="sv2#page12#enu5#fld7" target="sv2#cru2.User#att34"/>
+        <LinkParameter id="sv2#page12#enu5#ln9#par23" name="nome_nome" source="sv2#page12#enu5#fld22" target="sv2#cru2.User#att30"/>
+        <LinkParameter id="sv2#page12#enu5#ln9#par24" name="NULL_oid" target="sv2#cru2.userOID" sourceValue="NULL"/>
+        <LinkParameter id="sv2#page12#enu5#ln9#par25" name="password_password" source="sv2#page12#enu5#fld20" target="sv2#cru2.password"/>
+        <LinkParameter id="sv2#page12#enu5#ln9#par26" name="userName_userName" source="sv2#page12#enu5#fld19" target="sv2#cru2.userName"/>
+        <LinkParameter id="sv2#page12#enu5#ln9#par30" name="Latitude Maior_lat2" source="sv2#page12#enu5#fld8" target="sv2#cru2.User#att8"/>
+        <LinkParameter id="sv2#page12#enu5#ln9#par31" name="Longitude Maior_lon2" source="sv2#page12#enu5#fld9" target="sv2#cru2.User#att9"/>
+      </Link>
+      <Field id="sv2#page12#enu5#fld6" name="Latitude Menor" type="float" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv2#page12#enu5#fld6#mnd14" name="obrigat&#243;rio"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page12#enu5#fld7" name="Longitude Menor" type="float" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv2#page12#enu5#fld7#mnd11" name="obrigat&#243;rio"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page12#enu5#fld8" name="Latitude Maior" type="float" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv2#page12#enu5#fld8#mnd15" name="obrigat&#243;rio"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page12#enu5#fld9" name="Longitude Maior" type="float" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv2#page12#enu5#fld9#mnd12" name="obrigat&#243;rio"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page12#enu5#fld28" name="Reintroduza a Password" type="password" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv2#page12#enu5#fld28#mnd8" name="obrigat&#243;rio"/>
+          <CompareValidationRule id="sv2#page12#enu5#fld28#cmp3" name="As duas passwords devem ser iguais" predicate="eq" ignoreCase="false" valueField="sv2#page12#enu5#fld20" errorMessage="As duas passwords inseridas n&#227;o coincidem."/>
+        </VRules>
+      </Field>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#page12#enu5">
+          <layout:Link link="sv2#page12#enu5#ln9"/>
+          <layout:Field field="sv2#page12#enu5#fld22"/>
+          <layout:Field field="sv2#page12#enu5#fld19"/>
+          <layout:Field field="sv2#page12#enu5#fld21"/>
+          <layout:Field field="sv2#page12#enu5#fld20"/>
+          <layout:Field field="sv2#page12#enu5#fld28"/>
+          <layout:Field field="sv2#page12#enu5#fld23"/>
+          <layout:Field field="sv2#page12#enu5#fld6"/>
+          <layout:Field field="sv2#page12#enu5#fld7"/>
+          <layout:Field field="sv2#page12#enu5#fld8"/>
+          <layout:Field field="sv2#page12#enu5#fld9"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv2#page12#ln58" name="Voltar" to="sv2#page11" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

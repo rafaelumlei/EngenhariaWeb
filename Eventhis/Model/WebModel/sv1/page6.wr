@@ -1,0 +1,76 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="120" gr:y="44" id="sv1#page6" name="Enviar Newsletter" linkOrder="sv1#page6#ln64">
+  <ContentUnits>
+    <IndexUnit gr:x="14" gr:y="0" id="sv1#page6#inu1" name="Eventos da Newsletter" entity="ent5" displayAttributes="ent5#att23 ent5#att20 ent5#att21 ent5#att24 ent5#att25 ent5#att22">
+      <Selector id="sv1#page6#inu1#su21" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#page6#inu1#su21#acond4" name="Devem ser para a Newsletter" predicate="eq" booleanOperator="or" implied="false" attributes="ent5#att36" value="true"/>
+      </Selector>
+    </IndexUnit>
+    <MultiMessageUnit gr:x="724" gr:y="0" id="sv1#page6#mssu1" name="Mensagem">
+      <Message xml:space="preserve">Bem Vindo Admin!</Message>
+    </MultiMessageUnit>
+    <EntryUnit gr:x="134" gr:y="130" id="sv1#page6#enu7" name="Enviar Newsletter" linkOrder="sv1#page6#enu7#ln21">
+      <Field id="sv1#page6#enu7#fld37" name="T&#237;tulo" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv1#page6#enu7#fld37#mnd28" name="obrigat&#243;rio"/>
+        </VRules>
+      </Field>
+      <Link id="sv1#page6#enu7#ln21" name="Enviar Email" to="sv1#cru1" type="normal" validate="true">
+        <LinkParameter id="sv1#page6#enu7#ln21#par51" name="NULL_nr" sourceValue="NULL" target="sv1#cru1.ent1#att5"/>
+        <LinkParameter id="sv1#page6#enu7#ln21#par52" name="titulo_titulo" source="sv1#page6#enu7#fld37" target="sv1#cru1.ent1#att2"/>
+      </Link>
+    </EntryUnit>
+    <TimeUnit gr:x="0" gr:y="126" id="sv1#page6#tmu2" name="Tempo">
+      <Link id="sv1#page6#tmu2#ln22" name="Link22" to="sv1#cru1" type="transport" validate="true">
+        <LinkParameter id="sv1#page6#tmu2#ln22#par69" name="Current/Input Timestamp_dtenvio" source="currentTimestamp" target="sv1#cru1.ent1#att4"/>
+      </Link>
+    </TimeUnit>
+    <SelectorUnit gr:x="674" gr:y="140" id="sv1#page6#seu4" name="Eventos Para Enviar Via Email" entity="ent5">
+      <Selector id="sv1#page6#seu4#su23" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#page6#seu4#su23#acond5" name="newsletter?" predicate="eq" booleanOperator="or" implied="false" attributes="ent5#att36" value="true"/>
+      </Selector>
+      <Link id="sv1#page6#seu4#ln37" name="Link37" to="sv1#mlu1" type="transport" validate="true">
+        <LinkParameter id="sv1#page6#seu4#ln37#par100" name="descricao_descricao" source="ent5#att23Array" target="sv1#mlu1.descricao"/>
+        <LinkParameter id="sv1#page6#seu4#ln37#par101" name="titulo_titulo" source="ent5#att22Array" target="sv1#mlu1.titulo"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit gr:x="424" gr:y="140" id="sv1#page6#seu5" name="Utilizadores para enviar o email" entity="User">
+      <Link id="sv1#page6#seu5#ln35" name="Link35" to="sv1#mlu1" type="transport" validate="true">
+        <LinkParameter id="sv1#page6#seu5#ln35#par70" name="email_Bcc" source="emailArray" target="sv1#mlu1.bcc"/>
+        <LinkParameter id="sv1#page6#seu5#ln35#par71" name="email_To" source="emailArray" target="sv1#mlu1.to"/>
+        <LinkParameter id="sv1#page6#seu5#ln35#par102" name="nome_nome" source="User#att30Array" target="sv1#mlu1.nome"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#page6#mssu1"/>
+      </layout:Cell>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#page6#inu1">
+          <layout:Attribute attribute="ent5#att23"/>
+          <layout:Attribute attribute="ent5#att20"/>
+          <layout:Attribute attribute="ent5#att21"/>
+          <layout:Attribute attribute="ent5#att24"/>
+          <layout:Attribute attribute="ent5#att25"/>
+          <layout:Attribute attribute="ent5#att22"/>
+        </layout:Unit>
+      </layout:Cell>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#page6#enu7" layout:unitVisibilityCondition="sv1#page6#cexpr5" layout:unitVisibilityConditionNegated="true">
+          <layout:Field field="sv1#page6#enu7#fld37"/>
+          <layout:Link link="sv1#page6#enu7#ln21"/>
+        </layout:Unit>
+      </layout:Cell>
+    </layout:Row>
+  </layout:Grid>
+  <Variable id="sv1#page6#var2" name="ExistemNewslwettersParaEnviar" type="boolean" unitId="sv1#page6#inu1" parameter="data[].ent5#att22"/>
+  <ConditionExpression id="sv1#page6#cexpr5" name="Vis&#237;velEnviarNewsletter">
+    <TextValue xml:space="preserve">return (ExistemNewslwettersParaEnviar == null)</TextValue>
+  </ConditionExpression>
+  <Link id="sv1#page6#ln64" name="Log Out" to="sv1#lou1" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

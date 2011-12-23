@@ -1,0 +1,57 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page4" name="Pesquisar Eventos" landmark="true" gr:x="194" gr:y="-56">
+  <ContentUnits>
+    <EntryUnit id="sv2#page4#enu4" name="Pesquisar Eventos" linkOrder="sv2#page4#enu4#ln7" gr:x="190" gr:y="20">
+      <Field id="sv2#page4#enu4#fld31" name="Evento" type="string" modifiable="true" contentType="text/plain"/>
+      <Link id="sv2#page4#enu4#ln7" name="Pesquisar" to="sv2#page4#pwu2" type="normal" validate="true" preserveForm="true">
+        <LinkParameter id="sv2#page4#enu4#ln7#par7" name="Evento_AttCondition1" source="sv2#page4#enu4#fld31" target="sv2#page4#pwu2#su4#acond2"/>
+        <LinkParameter id="sv2#page4#enu4#ln7#par106" name="TipoEvento_AttCondition10" source="sv2#page4#enu4#sfld3" target="sv2#page4#pwu2#su4#acond10"/>
+      </Link>
+      <SelectionField id="sv2#page4#enu4#sfld3" type="string" name="TipoEvento"/>
+    </EntryUnit>
+    <SelectorUnit id="sv2#page4#seu3" name="Tipos" gr:x="0" gr:y="10" entity="ent2" distinctAttributes="ent2#att6 ent2#att7">
+      <Link id="sv2#page4#seu3#ln10" name="Link18" to="sv2#page4#enu4" type="transport" validate="true">
+        <LinkParameter id="sv2#page4#seu3#ln10#par10" name="$$NULL$$_TipoEvento - Preselection" target="sv2#page4#enu4#sfld3_presel" sourceValue="$$NULL$$"/>
+        <LinkParameter id="sv2#page4#seu3#ln10#par11" name="Tipo de Evento_TipoEvento [label]" source="ent2#att7Array" target="sv2#page4#enu4#sfld3_label"/>
+        <LinkParameter id="sv2#page4#seu3#ln10#par12" name="nome_TipoEvento [output]" source="ent2#att6Array" target="sv2#page4#enu4#sfld3_output"/>
+      </Link>
+    </SelectorUnit>
+    <PowerIndexUnit id="sv2#page4#pwu2" name="Resultados" gr:x="430" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="ent5#att22 ent5#att23 ent5#att21 ent5#att20 ent5#att24 ent5#att25" linkOrder="sv2#page4#pwu2#ln27">
+      <Selector id="sv2#page4#pwu2#su4" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#page4#pwu2#su4#acond2" name="Descricao Titulo" predicate="contains" booleanOperator="or" implied="false" attributes="ent5#att22 ent5#att23" ignoreCase="false"/>
+        <AttributesCondition id="sv2#page4#pwu2#su4#acond10" name="Tipo" predicate="eq" booleanOperator="or" implied="true" attributes="rel1#role2.ent2#att6"/>
+      </Selector>
+      <SortAttribute attribute="ent5#att21" order="descending"/>
+      <Link id="sv2#page4#pwu2#ln27" name="Ver Evento Detalhado" to="sv2#page15#dau3" type="normal" validate="true">
+        <LinkParameter id="sv2#page4#pwu2#ln27#par104" name="idevento_KeyCondition3 [idevento]" source="data[].ent5#att19" target="sv2#page15#dau3#su6#kcond3.ent5#att19"/>
+      </Link>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#page4#enu4">
+          <layout:Link link="sv2#page4#enu4#ln7"/>
+          <layout:Field field="sv2#page4#enu4#fld31"/>
+          <layout:Field field="sv2#page4#enu4#sfld3"/>
+        </layout:Unit>
+      </layout:Cell>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#page4#pwu2">
+          <layout:Link link="sv2#page4#pwu2#ln27"/>
+          <layout:Link link="sv2#page4#pwu2ent5#att21"/>
+          <layout:Attribute attribute="ent5#att22" label="T&#237;tulo"/>
+          <layout:Attribute attribute="ent5#att23" label="Descri&#231;&#227;o"/>
+          <layout:Attribute attribute="ent5#att21" label="&#237;nicio"/>
+          <layout:Attribute attribute="ent5#att20" label="Fim"/>
+          <layout:Attribute attribute="ent5#att24" label="Latitude"/>
+          <layout:Attribute attribute="ent5#att25" label="Longitude"/>
+        </layout:Unit>
+      </layout:Cell>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

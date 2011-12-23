@@ -1,0 +1,111 @@
+[22 Dez 2011 13:50:02] Building database metadata model
+[22 Dez 2011 13:50:02] Properties: {partialRefresh=false, processColumnsUsingSelect=, outputPath=C:\WebRatio\WebRatio Personal 6.1.1\workspace\Eventhis\.Temp~\DB.xml, schemaRegex=null, readProcedures=null, includeViews=true, derby.system.home=C:\WebRatio\WebRatio Personal 6.1.1\workspace\.metadata\.plugins\com.webratio.commons.db\derby, includePrimaryKeys=true, url=jdbc:mysql://localhost:3306/eventos, eventSocketClient=com.webratio.commons.net.EventSocketClient@c3c749, includeTables=true, username=root, tableRegex=null, outputLogPath=C:\WebRatio\WebRatio Personal 6.1.1\workspace\Eventhis\.Temp~\DB.xml.log, includeForeignKeys=false, retrieveAllNames=false, readIndexes=null, driverClass=com.mysql.jdbc.Driver, tablesToRefresh=, eventSocketPort=62769, includeSynonyms=true, metaDataProviderClass=com.webratio.commons.db.metadata.MySQLMetaDataProvider}
+[22 Dez 2011 13:50:02] URL: jdbc:mysql://localhost:3306/eventos
+[22 Dez 2011 13:50:02] Product name: MySQL
+[22 Dez 2011 13:50:02] Product version: 5.5.16
+[22 Dez 2011 13:50:02] Driver name: MySQL-AB JDBC Driver
+[22 Dez 2011 13:50:02] Driver version: mysql-connector-java-5.1.18 ( Revision: tonci.grgin@oracle.com-20110930151701-jfj14ddfq48ifkfq )
+[22 Dez 2011 13:50:02] Driver major version: 5
+[22 Dez 2011 13:50:02] Driver minor version: 1
+[22 Dez 2011 13:50:02] Identifier quote string: 1
+[22 Dez 2011 13:50:02] Retrieving schemas
+[22 Dez 2011 13:50:02] Retrieving [TABLE, VIEW, SYNONYM] for schema ''
+[22 Dez 2011 13:50:02]   Found 'comentario' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found 'evento' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found 'favoritos' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found 'group_module' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found 'grupo' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found 'module' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found 'newsletter' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found 'tipo' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found 'user_group' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found 'utilizador' [type = TABLE]
+[22 Dez 2011 13:50:02] Retrieving columns for 'comentario' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found column: idcomentario [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: titulo [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: texto [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: dtcom [type = TIME][SQL/XOPEN type = 92][size = 8][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: utilizador_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: evento_idevento [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Dez 2011 13:50:02] Retrieving primary keys for 'comentario' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found primary key column: idcomentario
+[22 Dez 2011 13:50:02] Retrieving columns for 'evento' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found column: idevento [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: dtfim [type = TIME][SQL/XOPEN type = 92][size = 8][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: dtinicio [type = TIME][SQL/XOPEN type = 92][size = 8][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: titulo [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: descricao [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: lat [type = DOUBLE][SQL/XOPEN type = 8][size = 22][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: lon [type = DOUBLE][SQL/XOPEN type = 8][size = 22][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: proxnewsletter [type = BIT][SQL/XOPEN type = -7][size = 1][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: tipo_idtipo [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: utilizador_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Dez 2011 13:50:02] Retrieving primary keys for 'evento' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found primary key column: idevento
+[22 Dez 2011 13:50:02] Retrieving columns for 'favoritos' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found column: utilizador_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: evento_idevento [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Dez 2011 13:50:02] Retrieving primary keys for 'favoritos' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found primary key column: utilizador_oid
+[22 Dez 2011 13:50:02]   Found primary key column: evento_idevento
+[22 Dez 2011 13:50:02] Retrieving columns for 'group_module' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found column: grupo_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: module_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Dez 2011 13:50:02] Retrieving primary keys for 'group_module' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found primary key column: grupo_oid
+[22 Dez 2011 13:50:02]   Found primary key column: module_oid
+[22 Dez 2011 13:50:02] Retrieving columns for 'grupo' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: groupname [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: module_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Dez 2011 13:50:02] Retrieving primary keys for 'grupo' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found primary key column: oid
+[22 Dez 2011 13:50:02] Retrieving columns for 'module' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: moduleid [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: modulename [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Dez 2011 13:50:02] Retrieving primary keys for 'module' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found primary key column: oid
+[22 Dez 2011 13:50:02] Retrieving columns for 'newsletter' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found column: nr [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: titulo [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: dtenvio [type = TIME][SQL/XOPEN type = 92][size = 8][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: evento_idevento [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Dez 2011 13:50:02] Retrieving primary keys for 'newsletter' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found primary key column: nr
+[22 Dez 2011 13:50:02] Retrieving columns for 'tipo' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found column: idtipo [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: nome [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Dez 2011 13:50:02] Retrieving primary keys for 'tipo' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found primary key column: idtipo
+[22 Dez 2011 13:50:02] Retrieving columns for 'user_group' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found column: utilizador_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: grupo_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Dez 2011 13:50:02] Retrieving primary keys for 'user_group' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found primary key column: utilizador_oid
+[22 Dez 2011 13:50:02]   Found primary key column: grupo_oid
+[22 Dez 2011 13:50:02] Retrieving columns for 'utilizador' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: email [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: password [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: nome [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: foto [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: lat [type = DOUBLE][SQL/XOPEN type = 8][size = 22][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: lon [type = DOUBLE][SQL/XOPEN type = 8][size = 22][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: lat2 [type = DOUBLE][SQL/XOPEN type = 8][size = 22][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: lon2 [type = DOUBLE][SQL/XOPEN type = 8][size = 22][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: username [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Dez 2011 13:50:02]   Found column: grupo_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Dez 2011 13:50:02] Retrieving primary keys for 'utilizador' [type = TABLE]
+[22 Dez 2011 13:50:02]   Found primary key column: oid
+[22 Dez 2011 13:50:02] Retrieving auto-increment columns for 'comentario' [type = TABLE]
+[22 Dez 2011 13:50:02] Retrieving auto-increment columns for 'evento' [type = TABLE]
+[22 Dez 2011 13:50:02] Retrieving auto-increment columns for 'favoritos' [type = TABLE]
+[22 Dez 2011 13:50:02] Retrieving auto-increment columns for 'group_module' [type = TABLE]
+[22 Dez 2011 13:50:02] Retrieving auto-increment columns for 'grupo' [type = TABLE]
+[22 Dez 2011 13:50:02] Retrieving auto-increment columns for 'module' [type = TABLE]
+[22 Dez 2011 13:50:02] Retrieving auto-increment columns for 'newsletter' [type = TABLE]
+[22 Dez 2011 13:50:02] Retrieving auto-increment columns for 'tipo' [type = TABLE]
+[22 Dez 2011 13:50:02] Retrieving auto-increment columns for 'user_group' [type = TABLE]
+[22 Dez 2011 13:50:02] Retrieving auto-increment columns for 'utilizador' [type = TABLE]
+[22 Dez 2011 13:50:02] Database connection closed

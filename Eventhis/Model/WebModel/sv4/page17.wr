@@ -1,0 +1,52 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="443" gr:y="530" id="sv4#page17" name="Favoritos" landmark="true" linkOrder="sv4#page17#ln53 sv4#page17#ln55">
+  <ContentUnits>
+    <MultiChoiceIndexUnit gr:x="189" gr:y="0" id="sv4#page17#mciu4" name="Favoritos" entity="ent5" displayAttributes="ent5#att22 ent5#att23 ent5#att21 ent5#att20 ent5#att24 ent5#att25" linkOrder="sv4#page17#mciu4#ln42 sv4#page17#mciu4#ln2">
+      <Selector id="sv4#page17#mciu4#su16" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv4#page17#mciu4#su16#acond25" name="AttCondition25" predicate="eq" booleanOperator="or" implied="false" attributes="rel6#role12.userOID"/>
+      </Selector>
+      <Link id="sv4#page17#mciu4#ln42" name="Desmarcar Favorito" to="sv4#dcnu1" type="normal" validate="true">
+        <LinkParameter id="sv4#page17#mciu4#ln42#par74" name="idevento (Single Row)_KeyCondition7 [idevento] [Evento] [Source]" source="data[].ent5#att19" target="sv4#dcnu1#su17#kcond7.ent5#att19"/>
+        <LinkParameter id="sv4#page17#mciu4#ln42#par75" name="EventoToUtilizador.oid (Single Row)_KeyCondition8 [oid] [Utilizador] [Target]" source="data[].rel4#role8_userOID" target="sv4#dcnu1#su18#kcond8.userOID"/>
+      </Link>
+      <SortAttribute attribute="ent5#att21" order="descending"/>
+      <Link id="sv4#page17#mciu4#ln2" name="Ver Evento Detalhado" to="sv4#page16#dau4" type="normal" validate="true" gr:bendpoints="473,-8,-16,419">
+        <LinkParameter id="sv4#page17#mciu4#ln2#par13" name="idevento (Single Row)_KeyCondition3 [idevento]" source="data[].ent5#att19" target="sv4#page16#dau4#su10#kcond5.ent5#att19"/>
+      </Link>
+    </MultiChoiceIndexUnit>
+    <GetUnit gr:x="0" gr:y="4" id="sv4#page17#gtu5" name="GetLoggedUser" contextParameters="UserCtxParam">
+      <Link id="sv4#page17#gtu5#ln47" name="Link47" to="sv4#page17#mciu4" type="transport" validate="true">
+        <LinkParameter id="sv4#page17#gtu5#ln47#par64" name="UserCtxParam.oid_AttCondition25" source="sv4#page17#gtu5.UserCtxParam" target="sv4#page17#mciu4#su16#acond25"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv4#page17#mciu4">
+          <layout:Link link="sv4#page17#mciu4#ln42"/>
+          <layout:Link link="sv4#page17#mciu4#ln2"/>
+          <layout:Attribute attribute="ent5#att22" label="T&#237;tulo"/>
+          <layout:Attribute attribute="ent5#att23" label="Descri&#231;&#227;o"/>
+          <layout:Attribute attribute="ent5#att21" label="&#205;nicio"/>
+          <layout:Attribute attribute="ent5#att20" label="Fim"/>
+          <layout:Attribute attribute="ent5#att24" label="Latitude"/>
+          <layout:Attribute attribute="ent5#att25" label="Longitude"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv4#page17#ln53" name="Voltar" to="sv4#page9" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-30,-164,-18,243"/>
+  <Link id="sv4#page17#ln55" name="Log Out" to="sv4#lou3" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="32,-104,-366,16"/>
+</Page>
