@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="P&#225;gina Principal Guests">
+  <SiteView>sv2</SiteView>
+  <Secure>false</Secure>
+  <SecureFormAction>false</SecureFormAction>
+  <Localized>false</Localized>
+  <ParentContainer>area4</ParentContainer>
+  <CheckPermission>false</CheckPermission>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <SessionContextInits></SessionContextInits>
+  <ManualLinks>
+    <ManualLink>ln112</ManualLink>
+    <ManualLink>ln113</ManualLink>
+  </ManualLinks>
+  <PageContextInitServices/>
+  <PageContextInits></PageContextInits>
+  <NonContextualIncomingLinks>page20|page20.redirect|page20.link|page20.link.redirect|ln116|ln111|ln118</NonContextualIncomingLinks>
+  <UnitIncomingLinks>ln112</UnitIncomingLinks>
+  <LinkSequence/>
+  <UnitComputations refreshFormAllLinks="page20|page20.redirect|page20.link|page20.link.redirect|impl|impl.redirect|ln116|ln111|ln118">
+    <UnitComputation unit="enu13" formBased="true"></UnitComputation>
+    <UnitComputation unit="mciu4" formBased="true">
+      <RefreshForm link="ln112"/>
+    </UnitComputation>
+  </UnitComputations>
+  <InitTrees>
+    <Node unit="enu13">
+      <Node unit="mciu4" fromLink="ln112"/>
+    </Node>
+  </InitTrees>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="mciu4" preservedByForm="false">acond22</PageParam>
+      <PageParam unit="mciu4" preservedByForm="false">acond23</PageParam>
+      <PageParam unit="mciu4" preservedByForm="false">acond24</PageParam>
+      <PageParam unit="mciu4" preservedByForm="false">acond25</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>osp</PageParam>
+    </PageParams>
+    <NavigationAncestors>sv2|area4</NavigationAncestors>
+    <ModelName>P&#225;gina Principal Guests</ModelName>
+  </WRParameterService>
+</Descriptor>
+ 

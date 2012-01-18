@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?webml version="4.1.4"?>
-
-<WebProject xmlns:gr="http://www.webratio.com/2006/WebML/Graph" outputPath="${webapps_loc}/${project_name}" gr:showUnitContent="true" gr:showTooltip="true" httpPort="8080" httpsPort="8443" jobGroupName="WEBRATIO" enableBrowserIntegration="true">
-  <ServiceDataProviders>
-    <SMTPServer id="smtp1" name="SMTP Server" url="https://mail.google.com/" port="25" username="rafaelumlei@gmail.com" cryptedPassword="true" password="ZG9tZWRpYTEz"/>
-  </ServiceDataProviders>
-</WebProject>

@@ -1,0 +1,14 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="Registados" protected="true" landmarks="sv4#page3 sv4#area1 sv4#area2 sv4#area3 sv4#page1" homePage="sv4#area2#page16">
+  <OperationUnits>
+    <DisconnectUnit id="sv4#dcnu1" name="DesmarcarFavorito" gr:x="910" gr:y="1320" relationship="rel6#role12">
+      <SourceSelector id="sv4#dcnu1#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#dcnu1#su3#kcond1" name="KeyCondition7" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv4#dcnu1#su5" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#dcnu1#su5#kcond2" name="KeyCondition8" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="sv4#dcnu1#oln2" name="OKLink5" to="sv4#page1" automaticCoupling="true"/>
+      <KOLink id="sv4#dcnu1#kln2" name="KOLink6" to="sv4#page1" automaticCoupling="true" gr:bendpoints="-124,47,106,54"/>
+    </DisconnectUnit>
+  </OperationUnits>
+</SiteView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="Tipos">
+  <MaxResults/>
+  <Query entity="ent2">
+    <Output id="att6" name="idtipo"/>
+    <Output id="att7" name="nome"/>
+    <HQL>select a_tipo.idtipo, a_tipo.nome from Tipo a_tipo</HQL>
+  </Query>
+</Descriptor>

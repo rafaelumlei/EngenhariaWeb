@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>mlu1</Target>
+  <Secure>false</Secure>
+  <SourcePage>page6</SourcePage>
+  <Source>seu5</Source>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <ChangesAlternative>false</ChangesAlternative>
+  <TargetContextParameters/>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <ManualContextPropagations>
+    <ManualContextPropagation targetParam="mlu1.bcc" sourceUnit="seu5" sourceParam="emailArray"/>
+    <ManualContextPropagation targetParam="mlu1.to" sourceUnit="seu5" sourceParam="emailArray"/>
+    <ManualContextPropagation targetParam="mlu1.nome" sourceUnit="seu5" sourceParam="att30Array"/>
+  </ManualContextPropagations>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+</Descriptor>

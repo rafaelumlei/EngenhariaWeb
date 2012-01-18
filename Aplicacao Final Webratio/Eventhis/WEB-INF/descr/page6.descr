@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Enviar Newsletter">
+  <SiteView>sv1</SiteView>
+  <Secure>false</Secure>
+  <SecureFormAction>false</SecureFormAction>
+  <Localized>false</Localized>
+  <ParentContainer>sv1</ParentContainer>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv1</PermissionElement>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <SessionContextInits></SessionContextInits>
+  <ManualLinks>
+    <ManualLink activatedOperation="cru1">ln21</ManualLink>
+    <ManualLink activatedOperation="lou1">ln64</ManualLink>
+  </ManualLinks>
+  <PageContextInitServices/>
+  <PageContextInits></PageContextInits>
+  <NonContextualIncomingLinks>page6|page6.redirect|page6.link|page6.link.redirect|ln44|ln63|oln7|oln7.redirect|oln10|oln10.redirect</NonContextualIncomingLinks>
+  <UnitIncomingLinks/>
+  <LinkSequence>ln22|ln37|ln35</LinkSequence>
+  <PageContextPropagations link="ln22">
+    <PageContextPropagation targetParam="cru1.att4" sourceUnit="tmu2" sourceParam="currentTimestamp"/>
+  </PageContextPropagations>
+  <PageContextPropagations link="ln37">
+    <PageContextPropagation targetParam="mlu1.descricao" sourceUnit="seu4" sourceParam="att23Array"/>
+    <PageContextPropagation targetParam="mlu1.titulo" sourceUnit="seu4" sourceParam="att22Array"/>
+  </PageContextPropagations>
+  <PageContextPropagations link="ln35">
+    <PageContextPropagation targetParam="mlu1.bcc" sourceUnit="seu5" sourceParam="emailArray"/>
+    <PageContextPropagation targetParam="mlu1.to" sourceUnit="seu5" sourceParam="emailArray"/>
+    <PageContextPropagation targetParam="mlu1.nome" sourceUnit="seu5" sourceParam="att30Array"/>
+  </PageContextPropagations>
+  <UnitComputations refreshFormAllLinks="page6|page6.redirect|page6.link|page6.link.redirect|impl|impl.redirect|ln44|ln63|oln7|oln7.redirect|oln10|oln10.redirect">
+    <UnitComputation unit="inu1"></UnitComputation>
+    <UnitComputation unit="mssu1"></UnitComputation>
+    <UnitComputation unit="enu7" formBased="true"></UnitComputation>
+    <UnitComputation unit="tmu2"></UnitComputation>
+    <UnitComputation unit="seu4"></UnitComputation>
+    <UnitComputation unit="seu5"></UnitComputation>
+    <UnitComputation unit="seu15"></UnitComputation>
+  </UnitComputations>
+  <InitTrees>
+    <Node unit="inu1"/>
+    <Node unit="mssu1"/>
+    <Node unit="enu7"/>
+    <Node unit="tmu2">
+      <Node unit="cru1" fromLink="ln22"/>
+    </Node>
+    <Node unit="seu4">
+      <Node unit="mlu1" fromLink="ln37"/>
+    </Node>
+    <Node unit="seu5">
+      <Node unit="mlu1" fromLink="ln35"/>
+    </Node>
+    <Node unit="seu15"/>
+  </InitTrees>
+  <Variables>
+    <Variable id="var2" name="ExistemNewslwettersParaEnviar" type="boolean" unitId="seu15" parameter="count$att23Array" value=""/>
+  </Variables>
+  <Conditions>
+    <Condition id="cexpr_var2" name="ExistemNewslwettersParaEnviar" xml:space="preserve">com.webratio.rtx.core.BeanHelper.asObject(ExistemNewslwettersParaEnviar)</Condition>
+    <Condition id="cexpr5" name="Vis&#237;velEnviarNewsletter" xml:space="preserve">return (ExistemNewslwettersParaEnviar != 0)</Condition>
+  </Conditions>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="inu1" preservedByForm="false">inu1.current.att19</PageParam>
+      <PageParam unit="mssu1" preservedByForm="false">mssu1.shownMessages</PageParam>
+      <PageParam unit="tmu2" preservedByForm="false">tmu2.time</PageParam>
+      <PageParam unit="tmu2" preservedByForm="false">tmu2.date</PageParam>
+      <PageParam unit="tmu2" preservedByForm="false">tmu2.timeStamp</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>osp</PageParam>
+    </PageParams>
+    <NavigationAncestors>sv1</NavigationAncestors>
+    <ModelName>Enviar Newsletter</ModelName>
+  </WRParameterService>
+</Descriptor>
+ 

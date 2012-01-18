@@ -1,0 +1,24 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="2380" gr:y="411" id="sv4#area3" name="Gest&#227;o de Eventos" landmark="true">
+  <OperationUnits>
+    <ModifyUnit id="sv4#area3#mfu4" name="ModificarEvento" gr:x="312" gr:y="139" entity="ent5">
+      <Selector id="sv4#area3#mfu4#su39" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#area3#mfu4#su39#kcond27" name="KeyCondition12" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="sv4#area3#mfu4#kln17" name="KOLink3" to="sv4#area3#page17" automaticCoupling="true" gr:bendpoints="-84,50,158,-7"/>
+      <OKLink id="sv4#area3#mfu4#oln20" name="OKLink4" to="sv4#area2#page14#dau1" automaticCoupling="true" gr:bendpoints="-2,-338,1070,-282;-1072,-340,0,-284"/>
+    </ModifyUnit>
+    <DeleteUnit id="sv4#area3#dlu2" name="Remo&#231;&#227;oEvento" gr:x="312" gr:y="0" entity="ent5">
+      <Selector id="sv4#area3#dlu2#su40" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#area3#dlu2#su40#kcond28" name="KeyCondition13" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="sv4#area3#dlu2#kln18" name="KOLink2" to="sv4#area3#page17" automaticCoupling="true" gr:bendpoints="-96,-4,140,-116"/>
+      <OKLink id="sv4#area3#dlu2#oln21" name="OKLink2" to="sv4#area2#page16" automaticCoupling="true" gr:bendpoints="0,-156,1438,-378;-1438,-152,0,-374"/>
+    </DeleteUnit>
+    <CreateUnit id="sv4#area3#cru6" name="CriarEvento" gr:x="222" gr:y="469" entity="ent5">
+      <KOLink id="sv4#area3#cru6#kln19" name="KOLink8" to="sv4#area3#page18" automaticCoupling="true" gr:bendpoints="-72,-115,-71,106"/>
+      <OKLink id="sv4#area3#cru6#oln22" name="OKLink8" to="sv4#area2#page14#dau1" gr:bendpoints="-427,46,546,500;-399,-459,498,133">
+        <LinkParameter id="sv4#area3#cru6#oln22#par186" name="idevento_KeyCondition3 [idevento]" source="ent5#att19Array" target="sv4#area2#page14#dau1#su34#kcond24.ent5#att19"/>
+      </OKLink>
+    </CreateUnit>
+  </OperationUnits>
+</Area>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="P&#225;gina Principal Registados">
+  <SiteView>sv4</SiteView>
+  <Secure>false</Secure>
+  <SecureFormAction>false</SecureFormAction>
+  <Localized>false</Localized>
+  <ParentContainer>area2</ParentContainer>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv4</PermissionElement>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <SessionContextInits>
+    <SessionContextToPageInit source="UserCtxParam" target="gtu5.UserCtxParam"/>
+  </SessionContextInits>
+  <ManualLinks>
+    <ManualLink>ln86</ManualLink>
+    <ManualLink activatedOperation="lou2">ln89</ManualLink>
+    <ManualLink>ln92</ManualLink>
+    <ManualLink>ln108</ManualLink>
+    <ManualLink>ln9</ManualLink>
+  </ManualLinks>
+  <PageContextInitServices/>
+  <PageContextInits></PageContextInits>
+  <NonContextualIncomingLinks>page16|page16.redirect|page16.link|page16.link.redirect|ln96|ln84|ln106|ln6|oln16|oln16.redirect|oln21|oln21.redirect</NonContextualIncomingLinks>
+  <UnitIncomingLinks/>
+  <LinkSequence>ln87|ln88</LinkSequence>
+  <PageContextPropagations link="ln87">
+    <PageContextPropagation targetParam="kcond26.userOID" sourceUnit="gtu5" sourceParam="gtu5.UserCtxParam"/>
+  </PageContextPropagations>
+  <PageContextPropagations link="ln88">
+    <PageContextPropagation targetParam="acond18" sourceUnit="dau2" sourceParam="data.att33"/>
+    <PageContextPropagation targetParam="acond19" sourceUnit="dau2" sourceParam="data.att8"/>
+    <PageContextPropagation targetParam="acond21" sourceUnit="dau2" sourceParam="data.att9"/>
+    <PageContextPropagation targetParam="acond20" sourceUnit="dau2" sourceParam="data.att34"/>
+  </PageContextPropagations>
+  <UnitComputations refreshFormAllLinks="page16|page16.redirect|page16.link|page16.link.redirect|impl|impl.redirect|ln96|ln84|ln106|ln6|oln16|oln16.redirect|oln21|oln21.redirect">
+    <UnitComputation unit="mciu3" formBased="true">
+      <RefreshForm link="ln88"/>
+    </UnitComputation>
+    <UnitComputation unit="gtu5"></UnitComputation>
+    <UnitComputation unit="dau2"></UnitComputation>
+  </UnitComputations>
+  <InitTrees>
+    <Node unit="gtu5" contextParameters="UserCtxParam" type="get">
+      <Node unit="dau2" fromLink="ln87">
+        <Node unit="mciu3" fromLink="ln88"/>
+      </Node>
+    </Node>
+  </InitTrees>
+  <Variables></Variables>
+  <Conditions>
+    <Condition id="cexpr9" name="NaoMostrarInfoUser" xml:space="preserve">return false</Condition>
+  </Conditions>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="mciu3" preservedByForm="false">acond18</PageParam>
+      <PageParam unit="mciu3" preservedByForm="false">acond19</PageParam>
+      <PageParam unit="mciu3" preservedByForm="false">acond20</PageParam>
+      <PageParam unit="mciu3" preservedByForm="false">acond21</PageParam>
+      <PageParam unit="dau2" preservedByForm="false">kcond26.userOID</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>osp</PageParam>
+    </PageParams>
+    <NavigationAncestors>sv4|area2</NavigationAncestors>
+    <ModelName>P&#225;gina Principal Registados</ModelName>
+  </WRParameterService>
+</Descriptor>

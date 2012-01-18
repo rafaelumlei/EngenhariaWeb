@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>dcnu1</Target>
+  <Secure>false</Secure>
+  <SourcePage>page17</SourcePage>
+  <Source>mciu4</Source>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <ChangesAlternative>true</ChangesAlternative>
+  <TargetContextParameters/>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <ManualContextPropagations>
+    <ManualContextPropagation targetParam="kcond7.att19" sourceUnit="mciu4" sourceParam="data[].att19"/>
+    <ManualContextPropagation targetParam="kcond8.userOID" sourceUnit="mciu4" sourceParam="data[].role8_userOID"/>
+  </ManualContextPropagations>
+  <PreservedContextParams>
+    <Params>kcond7.att19|kcond8.userOID</Params>
+  </PreservedContextParams>
+</Descriptor>
+ 

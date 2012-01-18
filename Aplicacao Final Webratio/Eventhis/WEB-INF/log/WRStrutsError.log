@@ -1,0 +1,45 @@
+20 Dez 2011 01:41:11,894  ERROR [http-8080-4]  (com.webratio.struts.WRPageFormBean:77) - [52D9D76B6BF2504CEA0302F24A421855]Unrecognized pressed button, the request parameter/attribute named 'button:<linkId>' is missing
+ 20 Dez 2011 01:41:11,902  ERROR [http-8080-4]  (com.webratio.struts.actions.AbstractWRAction:467) - [52D9D76B6BF2504CEA0302F24A421855][page11]The form bean property 'lastURL' is null. Please ensure that the JSP page includes a hidden field named 'lastURL'
+ 20 Dez 2011 22:18:57,372  ERROR [http-8080-5]  (com.webratio.struts.WRPageFormBean:77) - [A64716D5FE48DD5C96CD1FD8B0D0E2DA]Unrecognized pressed button, the request parameter/attribute named 'button:<linkId>' is missing
+ 20 Dez 2011 22:18:57,378  ERROR [http-8080-5]  (com.webratio.struts.actions.AbstractWRAction:467) - [A64716D5FE48DD5C96CD1FD8B0D0E2DA][page11]The form bean property 'lastURL' is null. Please ensure that the JSP page includes a hidden field named 'lastURL'
+ 20 Dez 2011 23:38:04,076  ERROR [http-8080-8]  (com.webratio.struts.WRPageFormBean:77) - [6F45B60A6D1B7BD646468EB777550405]Unrecognized pressed button, the request parameter/attribute named 'button:<linkId>' is missing
+ 20 Dez 2011 23:38:04,095  ERROR [http-8080-8]  (com.webratio.struts.actions.AbstractWRAction:467) - [6F45B60A6D1B7BD646468EB777550405][page11]The form bean property 'lastURL' is null. Please ensure that the JSP page includes a hidden field named 'lastURL'
+ 22 Dez 2011 15:45:24,292  ERROR [http-8080-3]  (com.webratio.struts.WRPageFormBean:77) - [F597318254762FA1A106C4EF409BA85C]Unrecognized pressed button, the request parameter/attribute named 'button:<linkId>' is missing
+ 03 Jan 2012 11:37:34,369  ERROR [http-8080-5]  (com.webratio.struts.WRPageFormBean:126) - [E8BABCEE44E066556283DC30941421F1]Validation Exception: com/webratio/struts/validation/ValidationContext
+ java.lang.NoClassDefFoundError: com/webratio/struts/validation/ValidationContext
+	at com.webratio.struts.WRPageFormBean.validate(WRPageFormBean.java:92)
+	at com.webratio.struts.chain.commands.WRValidateActionForm.validate(WRValidateActionForm.java:15)
+	at org.apache.struts.chain.commands.AbstractValidateActionForm.execute(AbstractValidateActionForm.java:120)
+	at org.apache.struts.chain.commands.ActionCommandBase.execute(ActionCommandBase.java:51)
+	at org.apache.commons.chain.impl.ChainBase.execute(ChainBase.java:190)
+	at org.apache.commons.chain.generic.LookupCommand.execute(LookupCommand.java:304)
+	at org.apache.commons.chain.impl.ChainBase.execute(ChainBase.java:190)
+	at org.apache.struts.chain.ComposableRequestProcessor.process(ComposableRequestProcessor.java:283)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1913)
+	at com.webratio.struts.servlets.WRActionServlet.process(WRActionServlet.java:100)
+	at com.webratio.struts.servlets.WRActionServlet.doPost(WRActionServlet.java:73)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:637)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.ClassNotFoundException: com.webratio.struts.validation.ValidationContext
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1680)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	... 25 more
+03 Jan 2012 11:37:38,666  ERROR [http-8080-5]  (com.webratio.struts.WRPageFormBean:77) - [FF2A92A4A17DF446DA4BEA4716EB615C]Unrecognized pressed button, the request parameter/attribute named 'button:<linkId>' is missing
+ 03 Jan 2012 11:37:38,674  ERROR [http-8080-5]  (com.webratio.struts.actions.AbstractWRAction:467) - [FF2A92A4A17DF446DA4BEA4716EB615C][page5]The form bean property 'lastURL' is null. Please ensure that the JSP page includes a hidden field named 'lastURL'
+ 03 Jan 2012 12:37:26,097  ERROR [http-8080-5]  (com.webratio.struts.WRPageFormBean:77) - [46C87B7601266FFF929E07DA96E0E7DA]Unrecognized pressed button, the request parameter/attribute named 'button:<linkId>' is missing
+ 03 Jan 2012 12:37:26,109  ERROR [http-8080-5]  (com.webratio.struts.actions.AbstractWRAction:467) - [46C87B7601266FFF929E07DA96E0E7DA][page5]The form bean property 'lastURL' is null. Please ensure that the JSP page includes a hidden field named 'lastURL'
+ 03 Jan 2012 13:21:33,356  ERROR [http-8080-2]  (com.webratio.struts.WRPageFormBean:77) - [B251ED216083A850C2EBAA2CD0B47999]Unrecognized pressed button, the request parameter/attribute named 'button:<linkId>' is missing
+ 03 Jan 2012 13:21:33,362  ERROR [http-8080-2]  (com.webratio.struts.actions.AbstractWRAction:467) - [B251ED216083A850C2EBAA2CD0B47999][page5]The form bean property 'lastURL' is null. Please ensure that the JSP page includes a hidden field named 'lastURL'
+ 

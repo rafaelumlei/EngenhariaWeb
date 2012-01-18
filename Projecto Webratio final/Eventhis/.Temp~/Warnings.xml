@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Warnings> 
+  <Warning xpath="id('db1')" rootXPath="/WebProject/DataModel" key="DISCONNECTED_DATABASE" tab="mapping" label="Mysql"> 
+    <Message>The database 'Mysql' is not connected: unable to perform a deep analysis</Message>  
+    <Resolution class="com.webratio.ide.ui.resources.RefreshDatabaseResolutionGenerator">Refresh the database</Resolution> 
+  </Warning>  
+  <Warning xpath="id('sv2#area4')" rootXPath="id('sv2')" key="UNDEFINED_DEFAULT_PAGE_PARENT_NO_LANDMARK" label="Visualiza&#231;&#227;o de Eventos"> 
+    <Message>Neither a default page nor a default area nor a default operation is defined for the area 'Visualiza&#231;&#227;o de Eventos'</Message> 
+  </Warning>  
+  <Warning xpath="id('sv2#area5')" rootXPath="id('sv2')" key="UNDEFINED_DEFAULT_PAGE_PARENT_NO_LANDMARK" label="Registo"> 
+    <Message>Neither a default page nor a default area nor a default operation is defined for the area 'Registo'</Message> 
+  </Warning>  
+  <Warning xpath="id('sv4#area1')" rootXPath="id('sv4')" key="UNDEFINED_DEFAULT_PAGE" label="Edi&#231;&#227;o de Registo"> 
+    <Message>Neither a default page nor a default area nor a default operation is defined for the area 'Edi&#231;&#227;o de Registo'</Message> 
+  </Warning>  
+  <Warning xpath="id('sv4#area2')" rootXPath="id('sv4')" key="UNDEFINED_DEFAULT_PAGE" label="Visualiza&#231;&#227;o de Eventos"> 
+    <Message>Neither a default page nor a default area nor a default operation is defined for the area 'Visualiza&#231;&#227;o de Eventos'</Message> 
+  </Warning>  
+  <Warning xpath="id('sv4#area3')" rootXPath="id('sv4')" key="UNDEFINED_DEFAULT_PAGE" label="Gest&#227;o de Eventos"> 
+    <Message>Neither a default page nor a default area nor a default operation is defined for the area 'Gest&#227;o de Eventos'</Message> 
+  </Warning>  
+  <Warning xpath="id('sv4#area1#page10#enu8#ln30#par44')" rootXPath="id('sv4')" key="UNUSED_PASSING_PARAMETER" label="Reintroduza a Password_PASSING"> 
+    <Message>The passing parameter 'Reintroduza a Password_PASSING' is declared but never used</Message>  
+    <Resolution class="com.webratio.ide.ui.resources.RemoveElementResolutionGenerator">Remove the invalid link parameter 'sv4#area1#page10#enu8#ln30#par44'</Resolution> 
+  </Warning>  
+  <Warning xpath="id('sv1#cru1#oln9')" rootXPath="id('sv1')" key="AUTOMATIC_COUPLING_WITHOUT_EFFECT" label="OKLink9"> 
+    <Message>Neither explicit nor implicit parameters' couplings could be found for the link 'OKLink9'</Message>  
+    <Resolution class="com.webratio.ide.ui.resources.ChangeAttributeResolutionGenerator" attribute="automaticCoupling" value="">Remove the 'Automatic Coupling' property</Resolution> 
+  </Warning>  
+  <Warning xpath="id('sv1#qu1')" rootXPath="id('sv1')" error="false" label="Retirar Eventos Da Newsletter" key="NO_OUTGOING_KO_LINKS"> 
+    <Message>No outgoing KO link(s) for the operation unit 'Retirar Eventos Da Newsletter'</Message> 
+  </Warning>  
+  <Warning xpath="id('sv1#lou1')" rootXPath="id('sv1')" error="false" label="LogoutAdmin" key="NO_OUTGOING_KO_LINKS"> 
+    <Message>No outgoing KO link(s) for the operation unit 'LogoutAdmin'</Message> 
+  </Warning>  
+  <Warning xpath="id('sv2#lgu4')" rootXPath="id('sv2')" error="false" label="Login" key="NO_OUTGOING_OK_LINKS"> 
+    <Message>No outgoing OK link(s) for the operation unit 'Login'</Message> 
+  </Warning>  
+  <Warning xpath="id('sv4#area2#lou2')" rootXPath="id('sv4')" error="false" label="LogoutUnit" key="NO_OUTGOING_KO_LINKS"> 
+    <Message>No outgoing KO link(s) for the operation unit 'LogoutUnit'</Message> 
+  </Warning>  
+  <Warning xpath="id('sv4#area2#cnu1')" rootXPath="id('sv4')" error="false" label="MarcarFavorito" key="NO_OUTGOING_OK_LINKS"> 
+    <Message>No outgoing OK link(s) for the operation unit 'MarcarFavorito'</Message> 
+  </Warning>  
+  <Warning xpath="id('sv4#area2#cnu1')" rootXPath="id('sv4')" error="false" label="MarcarFavorito" key="NO_OUTGOING_KO_LINKS"> 
+    <Message>No outgoing KO link(s) for the operation unit 'MarcarFavorito'</Message> 
+  </Warning>  
+  <Warning xpath="id('sv4#area2#dcnu3')" rootXPath="id('sv4')" error="false" label="DesmarcarFavorito" key="NO_OUTGOING_OK_LINKS"> 
+    <Message>No outgoing OK link(s) for the operation unit 'DesmarcarFavorito'</Message> 
+  </Warning>  
+  <Warning xpath="id('sv4#area2#dcnu3')" rootXPath="id('sv4')" error="false" label="DesmarcarFavorito" key="NO_OUTGOING_KO_LINKS"> 
+    <Message>No outgoing KO link(s) for the operation unit 'DesmarcarFavorito'</Message> 
+  </Warning>  
+  <Warning xpath="id('wsv1#port1#tmu1')" rootXPath="id('wsv1')" error="false" label="DateTimeNow" key="NO_OUTGOING_OK_LINKS"> 
+    <Message>No outgoing OK link(s) for the operation unit 'DateTimeNow'</Message> 
+  </Warning>  
+  <Warning xpath="id('wsv1#port1#tmu1')" rootXPath="id('wsv1')" error="false" label="DateTimeNow" key="NO_OUTGOING_KO_LINKS"> 
+    <Message>No outgoing KO link(s) for the operation unit 'DateTimeNow'</Message> 
+  </Warning>  
+  <Warning error="false" xpath="id('sv1#page6#inu1')" rootXPath="id('sv1')" key="" label="Eventos da Newsletter"> 
+    <Message>Sorting attribute are unspecified for the unit 'Eventos da Newsletter'</Message> 
+  </Warning>  
+  <Warning xpath="id('sv2#area5#page21#enu14')" rootXPath="id('sv2')" key="MISSING_MANDATORY_OUTPUT_PARAMETER" label="Novo Utilizador"> 
+    <Message>The mandatory output parameter 'Reintroduza a Password' is not transported along an outgoing link from the unit 'Novo Utilizador'</Message> 
+  </Warning>  
+  <Warning xpath="id('sv4#area3#page18#enu12')" rootXPath="id('sv4')" key="MISSING_MANDATORY_OUTPUT_PARAMETER" label="Novo Evento"> 
+    <Message>The mandatory output parameter 'ProximaNewsltter' is not transported along an outgoing link from the unit 'Novo Evento'</Message> 
+  </Warning>  
+  <Warning error="false" xpath="id('sv4#page2#inu2')" rootXPath="id('sv4')" key="NO_DISPLAY_ATTRIBUTES" label="Favoritos"> 
+    <Message>No attributes to display are specified for the unit 'Favoritos'</Message> 
+  </Warning>  
+  <Warning error="false" xpath="id('sv4#page2#inu2')" rootXPath="id('sv4')" key="" label="Favoritos"> 
+    <Message>Sorting attribute are unspecified for the unit 'Favoritos'</Message> 
+  </Warning>  
+  <Warning xpath="id('sv4#page2#inu2')" rootXPath="id('sv4')" key="MISSING_MANDATORY_INPUT_PARAMETER" label="Favoritos"> 
+    <Message>The mandatory input parameter 'AttCondition13' is not provided to the unit 'Favoritos'</Message> 
+  </Warning>
+  <Warning xpath="id('sv4#page2#inu2')" rootXPath="id('sv4')" key="MISSING_MANDATORY_INPUT_PARAMETER" label="Favoritos"> 
+    <Message>The mandatory input parameter 'AttCondition14' is not provided to the unit 'Favoritos'</Message> 
+  </Warning> 
+</Warnings>

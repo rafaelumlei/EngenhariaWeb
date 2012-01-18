@@ -1,0 +1,95 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#area3#page18" name="Criar Evento" linkOrder="sv4#area3#page18#ln106 sv4#area3#page18#ln107" landmark="false" gr:x="0" gr:y="304">
+  <ContentUnits>
+    <EntryUnit id="sv4#area3#page18#enu12" name="Novo Evento" linkOrder="sv4#area3#page18#enu12#ln103" gr:x="244" gr:y="5" fieldOrder="sv4#area3#page18#enu12#fld60 sv4#area3#page18#enu12#fld61 sv4#area3#page18#enu12#sfld6 sv4#area3#page18#enu12#fld63 sv4#area3#page18#enu12#fld62 sv4#area3#page18#enu12#fld64 sv4#area3#page18#enu12#fld65 sv4#area3#page18#enu12#fld66">
+      <SelectionField id="sv4#area3#page18#enu12#sfld6" name="Tipo do Evento" type="string">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area3#page18#enu12#sfld6#mnd26" name="Todos os eventos devem ter um tipo"/>
+        </VRules>
+      </SelectionField>
+      <Field id="sv4#area3#page18#enu12#fld60" name="T&#237;tulo" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area3#page18#enu12#fld60#mnd27" name="Todos os eventos devem ter um titulo"/>
+          <ValueLengthValidationRule id="sv4#area3#page18#enu12#fld60#vl8" name="O t&#237;tulo de um evento t&#234;m um tamanho m&#237;nimo" predicate="min" value="5" errorMessage="Os t&#237;tulos de eventos devem ter pelo menos 5 caracteres."/>
+        </VRules>
+      </Field>
+      <Field id="sv4#area3#page18#enu12#fld61" name="Descri&#231;&#227;o" type="text" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area3#page18#enu12#fld61#mnd29" name="Todos os eventos devem ter uma descri&#231;&#227;o"/>
+          <ValueLengthValidationRule id="sv4#area3#page18#enu12#fld61#vl9" name="A descri&#231;&#227;o t&#234;m tamanho m&#237;nimo" predicate="min" value="40" errorMessage="As descri&#231;&#245;es de eventos devem ter pelo menos 60 caracteres."/>
+        </VRules>
+      </Field>
+      <Field id="sv4#area3#page18#enu12#fld62" name="Fim" type="timestamp" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area3#page18#enu12#fld62#mnd30" name="Todos os eventos t&#234;m um final"/>
+          <CompareValidationRule id="sv4#area3#page18#enu12#fld62#cmp2" name="A data de final deve ser maior do que a de &#237;nicio" predicate="gt" valueField="sv4#area3#page18#enu12#fld63" errorMessage="Um evento deve terminar depois de come&#231;ar."/>
+        </VRules>
+      </Field>
+      <Field id="sv4#area3#page18#enu12#fld63" name="&#205;nicio" type="timestamp" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area3#page18#enu12#fld63#mnd31" name="Todos os eventos t&#234;m &#237;nicio"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#area3#page18#enu12#fld64" name="Latitude" type="float" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area3#page18#enu12#fld64#mnd32" name="Todos os eventos t&#234;m uma latitude"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#area3#page18#enu12#fld65" name="Longitude" type="float" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area3#page18#enu12#fld65#mnd33" name="Todos os eventos t&#234;m uma longitude"/>
+        </VRules>
+      </Field>
+      <Link id="sv4#area3#page18#enu12#ln103" name="Criar" to="sv4#area3#cru6" type="normal" validate="true">
+        <LinkParameter id="sv4#area3#page18#enu12#ln103#par175" name="descricao_descricao" source="sv4#area3#page18#enu12#fld61" target="sv4#area3#cru6.ent5#att23"/>
+        <LinkParameter id="sv4#area3#page18#enu12#ln103#par176" name="dtfim_dtfim" source="sv4#area3#page18#enu12#fld62" target="sv4#area3#cru6.ent5#att20"/>
+        <LinkParameter id="sv4#area3#page18#enu12#ln103#par177" name="dtinicio_dtinicio" source="sv4#area3#page18#enu12#fld63" target="sv4#area3#cru6.ent5#att21"/>
+        <LinkParameter id="sv4#area3#page18#enu12#ln103#par178" name="lat_lat" source="sv4#area3#page18#enu12#fld64" target="sv4#area3#cru6.ent5#att24"/>
+        <LinkParameter id="sv4#area3#page18#enu12#ln103#par179" name="lon_lon" source="sv4#area3#page18#enu12#fld65" target="sv4#area3#cru6.ent5#att25"/>
+        <LinkParameter id="sv4#area3#page18#enu12#ln103#par180" name="idtipo_PASSING_Tipo.idtipo(EventoToTipo)" source="sv4#area3#page18#enu12#sfld6" target="sv4#area3#cru6.rel1#role2.ent2#att6"/>
+        <LinkParameter id="sv4#area3#page18#enu12#ln103#par181" name="titulo_titulo" source="sv4#area3#page18#enu12#fld60" target="sv4#area3#cru6.ent5#att22"/>
+      </Link>
+      <Field id="sv4#area3#page18#enu12#fld66" name="ProximaNewsltter" type="boolean" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area3#page18#enu12#fld66#mnd34" name="obrigat&#243;rio" errorMessage="Tem que assinalar se pretende que o evento em cria&#231;&#227;o surja na pr&#243;xima newsletter do sistema."/>
+        </VRules>
+      </Field>
+    </EntryUnit>
+    <SelectorUnit id="sv4#area3#page18#seu14" name="Tipos" gr:x="129" gr:y="0" entity="ent2" distinctAttributes="ent2#att6 ent2#att7">
+      <Link id="sv4#area3#page18#seu14#ln104" name="Link48" to="sv4#area3#page18#enu12" type="transport" validate="true">
+        <LinkParameter id="sv4#area3#page18#seu14#ln104#par182" name="$$NULL$$_TipoEvento - Preselection" target="sv4#area3#page18#enu12#sfld6_presel" sourceValue="$$NULL$$"/>
+        <LinkParameter id="sv4#area3#page18#seu14#ln104#par183" name="Tipo do Evento_TipoEvento [label]" source="ent2#att7Array" target="sv4#area3#page18#enu12#sfld6_label"/>
+        <LinkParameter id="sv4#area3#page18#seu14#ln104#par184" name="nome_TipoEvento [output]" source="ent2#att6Array" target="sv4#area3#page18#enu12#sfld6_output"/>
+      </Link>
+    </SelectorUnit>
+    <GetUnit id="sv4#area3#page18#gtu6" name="GetLoggedUser" gr:x="0" gr:y="1" contextParameters="UserCtxParam">
+      <Link id="sv4#area3#page18#gtu6#ln105" name="Link41" to="sv4#area3#cru6" type="transport" validate="true" gr:bendpoints="40,109,-184,-34">
+        <LinkParameter id="sv4#area3#page18#gtu6#ln105#par185" name="UserCtxParam.oid_Utilizador.oid(EventoToUtilizador)" source="sv4#area3#page18#gtu6.UserCtxParam" target="sv4#area3#cru6.rel4#role8.userOID"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv4#area3#page18#enu12">
+          <layout:Link link="sv4#area3#page18#enu12#ln103"/>
+          <layout:Field field="sv4#area3#page18#enu12#fld60"/>
+          <layout:Field field="sv4#area3#page18#enu12#fld61"/>
+          <layout:Field field="sv4#area3#page18#enu12#sfld6"/>
+          <layout:Field field="sv4#area3#page18#enu12#fld63"/>
+          <layout:Field field="sv4#area3#page18#enu12#fld62"/>
+          <layout:Field field="sv4#area3#page18#enu12#fld64"/>
+          <layout:Field field="sv4#area3#page18#enu12#fld65"/>
+          <layout:Field field="sv4#area3#page18#enu12#fld66"/>
+        </layout:Unit>
+      </layout:Cell>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv4#area3#page18#ln106" name="Voltar" to="sv4#area2#page16" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="-163,317,1380,560;-1261,377,20,578"/>
+  <Link id="sv4#area3#page18#ln107" name="Log Out" to="sv4#area2#lou2" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="-273,214,813,325;-1085,206,1,317"/>
+</Page>

@@ -1,0 +1,91 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#area1#page10" name="P&#225;gina de Edi&#231;&#227;o Registo" gr:x="200" gr:y="0" linkOrder="sv4#area1#page10#ln96">
+  <ContentUnits>
+    <EntryUnit id="sv4#area1#page10#enu8" name="EditarUtilizador" linkOrder="sv4#area1#page10#enu8#ln30" gr:x="0" gr:y="0" fieldOrder="sv4#area1#page10#enu8#fld30 sv4#area1#page10#enu8#fld27 sv4#area1#page10#enu8#fld38 sv4#area1#page10#enu8#fld47 sv4#area1#page10#enu8#fld48 sv4#area1#page10#enu8#fld49 sv4#area1#page10#enu8#fld50 sv4#area1#page10#enu8#fld23 sv4#area1#page10#enu8#fld51">
+      <Link id="sv4#area1#page10#enu8#ln30" name="Guardar" to="sv4#area1#mfu3" type="normal" validate="true">
+        <LinkParameter id="sv4#area1#page10#enu8#ln30#par19" name="email_email" source="sv4#area1#page10#enu8#fld27" target="sv4#area1#mfu3.email"/>
+        <LinkParameter id="sv4#area1#page10#enu8#ln30#par36" name="foto_foto" source="sv4#area1#page10#enu8#fld38" target="sv4#area1#mfu3.User#att32"/>
+        <LinkParameter id="sv4#area1#page10#enu8#ln30#par38" name="lat1_lat1" source="sv4#area1#page10#enu8#fld47" target="sv4#area1#mfu3.User#att33"/>
+        <LinkParameter id="sv4#area1#page10#enu8#ln30#par39" name="lat2_lat2" source="sv4#area1#page10#enu8#fld49" target="sv4#area1#mfu3.User#att8"/>
+        <LinkParameter id="sv4#area1#page10#enu8#ln30#par40" name="lon1_lon1" source="sv4#area1#page10#enu8#fld48" target="sv4#area1#mfu3.User#att34"/>
+        <LinkParameter id="sv4#area1#page10#enu8#ln30#par41" name="lon2_lon2" source="sv4#area1#page10#enu8#fld50" target="sv4#area1#mfu3.User#att9"/>
+        <LinkParameter id="sv4#area1#page10#enu8#ln30#par42" name="nome_nome" source="sv4#area1#page10#enu8#fld30" target="sv4#area1#mfu3.User#att30"/>
+        <LinkParameter id="sv4#area1#page10#enu8#ln30#par43" name="password_password" source="sv4#area1#page10#enu8#fld23" target="sv4#area1#mfu3.password"/>
+        <LinkParameter id="sv4#area1#page10#enu8#ln30#par44" name="Reintroduza a Password_PASSING" source="sv4#area1#page10#enu8#fld51" passing="true"/>
+        <LinkParameter id="sv4#area1#page10#enu8#ln30#par45" name="oid_PASSING_KeyCondition15 [oid]" sourceLinkParameter="sv4#area1#page10#seu10#ln62#par115" target="sv4#area1#mfu3#su25#kcond17.userOID"/>
+        <LinkParameter id="sv4#area1#page10#enu8#ln30#par13" name="Fotografia_teste" source="sv4#area1#page10#enu8#fld38" target="sv4#area1#mfu3.User#att1"/>
+      </Link>
+      <Field id="sv4#area1#page10#enu8#fld23" name="Password" type="password" modifiable="true" preloaded="true"/>
+      <Field id="sv4#area1#page10#enu8#fld27" name="Email" type="string" modifiable="true" preloaded="true">
+        <VRules>
+          <EMailValidationRule id="sv4#area1#page10#enu8#fld27#email1" name="TemQueSerEmail" errorMessage="Este campo deve conter um endere&#231;o de email."/>
+        </VRules>
+      </Field>
+      <Field id="sv4#area1#page10#enu8#fld30" name="Nome" type="string" modifiable="true" preloaded="true">
+        <VRules>
+          <ValueLengthValidationRule id="sv4#area1#page10#enu8#fld30#vl1" name="Tamanho Minimo" predicate="min" value="15" errorMessage="Um nome tem que ter pelo menos 20 caracteres."/>
+        </VRules>
+      </Field>
+      <Field id="sv4#area1#page10#enu8#fld38" name="Fotografia" type="blob" modifiable="true" preloaded="true" contentType="image"/>
+      <Field id="sv4#area1#page10#enu8#fld47" name="Latitude Menor" type="float" modifiable="true" preloaded="true"/>
+      <Field id="sv4#area1#page10#enu8#fld48" name="Longitude Menor" type="float" modifiable="true" preloaded="true"/>
+      <Field id="sv4#area1#page10#enu8#fld49" name="Latitude Maior" type="float" modifiable="true" preloaded="true"/>
+      <Field id="sv4#area1#page10#enu8#fld50" name="Longitude Maior" type="float" modifiable="true" preloaded="true"/>
+      <Field id="sv4#area1#page10#enu8#fld51" name="Reintroduza a Password" type="password" modifiable="true" preloaded="true">
+        <VRules>
+          <CompareValidationRule id="sv4#area1#page10#enu8#fld51#cmp1" name="CompararComPassword" predicate="eq" valueField="sv4#area1#page10#enu8#fld23"/>
+        </VRules>
+      </Field>
+      <VRules/>
+    </EntryUnit>
+    <GetUnit id="sv4#area1#page10#gtu1" name="GetLoggedUser" gr:x="5" gr:y="98" contextParameters="UserCtxParam">
+      <Link id="sv4#area1#page10#gtu1#ln38" name="Link36" to="sv4#area1#page10#seu10" type="transport" validate="true">
+        <LinkParameter id="sv4#area1#page10#gtu1#ln38#par80" name="UserCtxParam.oid_KeyCondition1 [oid]" source="sv4#area1#page10#gtu1.UserCtxParam" target="sv4#area1#page10#seu10#su24#kcond16.userOID"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit id="sv4#area1#page10#seu10" name="UtilizadorAutenticado" gr:x="184" gr:y="94" entity="User">
+      <Selector id="sv4#area1#page10#seu10#su24" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#area1#page10#seu10#su24#kcond16" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv4#area1#page10#seu10#ln62" name="Link63" to="sv4#area1#page10#enu8" type="transport" validate="true" gr:bendpoints="-4,-107,200,0">
+        <LinkParameter id="sv4#area1#page10#seu10#ln62#par81" name="email_Email" source="emailArray" target="sv4#area1#page10#enu8#fld27_slot"/>
+        <LinkParameter id="sv4#area1#page10#seu10#ln62#par96" name="foto_Fotografia" source="User#att32Array" target="sv4#area1#page10#enu8#fld38_slot"/>
+        <LinkParameter id="sv4#area1#page10#seu10#ln62#par108" name="lat1_Latitude Maior" source="User#att8Array" target="sv4#area1#page10#enu8#fld49_slot"/>
+        <LinkParameter id="sv4#area1#page10#seu10#ln62#par109" name="lat2_Latitude Menor" source="User#att33Array" target="sv4#area1#page10#enu8#fld47_slot"/>
+        <LinkParameter id="sv4#area1#page10#seu10#ln62#par110" name="lon2_Longitude Maior" source="User#att34Array" target="sv4#area1#page10#enu8#fld50_slot"/>
+        <LinkParameter id="sv4#area1#page10#seu10#ln62#par111" name="lon1_Longitude Menor" source="User#att9Array" target="sv4#area1#page10#enu8#fld48_slot"/>
+        <LinkParameter id="sv4#area1#page10#seu10#ln62#par112" name="nome_Nome" source="User#att30Array" target="sv4#area1#page10#enu8#fld30_slot"/>
+        <LinkParameter id="sv4#area1#page10#seu10#ln62#par113" name="password_Password" source="passwordArray" target="sv4#area1#page10#enu8#fld23_slot"/>
+        <LinkParameter id="sv4#area1#page10#seu10#ln62#par114" name="password_Reintroduza a Password" source="passwordArray" target="sv4#area1#page10#enu8#fld51_slot"/>
+        <LinkParameter id="sv4#area1#page10#seu10#ln62#par115" name="oid_PASSING" source="userOIDArray" passing="true"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv4#area1#page10#enu8">
+          <layout:Link link="sv4#area1#page10#enu8#ln30"/>
+          <layout:Field field="sv4#area1#page10#enu8#fld30"/>
+          <layout:Field field="sv4#area1#page10#enu8#fld27"/>
+          <layout:Field field="sv4#area1#page10#enu8#fld38"/>
+          <layout:Field field="sv4#area1#page10#enu8#fld47"/>
+          <layout:Field field="sv4#area1#page10#enu8#fld48"/>
+          <layout:Field field="sv4#area1#page10#enu8#fld49"/>
+          <layout:Field field="sv4#area1#page10#enu8#fld50"/>
+          <layout:Field field="sv4#area1#page10#enu8#fld23"/>
+          <layout:Field field="sv4#area1#page10#enu8#fld51"/>
+        </layout:Unit>
+      </layout:Cell>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <ConditionExpression id="sv4#area1#page10#cexpr6" name="N&#227;oMostrarDados">
+    <TextValue xml:space="preserve">return false</TextValue>
+  </ConditionExpression>
+  <Link id="sv4#area1#page10#ln96" name="Voltar" to="sv4#area2#page16" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="229,-24,-330,72"/>
+</Page>

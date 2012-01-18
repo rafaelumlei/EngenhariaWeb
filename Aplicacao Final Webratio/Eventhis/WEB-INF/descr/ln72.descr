@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>page14</Target>
+  <Secure>false</Secure>
+  <SourcePage>page14</SourcePage>
+  <Source>dau1</Source>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>false</StartPageIdRequiredByTarget>
+  <ChangesAlternative>false</ChangesAlternative>
+  <TargetContextParameters/>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <ManualContextPropagations>
+    <ManualContextPropagation targetParam="rcond1.att19" sourceUnit="dau1" sourceParam="data.att19"/>
+  </ManualContextPropagations>
+  <PreservedContextParams>
+    <Params>tmu3.time|tmu3.date|tmu3.timeStamp|kcond24.att19|pwu3.block|pwu3.blockFactor|pwu3.blockWindow|pwu3.sortCriteria</Params>
+  </PreservedContextParams>
+</Descriptor>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.MultiChoiceIndexUnitService" name="Favoritos">
+  <MaxResults/>
+  <Query entity="ent5">
+    <Input id="p0" param="acond16" type="integer" implied="false" expandStyle="in" attribute="userOID"/>
+    <Output id="att19" name="idevento"/>
+    <Output id="att22" name="titulo"/>
+    <Output id="att23" name="descricao"/>
+    <Output id="att21" name="dtinicio"/>
+    <Output id="att20" name="dtfim"/>
+    <Output id="att24" name="lat"/>
+    <Output id="att25" name="lon"/>
+    <Output id="role8_userOID" name="eventoToUtilizador_oid" useId="true"/>
+    <HQL>select a_evento.idevento, a_evento.titulo, a_evento.descricao, a_evento.dtinicio, a_evento.dtfim, a_evento.lat, a_evento.lon, a_evento.eventoToUtilizador.oid from Evento a_evento
+      <Where defaultPolicy="fill" allImplied="false">([(a_evento.idevento in( select a_evento_2.idevento from Evento a_evento_2 inner join a_evento_2.foimarcado s_Utilizador_role12 where ({[p0]s_Utilizador_role12.oid in(?)})))])</Where>order by a_evento.dtinicio desc
+    </HQL>
+  </Query>
+  <WRValidation links="ln68|ln67"/>
+</Descriptor>
+ 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>cru3</Target>
+  <Secure>false</Secure>
+  <SourcePage>page16</SourcePage>
+  <Source>enu15</Source>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <ChangesAlternative>true</ChangesAlternative>
+  <TargetContextParameters/>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <ManualContextPropagations>
+    <ManualContextPropagation targetParam="cru3.att17" sourceUnit="enu15" sourceParam="fld40"/>
+    <ManualContextPropagation targetParam="cru3.att16" sourceUnit="enu15" sourceParam="fld39"/>
+    <ManualContextPropagation targetParam="cru3.att15" value="NULL"/>
+  </ManualContextPropagations>
+  <PreservedContextParams>
+    <Params>cru3.att15|cru3.att16|cru3.att17|cru3.att18|cru3.role4.userOID|cru3.role6.att19|kcond5.att19</Params>
+  </PreservedContextParams>
+</Descriptor>

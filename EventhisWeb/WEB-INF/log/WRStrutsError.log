@@ -1,8 +1,0 @@
-20 Dez 2011 01:41:11,894  ERROR [http-8080-4]  (com.webratio.struts.WRPageFormBean:77) - [52D9D76B6BF2504CEA0302F24A421855]Unrecognized pressed button, the request parameter/attribute named 'button:<linkId>' is missing
- 20 Dez 2011 01:41:11,902  ERROR [http-8080-4]  (com.webratio.struts.actions.AbstractWRAction:467) - [52D9D76B6BF2504CEA0302F24A421855][page11]The form bean property 'lastURL' is null. Please ensure that the JSP page includes a hidden field named 'lastURL'
- 20 Dez 2011 22:18:57,372  ERROR [http-8080-5]  (com.webratio.struts.WRPageFormBean:77) - [A64716D5FE48DD5C96CD1FD8B0D0E2DA]Unrecognized pressed button, the request parameter/attribute named 'button:<linkId>' is missing
- 20 Dez 2011 22:18:57,378  ERROR [http-8080-5]  (com.webratio.struts.actions.AbstractWRAction:467) - [A64716D5FE48DD5C96CD1FD8B0D0E2DA][page11]The form bean property 'lastURL' is null. Please ensure that the JSP page includes a hidden field named 'lastURL'
- 20 Dez 2011 23:38:04,076  ERROR [http-8080-8]  (com.webratio.struts.WRPageFormBean:77) - [6F45B60A6D1B7BD646468EB777550405]Unrecognized pressed button, the request parameter/attribute named 'button:<linkId>' is missing
- 20 Dez 2011 23:38:04,095  ERROR [http-8080-8]  (com.webratio.struts.actions.AbstractWRAction:467) - [6F45B60A6D1B7BD646468EB777550405][page11]The form bean property 'lastURL' is null. Please ensure that the JSP page includes a hidden field named 'lastURL'
- 22 Dez 2011 15:45:24,292  ERROR [http-8080-3]  (com.webratio.struts.WRPageFormBean:77) - [F597318254762FA1A106C4EF409BA85C]Unrecognized pressed button, the request parameter/attribute named 'button:<linkId>' is missing
- 

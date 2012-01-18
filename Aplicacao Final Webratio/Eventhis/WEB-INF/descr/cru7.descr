@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.CreateUnitService" name="AddUtilizador">
+  <Entity>User</Entity>
+  <BulkInsert>false</BulkInsert>
+  <SkipBlankRecords>false</SkipBlankRecords>
+  <Field param="cru7.userOID" type="integer" attribute="userOID">oid</Field>
+  <Field param="cru7.userName" type="string" attribute="userName">userName</Field>
+  <Field param="cru7.password" type="password" attribute="password">password</Field>
+  <Field param="cru7.email" type="string" attribute="email">email</Field>
+  <Field param="cru7.att30" type="string" attribute="att30">nome</Field>
+  <Field param="cru7.att32" type="string" attribute="att32">foto</Field>
+  <Field param="cru7.att33" type="float" attribute="att33">lat1</Field>
+  <Field param="cru7.att34" type="float" attribute="att34">lon1</Field>
+  <Field param="cru7.att8" type="float" attribute="att8">lat2</Field>
+  <Field param="cru7.att9" type="float" attribute="att9">lon2</Field>
+  <Field param="cru7.att1" type="blob" attribute="att1">teste</Field>
+  <Association name="defaultGroup" direct="true" inverseName="defaultUsers" oneToOne="false">
+    <QueryInput id="oid" param="cru7.User2DefaultGroup.groupOID" type="integer"/>
+    <Query>from Grupo _e where _e.oid = :oid</Query>
+  </Association>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <Secure>false</Secure>
+    <StartsTransaction>false</StartsTransaction>
+    <CheckPermission>false</CheckPermission>
+    <Localized>false</Localized>
+    <MasterPage/>
+    <ParentContainer>area5</ParentContainer>
+    <OperationParams>
+      <Params>cru7.email|sp|cru7.password|link|cru7.att30|cru7.att1|cru7.att32|cru7.att33|cru7.User2DefaultGroup.groupOID|cru7.att34|cru7.userOID|cru7.userName|cru7.att8|cru7.att9|osp|cru7.att1_name</Params>
+    </OperationParams>
+    <SessionContextInits></SessionContextInits>
+    <OutgoingLinks>
+      <Link resultCode="success">oln23</Link>
+      <Link resultCode="error">kln20</Link>
+    </OutgoingLinks>
+    <NavigationAncestors>sv2|area5</NavigationAncestors>
+    <ModelName>AddUtilizador</ModelName>
+  </WRParameterService>
+</Descriptor>
+ 

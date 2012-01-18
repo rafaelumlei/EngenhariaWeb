@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+  <controller bufferSize="4096" multipartClass="org.apache.struts.upload.CommonsMultipartRequestHandler" maxFileSize="8M" locale="false"/>
+  <plug-in className="com.webratio.struts.RTXInitPlugIn">
+    <set-property property="adminPassword" value="bm92YW5vdmE="/>
+    <set-property property="adminUser" value="admin"/>
+    <set-property property="cryptedPassword" value="true"/>
+    <set-property property="defaultApplicationEncoding" value=""/>
+    <set-property property="defaultServerEncoding" value=""/>
+    <set-property property="httpPort" value="8080"/>
+    <set-property property="httpRequestHelperClass" value="com.webratio.struts.DefaultHttpRequestHelper"/>
+    <set-property property="httpsPort" value="8443"/>
+    <set-property property="serverName" value=""/>
+    <set-property property="useAbsoluteURL" value="false"/>
+    <set-property property="useDefaultURLEncoding" value="false"/>
+  </plug-in>
+</struts-config>

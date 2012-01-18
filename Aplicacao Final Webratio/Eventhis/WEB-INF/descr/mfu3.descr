@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.ModifyUnitService" name="AlterarUtilizador">
+  <BulkUpdate>false</BulkUpdate>
+  <Entity>User</Entity>
+  <ModifiedAttributes>att32|email|att34|att1|att33|password|att8|att9|att30</ModifiedAttributes>
+  <ModifiedRoles/>
+  <FetchMode>ENTITY</FetchMode>
+  <Query entity="User">
+    <Input id="p0" param="kcond17.userOID" type="integer" implied="false" expandStyle="in"/>
+    <HQL>from Utilizador a_utilizador
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_utilizador.oid in(?)}))</Where>
+    </HQL>
+  </Query>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <Secure>false</Secure>
+    <StartsTransaction>false</StartsTransaction>
+    <CheckPermission>true</CheckPermission>
+    <Localized>false</Localized>
+    <MasterPage/>
+    <ParentContainer>area1</ParentContainer>
+    <PermissionElement>sv4</PermissionElement>
+    <OperationParams>
+      <Params>mfu3.User2DefaultGroup.groupOID|mfu3.email|kcond17.userOID|sp|link|mfu3.userName|mfu3.password|mfu3.att32|mfu3.att34|mfu3.att33|mfu3.att1|mfu3.att1_name|osp|mfu3.att8|par44|mfu3.att9|mfu3.att30</Params>
+    </OperationParams>
+    <SessionContextInits></SessionContextInits>
+    <OutgoingLinks>
+      <Link resultCode="success">oln16</Link>
+      <Link resultCode="error">kln14</Link>
+    </OutgoingLinks>
+    <NavigationAncestors>sv4|area1</NavigationAncestors>
+    <ModelName>AlterarUtilizador</ModelName>
+  </WRParameterService>
+</Descriptor>

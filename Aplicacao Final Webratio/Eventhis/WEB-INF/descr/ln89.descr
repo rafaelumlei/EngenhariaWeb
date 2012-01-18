@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>lou2</Target>
+  <Secure>false</Secure>
+  <SourcePage>page16</SourcePage>
+  <Source>page16</Source>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <ChangesAlternative>true</ChangesAlternative>
+  <TargetContextParameters/>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <ManualContextPropagations></ManualContextPropagations>
+  <PreservedContextParams>
+    <Params>kcond24.att19</Params>
+  </PreservedContextParams>
+</Descriptor>

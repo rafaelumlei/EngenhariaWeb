@@ -1,0 +1,63 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area4#page20" name="P&#225;gina Principal Guests" landmark="false" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <EntryUnit id="sv2#area4#page20#enu13" name="Zona" linkOrder="sv2#area4#page20#enu13#ln112" gr:x="0" gr:y="34" fieldOrder="sv2#area4#page20#enu13#fld70 sv2#area4#page20#enu13#fld67 sv2#area4#page20#enu13#fld68 sv2#area4#page20#enu13#fld69">
+      <Field id="sv2#area4#page20#enu13#fld67" name="Latitude Maior" type="float" modifiable="true"/>
+      <Field id="sv2#area4#page20#enu13#fld68" name="Longitude Menor" type="float" modifiable="true"/>
+      <Link id="sv2#area4#page20#enu13#ln112" name="Seleccionar" to="sv2#area4#page20#mciu4" type="normal" validate="true">
+        <LinkParameter id="sv2#area4#page20#enu13#ln112#par189" name="Latitude_Latitude1" source="sv2#area4#page20#enu13#fld70" target="sv2#area4#page20#mciu4#su44#acond22"/>
+        <LinkParameter id="sv2#area4#page20#enu13#ln112#par190" name="Latitude_Latitude2" source="sv2#area4#page20#enu13#fld67" target="sv2#area4#page20#mciu4#su44#acond23"/>
+        <LinkParameter id="sv2#area4#page20#enu13#ln112#par191" name="Longitude_Longitude1" source="sv2#area4#page20#enu13#fld68" target="sv2#area4#page20#mciu4#su44#acond24"/>
+        <LinkParameter id="sv2#area4#page20#enu13#ln112#par192" name="Longitude_Longitude2" source="sv2#area4#page20#enu13#fld69" target="sv2#area4#page20#mciu4#su44#acond25"/>
+      </Link>
+      <Field id="sv2#area4#page20#enu13#fld69" name="Longitude Maior" type="string" modifiable="true"/>
+      <Field id="sv2#area4#page20#enu13#fld70" name="Latitude Menor" type="string" modifiable="true"/>
+    </EntryUnit>
+    <MultiChoiceIndexUnit id="sv2#area4#page20#mciu4" name="MostrarEventos" linkOrder="sv2#area4#page20#mciu4#ln113" gr:x="222" gr:y="0" entity="ent5" displayAttributes="ent5#att23 ent5#att20 ent5#att21 ent5#att24 ent5#att25 ent5#att22">
+      <Selector id="sv2#area4#page20#mciu4#su44" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#area4#page20#mciu4#su44#acond22" name="Latitude1" attributes="ent5#att24" predicate="gt" booleanOperator="or" implied="false"/>
+        <AttributesCondition id="sv2#area4#page20#mciu4#su44#acond23" name="Latitude2" attributes="ent5#att24" predicate="lt" booleanOperator="or" implied="false"/>
+        <AttributesCondition id="sv2#area4#page20#mciu4#su44#acond24" name="Longitude1" attributes="ent5#att25" predicate="gt" booleanOperator="or" implied="false"/>
+        <AttributesCondition id="sv2#area4#page20#mciu4#su44#acond25" name="Longitude2" attributes="ent5#att25" predicate="lt" booleanOperator="or" implied="false"/>
+      </Selector>
+      <Link id="sv2#area4#page20#mciu4#ln113" name="Ver Evento Detalhado" to="sv2#area4#page19#dau3" type="normal" validate="true">
+        <LinkParameter id="sv2#area4#page20#mciu4#ln113#par193" name="idevento (Single Row)_KeyCondition3 [idevento]" source="data[].ent5#att19" target="sv2#area4#page19#dau3#su42#kcond30.ent5#att19"/>
+      </Link>
+      <SortAttribute attribute="ent5#att21" order="descending"/>
+    </MultiChoiceIndexUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area4#page20#enu13">
+          <layout:Link link="sv2#area4#page20#enu13#ln112"/>
+          <layout:Field field="sv2#area4#page20#enu13#fld70"/>
+          <layout:Field field="sv2#area4#page20#enu13#fld67"/>
+          <layout:Field field="sv2#area4#page20#enu13#fld68"/>
+          <layout:Field field="sv2#area4#page20#enu13#fld69"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area4#page20#mciu4">
+          <layout:Attribute attribute="ent5#att23"/>
+          <layout:Attribute attribute="ent5#att20"/>
+          <layout:Attribute attribute="ent5#att21"/>
+          <layout:Attribute attribute="ent5#att24"/>
+          <layout:Attribute attribute="ent5#att25"/>
+          <layout:Attribute attribute="ent5#att22"/>
+          <layout:Link link="sv2#area4#page20#mciu4#ln113"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

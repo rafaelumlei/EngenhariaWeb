@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="P&#225;gina de Edi&#231;&#227;o Registo">
+  <SiteView>sv4</SiteView>
+  <Secure>false</Secure>
+  <SecureFormAction>false</SecureFormAction>
+  <Localized>false</Localized>
+  <ParentContainer>sv4</ParentContainer>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv4</PermissionElement>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <SessionContextInits>
+    <SessionContextToPageInit source="UserCtxParam" target="gtu2.UserCtxParam"/>
+  </SessionContextInits>
+  <ManualLinks>
+    <ManualLink activatedOperation="mfu2">ln13</ManualLink>
+    <ManualLink>ln69</ManualLink>
+  </ManualLinks>
+  <PageContextInitServices/>
+  <PageContextInits></PageContextInits>
+  <NonContextualIncomingLinks>page2|page2.redirect|page2.link|page2.link.redirect|ln29|kln1|kln1.redirect</NonContextualIncomingLinks>
+  <UnitIncomingLinks/>
+  <LinkSequence>ln68|ln20</LinkSequence>
+  <PageContextPropagations link="ln68">
+    <PageContextPropagation targetParam="kcond1.userOID" sourceUnit="gtu2" sourceParam="gtu2.UserCtxParam"/>
+  </PageContextPropagations>
+  <PageContextPropagations link="ln20">
+    <PageContextPropagation targetParam="fld2_slot" sourceUnit="seu8" sourceParam="emailArray"/>
+    <PageContextPropagation targetParam="fld4_slot" sourceUnit="seu8" sourceParam="att32Array"/>
+    <PageContextPropagation targetParam="fld13_slot" sourceUnit="seu8" sourceParam="att8Array"/>
+    <PageContextPropagation targetParam="fld5_slot" sourceUnit="seu8" sourceParam="att33Array"/>
+    <PageContextPropagation targetParam="fld14_slot" sourceUnit="seu8" sourceParam="att34Array"/>
+    <PageContextPropagation targetParam="fld12_slot" sourceUnit="seu8" sourceParam="att9Array"/>
+    <PageContextPropagation targetParam="fld3_slot" sourceUnit="seu8" sourceParam="att30Array"/>
+    <PageContextPropagation targetParam="fld1_slot" sourceUnit="seu8" sourceParam="passwordArray"/>
+    <PageContextPropagation targetParam="fld27_slot" sourceUnit="seu8" sourceParam="passwordArray"/>
+    <PageContextPropagation targetParam="par134" sourceUnit="seu8" sourceParam="userOIDArray"/>
+  </PageContextPropagations>
+  <UnitComputations refreshFormAllLinks="page2|page2.redirect|page2.link|page2.link.redirect|impl|impl.redirect|ln29|kln1|kln1.redirect">
+    <UnitComputation unit="enu2" formBased="true">
+      <RefreshForm link="ln20"/>
+    </UnitComputation>
+    <UnitComputation unit="gtu2"></UnitComputation>
+    <UnitComputation unit="seu8"></UnitComputation>
+  </UnitComputations>
+  <InitTrees>
+    <Node unit="gtu2" contextParameters="UserCtxParam" type="get">
+      <Node unit="seu8" fromLink="ln68">
+        <Node unit="enu2" fromLink="ln20"/>
+      </Node>
+    </Node>
+  </InitTrees>
+  <Variables></Variables>
+  <Conditions>
+    <Condition id="cexpr3" name="N&#227;oMostrarDados" xml:space="preserve">return false</Condition>
+  </Conditions>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="enu2" preservedByForm="true">fld1_slot</PageParam>
+      <PageParam unit="enu2" preservedByForm="true">fld2_slot</PageParam>
+      <PageParam unit="enu2" preservedByForm="true">fld3_slot</PageParam>
+      <PageParam unit="enu2" preservedByForm="true">fld4_slot</PageParam>
+      <PageParam unit="enu2" preservedByForm="true">fld5_slot</PageParam>
+      <PageParam unit="enu2" preservedByForm="true">fld12_slot</PageParam>
+      <PageParam unit="enu2" preservedByForm="true">fld13_slot</PageParam>
+      <PageParam unit="enu2" preservedByForm="true">fld14_slot</PageParam>
+      <PageParam unit="enu2" preservedByForm="true">fld27_slot</PageParam>
+      <PageParam>par134</PageParam>
+      <PageParam unit="seu8" preservedByForm="false">kcond1.userOID</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>osp</PageParam>
+    </PageParams>
+    <NavigationAncestors>sv4</NavigationAncestors>
+    <ModelName>P&#225;gina de Edi&#231;&#227;o Registo</ModelName>
+  </WRParameterService>
+</Descriptor>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>cru6</Target>
+  <Secure>false</Secure>
+  <SourcePage>page18</SourcePage>
+  <Source>enu12</Source>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <ChangesAlternative>true</ChangesAlternative>
+  <TargetContextParameters/>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <ManualContextPropagations>
+    <ManualContextPropagation targetParam="cru6.att23" sourceUnit="enu12" sourceParam="fld61"/>
+    <ManualContextPropagation targetParam="cru6.att20" sourceUnit="enu12" sourceParam="fld62"/>
+    <ManualContextPropagation targetParam="cru6.att21" sourceUnit="enu12" sourceParam="fld63"/>
+    <ManualContextPropagation targetParam="cru6.att24" sourceUnit="enu12" sourceParam="fld64"/>
+    <ManualContextPropagation targetParam="cru6.att25" sourceUnit="enu12" sourceParam="fld65"/>
+    <ManualContextPropagation targetParam="cru6.role2.att6" sourceUnit="enu12" sourceParam="sfld6"/>
+    <ManualContextPropagation targetParam="cru6.att22" sourceUnit="enu12" sourceParam="fld60"/>
+  </ManualContextPropagations>
+  <PreservedContextParams>
+    <Params>cru6.att19|cru6.att20|cru6.att21|cru6.att22|cru6.att23|cru6.att24|cru6.att25|cru6.att36|cru6.role2.att6|cru6.role8.userOID|kcond24.att19</Params>
+  </PreservedContextParams>
+</Descriptor>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>mfu2</Target>
+  <Secure>false</Secure>
+  <SourcePage>page2</SourcePage>
+  <Source>enu2</Source>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <ChangesAlternative>true</ChangesAlternative>
+  <TargetContextParameters/>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <ManualContextPropagations>
+    <ManualContextPropagation targetParam="mfu2.email" sourceUnit="enu2" sourceParam="fld2"/>
+    <ManualContextPropagation targetParam="mfu2.att32" sourceUnit="enu2" sourceParam="fld4"/>
+    <ManualContextPropagation targetParam="mfu2.att33" sourceUnit="enu2" sourceParam="fld5"/>
+    <ManualContextPropagation targetParam="mfu2.att8" sourceUnit="enu2" sourceParam="fld13"/>
+    <ManualContextPropagation targetParam="mfu2.att34" sourceUnit="enu2" sourceParam="fld12"/>
+    <ManualContextPropagation targetParam="mfu2.att9" sourceUnit="enu2" sourceParam="fld14"/>
+    <ManualContextPropagation targetParam="mfu2.att30" sourceUnit="enu2" sourceParam="fld3"/>
+    <ManualContextPropagation targetParam="mfu2.password" sourceUnit="enu2" sourceParam="fld1"/>
+    <ManualContextPropagation sourceUnit="enu2" targetParam="par36" sourceParam="fld27"/>
+    <ManualContextPropagation targetParam="kcond15.userOID" sourceUnit="enu2" sourceLinkParam="par134"/>
+  </ManualContextPropagations>
+  <PreservedContextParams>
+    <Params>kcond15.userOID|mfu2.userName|mfu2.password|mfu2.email|mfu2.att30|mfu2.att32|mfu2.att33|mfu2.att34|mfu2.att8|mfu2.att9|mfu2.att1|mfu2.att1_name|mfu2.User2DefaultGroup.groupOID|par36</Params>
+  </PreservedContextParams>
+</Descriptor>

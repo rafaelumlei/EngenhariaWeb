@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>page1</Target>
+  <Secure>false</Secure>
+  <SourcePage>page1</SourcePage>
+  <Source>seu9</Source>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>false</StartPageIdRequiredByTarget>
+  <ChangesAlternative>false</ChangesAlternative>
+  <TargetContextParameters/>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <ManualContextPropagations>
+    <ManualContextPropagation targetParam="fld16_slot" sourceUnit="seu9" sourceParam="att23Array"/>
+    <ManualContextPropagation targetParam="fld17_slot" sourceUnit="seu9" sourceParam="att20Array"/>
+    <ManualContextPropagation targetParam="fld24_slot" sourceUnit="seu9" sourceParam="att24Array"/>
+    <ManualContextPropagation targetParam="fld25_slot" sourceUnit="seu9" sourceParam="att25Array"/>
+    <ManualContextPropagation targetParam="fld15_slot" sourceUnit="seu9" sourceParam="att22Array"/>
+    <ManualContextPropagation targetParam="fld18_slot" sourceUnit="seu9" sourceParam="att21Array"/>
+    <ManualContextPropagation sourceUnit="seu9" targetParam="par136" sourceParam="att19Array"/>
+  </ManualContextPropagations>
+  <PreservedContextParams>
+    <Params>kcond14.att19|sfld1_label|sfld1_output|sfld1_presel|var6</Params>
+  </PreservedContextParams>
+</Descriptor>
+ 

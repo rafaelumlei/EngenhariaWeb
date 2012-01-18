@@ -1,0 +1,109 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#area3#page17" name="P&#225;gina Edi&#231;&#227;o de Evento" gr:x="10" gr:y="28">
+  <ContentUnits>
+    <EntryUnit id="sv4#area3#page17#enu10" name="EditarEvento" linkOrder="sv4#area3#page17#enu10#ln98 sv4#area3#page17#enu10#ln99 sv4#area3#page17#enu10#ln100" gr:x="106" gr:y="0" fieldOrder="sv4#area3#page17#enu10#fld54 sv4#area3#page17#enu10#fld55 sv4#area3#page17#enu10#sfld5 sv4#area3#page17#enu10#fld57 sv4#area3#page17#enu10#fld56 sv4#area3#page17#enu10#fld58 sv4#area3#page17#enu10#fld59">
+      <Link id="sv4#area3#page17#enu10#ln98" name="Remover Evento" to="sv4#area3#dlu2" type="normal" validate="true">
+        <LinkParameter id="sv4#area3#page17#enu10#ln98#par156" name="idevento_PASSING_KeyCondition13 [idevento]" sourceLinkParameter="sv4#area3#page17#seu13#ln102#par174" target="sv4#area3#dlu2#su40#kcond28.ent5#att19"/>
+      </Link>
+      <Link id="sv4#area3#page17#enu10#ln99" name="Guardar" to="sv4#area3#mfu4" type="normal" validate="true">
+        <LinkParameter id="sv4#area3#page17#enu10#ln99#par157" name="descricao_descricao" source="sv4#area3#page17#enu10#fld55" target="sv4#area3#mfu4.ent5#att23"/>
+        <LinkParameter id="sv4#area3#page17#enu10#ln99#par158" name="dtfim_dtfim" source="sv4#area3#page17#enu10#fld56" target="sv4#area3#mfu4.ent5#att20"/>
+        <LinkParameter id="sv4#area3#page17#enu10#ln99#par159" name="dtinicio_dtinicio" source="sv4#area3#page17#enu10#fld57" target="sv4#area3#mfu4.ent5#att21"/>
+        <LinkParameter id="sv4#area3#page17#enu10#ln99#par160" name="lat_lat" source="sv4#area3#page17#enu10#fld58" target="sv4#area3#mfu4.ent5#att24"/>
+        <LinkParameter id="sv4#area3#page17#enu10#ln99#par161" name="lon_lon" source="sv4#area3#page17#enu10#fld59" target="sv4#area3#mfu4.ent5#att25"/>
+        <LinkParameter id="sv4#area3#page17#enu10#ln99#par162" name="titulo_titulo" source="sv4#area3#page17#enu10#fld54" target="sv4#area3#mfu4.ent5#att22"/>
+        <LinkParameter id="sv4#area3#page17#enu10#ln99#par163" name="Tipo do Evento_Tipo.idtipo(EventoToTipo)" source="sv4#area3#page17#enu10#sfld5" target="sv4#area3#mfu4.rel1#role2.ent2#att6"/>
+        <LinkParameter id="sv4#area3#page17#enu10#ln99#par164" name="idevento_PASSING_KeyCondition12 [idevento]" sourceLinkParameter="sv4#area3#page17#seu13#ln102#par174" target="sv4#area3#mfu4#su39#kcond27.ent5#att19"/>
+      </Link>
+      <Field id="sv4#area3#page17#enu10#fld54" name="T&#237;tulo" type="string" modifiable="true" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area3#page17#enu10#fld54#mnd19" name="obrigat&#243;rio"/>
+          <ValueLengthValidationRule id="sv4#area3#page17#enu10#fld54#vl6" name="O t&#237;tulo de um evento tem um tamanho m&#237;nimo" predicate="min" value="5" errorMessage="O t&#237;tulo de um evento deve ter pelo menos 5 caracteres."/>
+        </VRules>
+      </Field>
+      <Field id="sv4#area3#page17#enu10#fld55" name="Descri&#231;&#227;o" type="text" modifiable="true" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area3#page17#enu10#fld55#mnd20" name="obrigat&#243;rio"/>
+          <ValueLengthValidationRule id="sv4#area3#page17#enu10#fld55#vl7" name="A descri&#231;&#227;o de um evento tem tamanho m&#237;nimo" predicate="min" value="40" errorMessage="A descri&#231;&#227;o de um evento n&#227;o pode ser inferior a 60 caracteres."/>
+        </VRules>
+      </Field>
+      <Field id="sv4#area3#page17#enu10#fld56" name="Fim" type="timestamp" modifiable="true" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area3#page17#enu10#fld56#mnd21" name="obrigat&#243;rio"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#area3#page17#enu10#fld57" name="&#205;nicio" type="timestamp" modifiable="true" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area3#page17#enu10#fld57#mnd22" name="obrigat&#243;rio"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#area3#page17#enu10#fld58" name="Latitude" type="float" modifiable="true" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area3#page17#enu10#fld58#mnd23" name="obrigat&#243;rio"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#area3#page17#enu10#fld59" name="Longitude" type="float" modifiable="true" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area3#page17#enu10#fld59#mnd24" name="obrigat&#243;rio"/>
+        </VRules>
+      </Field>
+      <SelectionField id="sv4#area3#page17#enu10#sfld5" name="Tipo do Evento" type="string">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area3#page17#enu10#sfld5#mnd25" name="obrigat&#243;rio"/>
+        </VRules>
+      </SelectionField>
+      <Link id="sv4#area3#page17#enu10#ln100" name="P&#225;gina do Evento" to="sv4#area2#page14#dau1" type="normal" validate="true" gr:bendpoints="-299,42,594,86"/>
+    </EntryUnit>
+    <SelectorUnit id="sv4#area3#page17#seu12" name="Tipos" gr:x="120" gr:y="114" entity="ent2" distinctAttributes="ent2#att6 ent2#att7">
+      <Link id="sv4#area3#page17#seu12#ln101" name="Link32" to="sv4#area3#page17#enu10" type="transport" validate="true">
+        <LinkParameter id="sv4#area3#page17#seu12#ln101#par165" name="$$NULL$$_Tipo do Evento - Preselection" target="sv4#area3#page17#enu10#sfld5_presel" sourceValue="$$NULL$$"/>
+        <LinkParameter id="sv4#area3#page17#seu12#ln101#par166" name="nome_Tipo do Evento [label]" source="ent2#att7Array" target="sv4#area3#page17#enu10#sfld5_label"/>
+        <LinkParameter id="sv4#area3#page17#seu12#ln101#par167" name="idtipo_Tipo do Evento [output]" source="ent2#att6Array" target="sv4#area3#page17#enu10#sfld5_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="sv4#area3#page17#seu13" name="DadosEvento" gr:x="0" gr:y="114" entity="ent5">
+      <Link id="sv4#area3#page17#seu13#ln102" name="Link25" to="sv4#area3#page17#enu10" type="transport" validate="true">
+        <LinkParameter id="sv4#area3#page17#seu13#ln102#par168" name="descricao_Descri&#231;&#227;o" source="ent5#att23Array" target="sv4#area3#page17#enu10#fld55_slot"/>
+        <LinkParameter id="sv4#area3#page17#seu13#ln102#par169" name="dtfim_Fim" source="ent5#att20Array" target="sv4#area3#page17#enu10#fld56_slot"/>
+        <LinkParameter id="sv4#area3#page17#seu13#ln102#par170" name="lat_Latitude" source="ent5#att24Array" target="sv4#area3#page17#enu10#fld58_slot"/>
+        <LinkParameter id="sv4#area3#page17#seu13#ln102#par171" name="lon_Longitude" source="ent5#att25Array" target="sv4#area3#page17#enu10#fld59_slot"/>
+        <LinkParameter id="sv4#area3#page17#seu13#ln102#par172" name="titulo_T&#237;tulo" source="ent5#att22Array" target="sv4#area3#page17#enu10#fld54_slot"/>
+        <LinkParameter id="sv4#area3#page17#seu13#ln102#par173" name="dtinicio_&#205;nicio" source="ent5#att21Array" target="sv4#area3#page17#enu10#fld57_slot"/>
+        <LinkParameter id="sv4#area3#page17#seu13#ln102#par174" name="idevento_PASSING" source="ent5#att19Array" passing="true"/>
+      </Link>
+      <Selector id="sv4#area3#page17#seu13#su41" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#area3#page17#seu13#su41#kcond29" name="KeyCondition14" predicate="in" implied="false"/>
+      </Selector>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv4#area3#page17#enu10">
+          <layout:Field field="sv4#area3#page17#enu10#fld54"/>
+          <layout:Field field="sv4#area3#page17#enu10#fld55"/>
+          <layout:Field field="sv4#area3#page17#enu10#sfld5"/>
+          <layout:Field field="sv4#area3#page17#enu10#fld57"/>
+          <layout:Field field="sv4#area3#page17#enu10#fld56"/>
+          <layout:Field field="sv4#area3#page17#enu10#fld58"/>
+          <layout:Field field="sv4#area3#page17#enu10#fld59"/>
+          <layout:Link link="sv4#area3#page17#enu10#ln98"/>
+          <layout:Link link="sv4#area3#page17#enu10#ln99"/>
+          <layout:Link link="sv4#area3#page17#enu10#ln100"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Variable id="sv4#area3#page17#var9" name="idevento"/>
+</Page>

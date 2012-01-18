@@ -1,0 +1,122 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#area2#page14" name="P&#225;gina do Evento" linkOrder="sv4#area2#page14#ln84" gr:x="608" gr:y="58">
+  <ContentUnits>
+    <DataUnit id="sv4#area2#page14#dau1" name="Evento" linkOrder="sv4#area2#page14#dau1#ln74 sv4#area2#page14#dau1#ln75 sv4#area2#page14#dau1#ln109" gr:x="0" gr:y="0" entity="ent5" displayAttributes="ent5#att22 ent5#att23 rel1#role2.ent2#att7 ent5#att21 ent5#att20 ent5#att24 ent5#att25">
+      <Selector id="sv4#area2#page14#dau1#su34" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#area2#page14#dau1#su34#kcond24" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv4#area2#page14#dau1#ln72" name="ComentarioDoEvento" to="sv4#area2#page14#pwu3" type="transport" validate="true">
+        <LinkParameter id="sv4#area2#page14#dau1#ln72#par120" name="idevento_RoleCondition3 [idevento]" source="data.ent5#att19" target="sv4#area2#page14#pwu3#su35#rcond1.ent5#att19"/>
+      </Link>
+      <Link id="sv4#area2#page14#dau1#ln73" name="IdEventoParaCriarComentario" to="sv4#area2#cru5" type="transport" validate="true" gr:bendpoints="10,462,-206,-2">
+        <LinkParameter id="sv4#area2#page14#dau1#ln73#par124" name="idevento_Evento.idevento(ComentarioToEvento)" source="data.ent5#att19" target="sv4#area2#cru5.rel3#role6.ent5#att19"/>
+      </Link>
+      <Link id="sv4#area2#page14#dau1#ln74" name="Desmarcar Favorito" to="sv4#area2#dcnu3" type="normal" validate="true" gr:bendpoints="142,-130,-147,116">
+        <LinkParameter id="sv4#area2#page14#dau1#ln74#par125" name="idevento_KeyCondition9 [idevento] [Evento] [Source]" source="data.ent5#att19" target="sv4#area2#dcnu3#su30#kcond20.ent5#att19"/>
+      </Link>
+      <Link id="sv4#area2#page14#dau1#ln75" name="Marcar Como Favorito" to="sv4#area2#cnu1" type="normal" validate="true" gr:bendpoints="-279,-19,107,63">
+        <LinkParameter id="sv4#area2#page14#dau1#ln75#par126" name="idevento_KeyCondition4 [idevento] [Evento] [Source]" source="data.ent5#att19" target="sv4#area2#cnu1#su28#kcond18.ent5#att19"/>
+      </Link>
+      <Link id="sv4#area2#page14#dau1#ln76" name="Link14" to="sv4#area2#page14#seu11" type="transport" validate="true" gr:bendpoints="112,68,-196,-90;287,72,-1,-86">
+        <LinkParameter id="sv4#area2#page14#dau1#ln76#par127" name="idevento_eventomarcado [idevento]" source="data.ent5#att19" target="sv4#area2#page14#seu11#su36#kcond25.ent5#att19"/>
+      </Link>
+      <Link id="sv4#area2#page14#dau1#ln109" name="Editar ou Remover Evento" to="sv4#area3#page17#seu13" type="normal" validate="true" gr:bendpoints="625,140,-3,-60">
+        <LinkParameter id="sv4#area2#page14#dau1#ln109#par187" name="idevento_KeyCondition14 [idevento]" source="data.ent5#att19" target="sv4#area3#page17#seu13#su41#kcond29.ent5#att19"/>
+      </Link>
+    </DataUnit>
+    <PowerIndexUnit id="sv4#area2#page14#pwu3" name="Coment&#225;rios" gr:x="390" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="rel2#role4.User#att1 ent4#att16 ent4#att17">
+      <Selector id="sv4#area2#page14#pwu3#su35" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#area2#page14#pwu3#su35#rcond1" name="RoleCondition3" predicate="in" implied="false" role="rel3#role5"/>
+      </Selector>
+      <SortAttribute attribute="ent4#att18" order="descending"/>
+    </PowerIndexUnit>
+    <EntryUnit id="sv4#area2#page14#enu9" name="Novo Comentario" linkOrder="sv4#area2#page14#enu9#ln78" gr:x="180" gr:y="350">
+      <Field id="sv4#area2#page14#enu9#fld52" name="T&#237;tulo" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area2#page14#enu9#fld52#mnd13" name="obrigat&#243;rio"/>
+          <ValueLengthValidationRule id="sv4#area2#page14#enu9#fld52#vl4" name="Limite m&#237;nimo para o tamanho do t&#237;tulo" predicate="min" value="3" errorMessage="O t&#237;tulo de um coment&#225;rio deve ter pelo menos 3 caracteres."/>
+        </VRules>
+      </Field>
+      <Field id="sv4#area2#page14#enu9#fld53" name="Corpo" type="text" modifiable="true" contentType="text/plain">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area2#page14#enu9#fld53#mnd18" name="obrigat&#243;rio"/>
+          <ValueLengthValidationRule id="sv4#area2#page14#enu9#fld53#vl5" name="Limite m&#237;nimo para o tamanho do corpo" predicate="min" errorMessage="O corpo de um coment&#225;rio deve ter mais do que 3 caracteres." value="3"/>
+        </VRules>
+      </Field>
+      <Link id="sv4#area2#page14#enu9#ln78" name="Comentar" to="sv4#area2#cru5" type="normal" validate="true">
+        <LinkParameter id="sv4#area2#page14#enu9#ln78#par135" name="texto_texto" source="sv4#area2#page14#enu9#fld53" target="sv4#area2#cru5.ent4#att17"/>
+        <LinkParameter id="sv4#area2#page14#enu9#ln78#par138" name="titulo_titulo" source="sv4#area2#page14#enu9#fld52" target="sv4#area2#cru5.ent4#att16"/>
+        <LinkParameter id="sv4#area2#page14#enu9#ln78#par143" name="NULL_idcomentario" target="sv4#area2#cru5.ent4#att15" sourceValue="NULL"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit id="sv4#area2#page14#seu11" name="EstadoFavorito" gr:x="400" gr:y="200" entity="ent5" distinctAttributes="count(rel6#role12.userOID) rel6#role12.userOID">
+      <Selector id="sv4#area2#page14#seu11#su36" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv4#area2#page14#seu11#su36#acond17" name="marcadopor" predicate="eq" booleanOperator="or" implied="false" attributes="rel6#role12.userOID"/>
+        <KeyCondition id="sv4#area2#page14#seu11#su36#kcond25" name="eventomarcado" predicate="in" implied="false"/>
+      </Selector>
+    </SelectorUnit>
+    <GetUnit id="sv4#area2#page14#gtu3" name="GetLoggedUser" gr:x="190" gr:y="230" contextParameters="UserCtxParam">
+      <Link id="sv4#area2#page14#gtu3#ln79" name="Link51" to="sv4#area2#cru5" type="transport" validate="true" gr:bendpoints="-97,-1,-130,-281;-92,267,-125,-13">
+        <LinkParameter id="sv4#area2#page14#gtu3#ln79#par144" name="UserCtxParam.oid_Utilizador.oid(ComentarioToUtilizador)" source="sv4#area2#page14#gtu3.UserCtxParam" target="sv4#area2#cru5.rel2#role4.userOID"/>
+      </Link>
+      <Link id="sv4#area2#page14#gtu3#ln80" name="Link56" to="sv4#area2#page14#seu11" type="transport" validate="true">
+        <LinkParameter id="sv4#area2#page14#gtu3#ln80#par145" name="UserCtxParam.oid_marcado" source="sv4#area2#page14#gtu3.UserCtxParam" target="sv4#area2#page14#seu11#su36#acond17"/>
+      </Link>
+      <Link id="sv4#area2#page14#gtu3#ln81" name="Link60" to="sv4#area2#dcnu3" type="transport" validate="true" gr:bendpoints="-3,-318,371,-4">
+        <LinkParameter id="sv4#area2#page14#gtu3#ln81#par146" name="UserCtxParam.oid_KeyCondition10 [oid] [Utilizador] [Target]" source="sv4#area2#page14#gtu3.UserCtxParam" target="sv4#area2#dcnu3#su31#kcond21.userOID"/>
+      </Link>
+      <Link id="sv4#area2#page14#gtu3#ln82" name="Link61" to="sv4#area2#cnu1" type="transport" validate="true" gr:bendpoints="-286,-127,308,178;-283,-229,311,76;-476,-255,118,51">
+        <LinkParameter id="sv4#area2#page14#gtu3#ln82#par147" name="UserCtxParam.oid_KeyCondition6 [oid] [Utilizador] [Target]" source="sv4#area2#page14#gtu3.UserCtxParam" target="sv4#area2#cnu1#su29#kcond19.userOID"/>
+      </Link>
+    </GetUnit>
+    <TimeUnit id="sv4#area2#page14#tmu3" name="TempoComentarios" gr:x="350" gr:y="360">
+      <Link id="sv4#area2#page14#tmu3#ln83" name="Link3" to="sv4#area2#cru5" type="transport" validate="true" gr:bendpoints="-93,146,126,-11">
+        <LinkParameter id="sv4#area2#page14#tmu3#ln83#par148" name="Current/Input Timestamp_dtcom" source="currentTimestamp" target="sv4#area2#cru5.ent4#att18"/>
+      </Link>
+    </TimeUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv4#area2#page14#dau1">
+          <layout:Attribute label="T&#237;tulo" attribute="ent5#att22"/>
+          <layout:Attribute label="Descri&#231;&#227;o" attribute="ent5#att23"/>
+          <layout:Attribute label="Tipo do Evento" attribute="rel1#role2.ent2#att7"/>
+          <layout:Attribute label="&#205;nicio" attribute="ent5#att21"/>
+          <layout:Attribute label="Fim" attribute="ent5#att20"/>
+          <layout:Attribute label="Latitude" attribute="ent5#att24"/>
+          <layout:Attribute label="Longitude" attribute="ent5#att25"/>
+          <layout:Link link="sv4#area2#page14#dau1#ln74" layout:linkVisibilityCondition="sv4#area2#page14#cexpr7" layout:linkVisibilityConditionNegated="true"/>
+          <layout:Link link="sv4#area2#page14#dau1#ln75" layout:linkVisibilityCondition="sv4#area2#page14#cexpr7" layout:linkDisableConditionNegated="true"/>
+          <layout:Link link="sv4#area2#page14#dau1#ln109" layout:linkVisibilityCondition="sv4#area2#page14#cexpr8"/>
+        </layout:Unit>
+      </layout:Cell>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv4#area2#page14#pwu3" layout:unitLayout="ChangeComents/comments">
+          <layout:Attribute attribute="rel2#role4.User#att1"/>
+          <layout:Attribute attribute="ent4#att16"/>
+          <layout:Attribute attribute="ent4#att17"/>
+          <layout:LayoutParameter name="image-width" value="50" type="attribute"/>
+          <layout:LayoutParameter name="image-height" value="50" type="attribute"/>
+        </layout:Unit>
+      </layout:Cell>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv4#area2#page14#enu9">
+          <layout:Field field="sv4#area2#page14#enu9#fld52"/>
+          <layout:Field field="sv4#area2#page14#enu9#fld53"/>
+          <layout:Link link="sv4#area2#page14#enu9#ln78"/>
+        </layout:Unit>
+      </layout:Cell>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv4#area2#page14#ln84" name="Voltar" to="sv4#area2#page16" type="normal" automaticCoupling="true" validate="true"/>
+  <Variable id="sv4#area2#page14#var5" name="EstadoFavorito" type="integer" unitId="sv4#area2#page14#seu11" parameter="ent5#att23Array"/>
+  <Link id="sv4#area2#page14#ln85" name="Log Out" to="sv4#area2#lou2" type="transport" automaticCoupling="true" validate="true" gr:bendpoints="-327,80,49,-66"/>
+  <ConditionExpression id="sv4#area2#page14#cexpr7" name="VisibilidadeLinks">
+    <TextValue xml:space="preserve">return (EstadoFavorito == null)
+</TextValue>  </ConditionExpression>  <Variable id="sv4#area2#page14#var7" name="CriadorEvento" type="integer" unitId="sv4#area2#page14#dau1" parameter="data.rel4#role8_userOID"/>  <Variable id="sv4#area2#page14#var8" name="UtilizadorAutenticado" type="integer" unitId="sv4#area2#page14#gtu3" parameter="sv4#area2#page14#gtu3.UserCtxParam"/>  <ConditionExpression id="sv4#area2#page14#cexpr8" name="MostrarLinkRemo&#231;&#227;oEdi&#231;&#227;o">    <TextValue xml:space="preserve">return (UtilizadorAutenticado == CriadorEvento)</TextValue>
+  </ConditionExpression>
+</Page>

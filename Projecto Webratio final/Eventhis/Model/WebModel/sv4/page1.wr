@@ -1,0 +1,58 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page1" name="Favoritos" linkOrder="sv4#page1#ln6 sv4#page1#ln8" landmark="true" gr:x="1190" gr:y="1250">
+  <ContentUnits>
+    <MultiChoiceIndexUnit id="sv4#page1#mciu1" name="Favoritos" linkOrder="sv4#page1#mciu1#ln13 sv4#page1#mciu1#ln3" gr:x="186" gr:y="0" entity="ent5" displayAttributes="ent5#att22 ent5#att23 ent5#att21 ent5#att20 ent5#att24 ent5#att25">
+      <Selector id="sv4#page1#mciu1#su2" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv4#page1#mciu1#su2#acond3" name="DoUtilizador" predicate="eq" booleanOperator="or" implied="false" attributes="rel6#role12.userOID"/>
+        <AttributesCondition id="sv4#page1#mciu1#su2#acond12" name="PorTerminar" predicate="gt" booleanOperator="or" implied="false" attributes="ent5#att20"/>
+      </Selector>
+      <SortAttribute attribute="ent5#att21" order="descending"/>
+      <Link id="sv4#page1#mciu1#ln3" name="Ver Evento Detalhado" to="sv4#area2#page14#dau1" type="normal" validate="true" gr:bendpoints="225,-167,-24,670">
+        <LinkParameter id="sv4#page1#mciu1#ln3#par8" name="idevento (Single Row)_KeyCondition3 [idevento]" source="data[].ent5#att19" target="sv4#area2#page14#dau1#su34#kcond24.ent5#att19"/>
+      </Link>
+      <Link id="sv4#page1#mciu1#ln13" name="Desmarcar Favorito" to="sv4#dcnu1" type="normal" validate="true" gr:bendpoints="-305,-80,251,-89">
+        <LinkParameter id="sv4#page1#mciu1#ln13#par18" name="idevento (Single Row)_KeyCondition7 [idevento] [Evento] [Source]" source="data[].ent5#att19" target="sv4#dcnu1#su3#kcond1.ent5#att19"/>
+        <LinkParameter id="sv4#page1#mciu1#ln13#par20" name="EventoToUtilizador.oid (Single Row)_KeyCondition8 [oid] [Utilizador] [Target]" source="data[].rel4#role8_userOID" target="sv4#dcnu1#su5#kcond2.userOID"/>
+      </Link>
+    </MultiChoiceIndexUnit>
+    <GetUnit id="sv4#page1#gtu4" name="GetLoggedUser" gr:x="0" gr:y="20" contextParameters="UserCtxParam">
+      <Link id="sv4#page1#gtu4#ln4" name="Link47" to="sv4#page1#mciu1" type="transport" validate="true">
+        <LinkParameter id="sv4#page1#gtu4#ln4#par9" name="UserCtxParam.oid_AttCondition25" source="sv4#page1#gtu4.UserCtxParam" target="sv4#page1#mciu1#su2#acond3"/>
+      </Link>
+    </GetUnit>
+    <TimeUnit gr:x="4" gr:y="124" id="sv4#page1#tmu4" name="DataHoraActual">
+      <Link id="sv4#page1#tmu4#ln12" name="Link12" to="sv4#page1#mciu1" type="transport" validate="true">
+        <LinkParameter id="sv4#page1#tmu4#ln12#par15" name="Current/Input Timestamp_PorTerminar" source="currentTimestamp" target="sv4#page1#mciu1#su2#acond12"/>
+      </Link>
+    </TimeUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv4#page1#mciu1">
+          <layout:Attribute label="T&#237;tulo" attribute="ent5#att22"/>
+          <layout:Attribute label="Descri&#231;&#227;o" attribute="ent5#att23"/>
+          <layout:Attribute label="&#205;nicio" attribute="ent5#att21"/>
+          <layout:Attribute label="Fim" attribute="ent5#att20"/>
+          <layout:Attribute label="Latitude" attribute="ent5#att24"/>
+          <layout:Attribute label="Longitude" attribute="ent5#att25"/>
+          <layout:Link link="sv4#page1#mciu1#ln13"/>
+          <layout:Link link="sv4#page1#mciu1#ln3"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv4#page1#ln6" name="Voltar" to="sv4#area2#page16" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="-139,-346,-101,426"/>
+  <Link id="sv4#page1#ln8" name="Log Out" to="sv4#area2#lou2" type="normal" automaticCoupling="true" validate="true"/>
+</Page>

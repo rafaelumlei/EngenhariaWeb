@@ -1,0 +1,42 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Administrador" homePage="sv1#page6" protected="true">
+  <OperationUnits>
+    <CreateUnit gr:x="160" gr:y="410" id="sv1#cru1" name="Enviar Newsletter Operation" entity="ent1">
+      <Link id="sv1#cru1#ln31" name="Link31" to="sv1#mlu1" type="transport" validate="true" gr:bendpoints="175,67,-332,3;311,50,-196,26">
+        <LinkParameter id="sv1#cru1#ln31#par72" name="titulo_Subject" source="ent1#att2Array" target="sv1#mlu1.subject"/>
+      </Link>
+      <KOLink id="sv1#cru1#kln9" name="KOLink9" to="sv1#page8" automaticCoupling="true" gr:bendpoints="37,89,-639,0;190,120,-486,31;460,124,-216,35"/>
+      <OKLink id="sv1#cru1#oln9" name="OKLink9" to="sv1#qu1" automaticCoupling="true" gr:bendpoints="-14,80,-17,-74"/>
+    </CreateUnit>
+    <MailUnit gr:x="710" gr:y="440" id="sv1#mlu1" name="Enviar Email" format="html" smtpServer="smtp1">
+      <BodyTemplate xml:space="preserve">&lt;html&gt;
+   &lt;body&gt;
+      &lt;div&gt;
+         Ol&#225; $$nome$$,
+      &lt;/div&gt;
+      &lt;div&gt;
+         Queira visitar o Eventhis!
+	  Poder&#225; conhecer e explorar diversos eventos, como 
+	 o apresentado abaixo
+      &lt;/div&gt;
+      &lt;div&gt;
+         &lt;b&gt;Username&lt;/b&gt;: $$titulo$$
+      &lt;/div&gt;
+      &lt;div&gt;
+         &lt;b&gt;Password&lt;/b&gt;: $$descricao$$
+      &lt;/div&gt;
+      &lt;div&gt;
+	 Visite o nosso s&#237;tio
+         &lt;a href="http://localhost:8080/Eventhis/"&gt;web site&lt;/a&gt;
+      &lt;/div&gt;
+   &lt;/body&gt;
+&lt;/html&gt;</BodyTemplate>
+      <KOLink id="sv1#mlu1#kln4" name="KOLink4" to="sv1#page7" automaticCoupling="true"/>
+      <OKLink id="sv1#mlu1#oln7" name="OKLink7" to="sv1#page6" automaticCoupling="true" gr:bendpoints="-165,-108,27,219"/>
+    </MailUnit>
+    <QueryUnit gr:x="50" gr:y="520" id="sv1#qu1" name="Retirar Eventos Da Newsletter" mode="update" language="SQL" db="db1">
+      <QueryText xml:space="preserve">update evento set proxnewsletter = false where idevento &gt; 0</QueryText>
+      <OKLink id="sv1#qu1#oln10" name="OKLink10" to="sv1#page6" automaticCoupling="true" gr:bendpoints="-84,-61,-527,411;-110,-344,-478,23"/>
+    </QueryUnit>
+    <LogoutUnit gr:x="980" gr:y="140" id="sv1#lou1" name="LogoutAdmin" siteView="sv2"/>
+  </OperationUnits>
+</SiteView>

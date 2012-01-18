@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.ModifyUnitService" name="ModificarEvento">
+  <BulkUpdate>false</BulkUpdate>
+  <Entity>ent5</Entity>
+  <ModifiedAttributes>att23|att24|att25|att20|att21|att22</ModifiedAttributes>
+  <ModifiedRoles>role2</ModifiedRoles>
+  <FetchMode keyCondition="kcond27">HQL</FetchMode>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <Secure>false</Secure>
+    <StartsTransaction>false</StartsTransaction>
+    <CheckPermission>true</CheckPermission>
+    <Localized>false</Localized>
+    <MasterPage/>
+    <ParentContainer>area3</ParentContainer>
+    <PermissionElement>sv4</PermissionElement>
+    <OperationParams>
+      <Params>mfu4.role8.userOID|mfu4.role2.att6|sp|link|kcond27.att19|mfu4.att23|mfu4.att24|mfu4.att25|mfu4.att20|kcond29.att19|mfu4.att21|mfu4.att22|var9|mfu4.att36|osp|kcond24.att19</Params>
+    </OperationParams>
+    <SessionContextInits></SessionContextInits>
+    <OutgoingLinks>
+      <Link resultCode="success">oln20</Link>
+      <Link resultCode="error">kln17</Link>
+    </OutgoingLinks>
+    <NavigationAncestors>sv4|area3</NavigationAncestors>
+    <ModelName>ModificarEvento</ModelName>
+  </WRParameterService>
+</Descriptor>

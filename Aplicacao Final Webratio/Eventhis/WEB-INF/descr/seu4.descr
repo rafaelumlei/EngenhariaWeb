@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.utility.rtx.db.SelectorUnitService" name="Eventos Para Enviar Via Email">
+  <MaxResults/>
+  <Query entity="ent5">
+    <Input id="p0" param="acond5" type="boolean" implied="false" expandStyle="in" value="true" attribute="att36"/>
+    <Output id="att19" name="idevento"/>
+    <Output id="att23" name="descricao"/>
+    <Output id="att22" name="titulo"/>
+    <HQL>select a_evento.idevento, a_evento.descricao, a_evento.titulo from Evento a_evento
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_evento.proxnewsletter in(?)}))</Where>
+    </HQL>
+  </Query>
+</Descriptor>

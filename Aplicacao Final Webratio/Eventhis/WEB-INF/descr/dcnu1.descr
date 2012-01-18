@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.DisconnectUnitService" name="DesmarcarFavorito">
+  <Role useHQL="true">role12</Role>
+  <Source id="ent5" keyCondition="kcond7"></Source>
+  <Target id="User" keyCondition="kcond8"></Target>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <Secure>false</Secure>
+    <StartsTransaction>false</StartsTransaction>
+    <CheckPermission>true</CheckPermission>
+    <Localized>false</Localized>
+    <MasterPage/>
+    <ParentContainer>sv4</ParentContainer>
+    <PermissionElement>sv4</PermissionElement>
+    <OperationParams>
+      <Params>kcond8.userOID|sp|link|osp|kcond7.att19</Params>
+    </OperationParams>
+    <SessionContextInits></SessionContextInits>
+    <OutgoingLinks>
+      <Link resultCode="success">oln5</Link>
+      <Link resultCode="error">kln6</Link>
+    </OutgoingLinks>
+    <NavigationAncestors>sv4</NavigationAncestors>
+    <ModelName>DesmarcarFavorito</ModelName>
+  </WRParameterService>
+</Descriptor>
+ 

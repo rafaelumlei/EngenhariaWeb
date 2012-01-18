@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="P&#225;gina Principal Guests">
+  <SiteView>sv2</SiteView>
+  <Secure>false</Secure>
+  <SecureFormAction>false</SecureFormAction>
+  <Localized>false</Localized>
+  <ParentContainer>sv2</ParentContainer>
+  <CheckPermission>false</CheckPermission>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <SessionContextInits></SessionContextInits>
+  <ManualLinks>
+    <ManualLink>ln23</ManualLink>
+    <ManualLink>ln26</ManualLink>
+  </ManualLinks>
+  <PageContextInitServices/>
+  <PageContextInits></PageContextInits>
+  <NonContextualIncomingLinks>page11|page11.redirect|page11.link|page11.link.redirect|ln19|ln58|ln59</NonContextualIncomingLinks>
+  <UnitIncomingLinks>ln23</UnitIncomingLinks>
+  <LinkSequence/>
+  <UnitComputations refreshFormAllLinks="page11|page11.redirect|page11.link|page11.link.redirect|impl|impl.redirect|ln19|ln58|ln59">
+    <UnitComputation unit="enu11" formBased="true"></UnitComputation>
+    <UnitComputation unit="mciu1" formBased="true">
+      <RefreshForm link="ln23"/>
+    </UnitComputation>
+  </UnitComputations>
+  <InitTrees>
+    <Node unit="enu11">
+      <Node unit="mciu1" fromLink="ln23"/>
+    </Node>
+  </InitTrees>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="mciu1" preservedByForm="false">acond11</PageParam>
+      <PageParam unit="mciu1" preservedByForm="false">acond12</PageParam>
+      <PageParam unit="mciu1" preservedByForm="false">acond13</PageParam>
+      <PageParam unit="mciu1" preservedByForm="false">acond14</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>osp</PageParam>
+    </PageParams>
+    <NavigationAncestors>sv2</NavigationAncestors>
+    <ModelName>P&#225;gina Principal Guests</ModelName>
+  </WRParameterService>
+</Descriptor>
+ 

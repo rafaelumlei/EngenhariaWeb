@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<Descriptor service="com.webratio.units.content.rtx.MultiMessageUnitService" name="Erro ao Adicionar Newsletter">
-  <Message xml:space="preserve">Erro ao inserir nova newsletter!!</Message>
-</Descriptor>
- 

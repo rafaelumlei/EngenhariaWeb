@@ -1,0 +1,7 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Guests" landmarks="sv2#page4 sv2#page5" homePage="sv2#area4#page20">
+  <OperationUnits>
+    <LoginUnit id="sv2#lgu4" name="Login" landmark="false" secure="false" customDescriptor="false" gr:x="130" gr:y="250">
+      <KOLink id="sv2#lgu4#kln13" name="KOLink13" to="sv2#page5" automaticCoupling="true" gr:bendpoints="71,-54,-89,-43"/>
+    </LoginUnit>
+  </OperationUnits>
+</SiteView>

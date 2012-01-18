@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntryUnitService" name="EditarUtilizador">
+  <FormFields>
+    <Field id="fld23" name="Password" type="password" subType="" localized="false">
+      <Slot id="fld23_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld27" name="Email" type="string" subType="" localized="false">
+      <Slot id="fld27_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld30" name="Nome" type="string" subType="" localized="false">
+      <Slot id="fld30_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld38" name="Fotografia" type="blob" subType="" localized="false">
+      <Slot id="fld38_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld47" name="Latitude Menor" type="float" subType="" localized="true">
+      <Slot id="fld47_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld48" name="Longitude Menor" type="float" subType="" localized="true">
+      <Slot id="fld48_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld49" name="Latitude Maior" type="float" subType="" localized="true">
+      <Slot id="fld49_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld50" name="Longitude Maior" type="float" subType="" localized="true">
+      <Slot id="fld50_slot" label="true" output="true"/>
+    </Field>
+    <Field id="fld51" name="Reintroduza a Password" type="password" subType="" localized="false">
+      <Slot id="fld51_slot" label="true" output="true"/>
+    </Field>
+  </FormFields>
+  <WRValidation links="ln30">
+    <EMailValidationRule service="com.webratio.units.validation.EMailValidationRuleService" elementId="fld27" id="email1" name="TemQueSerEmail" condition="" customErrorMessage="true"/>
+    <ValueLengthValidationRule service="com.webratio.units.validation.ValueLengthValidationRuleService" elementId="fld30" id="vl1" name="Tamanho Minimo" condition="" customErrorMessage="true">
+      <Predicate>min</Predicate>
+      <Value>15</Value>
+    </ValueLengthValidationRule>
+    <CompareValidationRule service="com.webratio.units.validation.CompareValidationRuleService" elementId="fld51" id="cmp1" name="CompararComPassword" condition="">
+      <Predicate>eq</Predicate>
+      <IgnoreCase>false</IgnoreCase>
+      <ValueField>fld23</ValueField>
+    </CompareValidationRule>
+  </WRValidation>
+</Descriptor>

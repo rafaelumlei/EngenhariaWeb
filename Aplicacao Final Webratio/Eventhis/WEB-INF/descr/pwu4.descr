@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.PowerIndexUnitService" name="Coment&#225;rios">
+  <Results maxResults="" blockFactor="" blockWindow=""/>
+  <SortHistorySize>1</SortHistorySize>
+  <Checkable>false</Checkable>
+  <Query entity="ent4">
+    <Input id="p0" param="rcond2.att19" type="integer" implied="false" expandStyle="in"/>
+    <Output id="att15" name="idcomentario"/>
+    <Output id="att17" name="texto"/>
+    <Output id="att16" name="titulo"/>
+    <HQL>select a_comentario.idcomentario, a_comentario.texto, a_comentario.titulo from Comentario a_comentario
+      <Where defaultPolicy="fill" allImplied="false">(({[p0](a_comentario.comentarioToEvento.idevento in(?))}))</Where>order by a_comentario.dtcom desc
+    </HQL>
+  </Query>
+  <SortAttributes>
+    <Attribute id="att18" dynamic="false" order="desc">a_comentario.dtcom</Attribute>
+  </SortAttributes>
+</Descriptor>
+ 

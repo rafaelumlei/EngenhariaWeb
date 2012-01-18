@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Favoritos">
+  <SiteView>sv4</SiteView>
+  <Secure>false</Secure>
+  <SecureFormAction>false</SecureFormAction>
+  <Localized>false</Localized>
+  <ParentContainer>sv4</ParentContainer>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv4</PermissionElement>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <SessionContextInits>
+    <SessionContextToPageInit source="UserCtxParam" target="gtu4.UserCtxParam"/>
+  </SessionContextInits>
+  <ManualLinks>
+    <ManualLink activatedOperation="dcnu4">ln2</ManualLink>
+    <ManualLink>ln3</ManualLink>
+    <ManualLink>ln6</ManualLink>
+    <ManualLink activatedOperation="lou2">ln8</ManualLink>
+  </ManualLinks>
+  <PageContextInitServices/>
+  <PageContextInits></PageContextInits>
+  <NonContextualIncomingLinks>page1|page1.redirect|page1.link|page1.link.redirect|ln9|oln1|oln1.redirect|kln1|kln1.redirect</NonContextualIncomingLinks>
+  <UnitIncomingLinks/>
+  <LinkSequence>ln4</LinkSequence>
+  <PageContextPropagations link="ln4">
+    <PageContextPropagation targetParam="acond3" sourceUnit="gtu4" sourceParam="gtu4.UserCtxParam"/>
+  </PageContextPropagations>
+  <UnitComputations refreshFormAllLinks="page1|page1.redirect|page1.link|page1.link.redirect|impl|impl.redirect|ln9|oln1|oln1.redirect|kln1|kln1.redirect">
+    <UnitComputation unit="mciu1" formBased="true">
+      <RefreshForm link="ln4"/>
+    </UnitComputation>
+    <UnitComputation unit="gtu4"></UnitComputation>
+  </UnitComputations>
+  <InitTrees>
+    <Node unit="gtu4" contextParameters="UserCtxParam" type="get">
+      <Node unit="mciu1" fromLink="ln4"/>
+    </Node>
+  </InitTrees>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="mciu1" preservedByForm="false">acond3</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>osp</PageParam>
+    </PageParams>
+    <NavigationAncestors>sv4</NavigationAncestors>
+    <ModelName>Favoritos</ModelName>
+  </WRParameterService>
+</Descriptor>

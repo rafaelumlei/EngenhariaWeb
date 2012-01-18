@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>mfu4</Target>
+  <Secure>false</Secure>
+  <SourcePage>page17</SourcePage>
+  <Source>enu10</Source>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <ChangesAlternative>true</ChangesAlternative>
+  <TargetContextParameters/>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <ManualContextPropagations>
+    <ManualContextPropagation targetParam="mfu4.att23" sourceUnit="enu10" sourceParam="fld55"/>
+    <ManualContextPropagation targetParam="mfu4.att20" sourceUnit="enu10" sourceParam="fld56"/>
+    <ManualContextPropagation targetParam="mfu4.att21" sourceUnit="enu10" sourceParam="fld57"/>
+    <ManualContextPropagation targetParam="mfu4.att24" sourceUnit="enu10" sourceParam="fld58"/>
+    <ManualContextPropagation targetParam="mfu4.att25" sourceUnit="enu10" sourceParam="fld59"/>
+    <ManualContextPropagation targetParam="mfu4.att22" sourceUnit="enu10" sourceParam="fld54"/>
+    <ManualContextPropagation targetParam="mfu4.role2.att6" sourceUnit="enu10" sourceParam="sfld5"/>
+    <ManualContextPropagation targetParam="kcond27.att19" sourceUnit="enu10" sourceLinkParam="par174"/>
+  </ManualContextPropagations>
+  <PreservedContextParams>
+    <Params>kcond27.att19|mfu4.att20|mfu4.att21|mfu4.att22|mfu4.att23|mfu4.att24|mfu4.att25|mfu4.att36|mfu4.role2.att6|mfu4.role8.userOID|kcond29.att19|kcond24.att19|var9</Params>
+  </PreservedContextParams>
+</Descriptor>

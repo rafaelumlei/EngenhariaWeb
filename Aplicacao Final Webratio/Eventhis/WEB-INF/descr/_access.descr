@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.db.AccessService" name="Access Service">
+  <Database>db1</Database>
+  <AccessQueries>
+    <!-- group module query using group2module relationship -->
+    <Query>SELECT m.moduleID FROM Module m JOIN m.groups g WHERE g.oid = :groupOid</Query>
+    <!-- group module query using group2defaultmodule relationship -->
+    <Query>SELECT m.moduleID FROM Module m JOIN m.defaultGroups g WHERE g.oid = :groupOid</Query>
+  </AccessQueries>
+  <GroupQueries>
+    <!--group query using user2group and group2module relationships-->
+    <Query>SELECT g.oid, m.moduleID FROM Grupo g JOIN g.modules m JOIN g.users u WHERE u.oid = :userOid</Query>
+    <!--group query using user2defaultgroup and group2module relationships-->
+    <Query>SELECT g.oid, m.moduleID FROM Grupo g JOIN g.modules m JOIN g.defaultUsers u WHERE u.oid = :userOid</Query>
+    <!--group query using user2group and group2defaultmodule relationships-->
+    <Query>SELECT g.oid, m.moduleID FROM Grupo g JOIN g.defaultModule m JOIN g.users u WHERE u.oid = :userOid</Query>
+    <!--group query using user2defaultgroup and group2defaultmodule relationships-->
+    <Query>SELECT g.oid, m.moduleID FROM Grupo g JOIN g.defaultModule m JOIN g.defaultUsers u WHERE u.oid = :userOid</Query>
+  </GroupQueries>
+</Descriptor>
+ 

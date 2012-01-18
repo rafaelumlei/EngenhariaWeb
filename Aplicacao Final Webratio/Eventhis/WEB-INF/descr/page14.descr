@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="P&#225;gina do Evento">
+  <SiteView>sv4</SiteView>
+  <Secure>false</Secure>
+  <SecureFormAction>false</SecureFormAction>
+  <Localized>false</Localized>
+  <ParentContainer>area2</ParentContainer>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv4</PermissionElement>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <SessionContextInits>
+    <SessionContextToPageInit source="UserCtxParam" target="gtu3.UserCtxParam"/>
+  </SessionContextInits>
+  <ManualLinks>
+    <ManualLink activatedOperation="dcnu3">ln74</ManualLink>
+    <ManualLink activatedOperation="cnu1">ln75</ManualLink>
+    <ManualLink>ln109</ManualLink>
+    <ManualLink activatedOperation="cru5">ln78</ManualLink>
+    <ManualLink>ln84</ManualLink>
+  </ManualLinks>
+  <PageContextInitServices/>
+  <PageContextInits></PageContextInits>
+  <NonContextualIncomingLinks>page14|page14.redirect|page14.link|page14.link.redirect|oln14|oln14.redirect|kln15|kln15.redirect</NonContextualIncomingLinks>
+  <UnitIncomingLinks>ln97|ln86|ln100|ln3|oln20|oln22</UnitIncomingLinks>
+  <LinkSequence>ln72|ln76|ln80|ln73|ln79|ln81|ln82|ln83</LinkSequence>
+  <PageContextPropagations link="ln72">
+    <PageContextPropagation targetParam="rcond1.att19" sourceUnit="dau1" sourceParam="data.att19"/>
+  </PageContextPropagations>
+  <PageContextPropagations link="ln73">
+    <PageContextPropagation targetParam="cru5.role6.att19" sourceUnit="dau1" sourceParam="data.att19"/>
+  </PageContextPropagations>
+  <PageContextPropagations link="ln76">
+    <PageContextPropagation targetParam="kcond25.att19" sourceUnit="dau1" sourceParam="data.att19"/>
+  </PageContextPropagations>
+  <PageContextPropagations link="ln79">
+    <PageContextPropagation targetParam="cru5.role4.userOID" sourceUnit="gtu3" sourceParam="gtu3.UserCtxParam"/>
+  </PageContextPropagations>
+  <PageContextPropagations link="ln80">
+    <PageContextPropagation targetParam="acond17" sourceUnit="gtu3" sourceParam="gtu3.UserCtxParam"/>
+  </PageContextPropagations>
+  <PageContextPropagations link="ln81">
+    <PageContextPropagation targetParam="kcond21.userOID" sourceUnit="gtu3" sourceParam="gtu3.UserCtxParam"/>
+  </PageContextPropagations>
+  <PageContextPropagations link="ln82">
+    <PageContextPropagation targetParam="kcond19.userOID" sourceUnit="gtu3" sourceParam="gtu3.UserCtxParam"/>
+  </PageContextPropagations>
+  <PageContextPropagations link="ln83">
+    <PageContextPropagation targetParam="cru5.att18" sourceUnit="tmu3" sourceParam="currentTimestamp"/>
+  </PageContextPropagations>
+  <UnitComputations refreshFormAllLinks="page14|page14.redirect|page14.link|page14.link.redirect|impl|impl.redirect|oln14|oln14.redirect|kln15|kln15.redirect|ln97|ln86|ln100|ln3|oln20|oln20.redirect|oln22|oln22.redirect">
+    <UnitComputation unit="dau1"></UnitComputation>
+    <UnitComputation unit="pwu3" formBased="true">
+      <RefreshFormAll link="ln100"/>
+      <RefreshFormAll link="ln100.redirect"/>
+      <RefreshFormAll link="ln3"/>
+      <RefreshFormAll link="ln3.redirect"/>
+      <RefreshFormAll link="ln86"/>
+      <RefreshFormAll link="ln86.redirect"/>
+      <RefreshFormAll link="ln97"/>
+      <RefreshFormAll link="ln97.redirect"/>
+      <RefreshFormAll link="oln20"/>
+      <RefreshFormAll link="oln20.redirect"/>
+      <RefreshFormAll link="oln22"/>
+      <RefreshFormAll link="oln22.redirect"/>
+      <RefreshForm link="ln72"/>
+    </UnitComputation>
+    <UnitComputation unit="enu9" formBased="true">
+      <RefreshFormAll link="ln100"/>
+      <RefreshFormAll link="ln100.redirect"/>
+      <RefreshFormAll link="ln3"/>
+      <RefreshFormAll link="ln3.redirect"/>
+      <RefreshFormAll link="ln86"/>
+      <RefreshFormAll link="ln86.redirect"/>
+      <RefreshFormAll link="ln97"/>
+      <RefreshFormAll link="ln97.redirect"/>
+      <RefreshFormAll link="oln20"/>
+      <RefreshFormAll link="oln20.redirect"/>
+      <RefreshFormAll link="oln22"/>
+      <RefreshFormAll link="oln22.redirect"/>
+    </UnitComputation>
+    <UnitComputation unit="seu11"></UnitComputation>
+    <UnitComputation unit="gtu3"></UnitComputation>
+    <UnitComputation unit="tmu3"></UnitComputation>
+  </UnitComputations>
+  <InitTrees>
+    <Node unit="dau1" accessLinks="ln3 oln22 ln100 ln86 ln97 oln20">
+      <Node unit="pwu3" fromLink="ln72"/>
+      <Node unit="cru5" fromLink="ln73"/>
+      <Node unit="seu11" fromLink="ln76"/>
+    </Node>
+    <Node unit="gtu3" contextParameters="UserCtxParam" type="get">
+      <Node unit="cru5" fromLink="ln79"/>
+      <Node unit="seu11" fromLink="ln80"/>
+      <Node unit="dcnu3" fromLink="ln81"/>
+      <Node unit="cnu1" fromLink="ln82"/>
+    </Node>
+    <Node unit="enu9"/>
+    <Node unit="tmu3">
+      <Node unit="cru5" fromLink="ln83"/>
+    </Node>
+    <Node unit="seu11"/>
+  </InitTrees>
+  <Variables>
+    <Variable id="var5" name="EstadoFavorito" type="integer" unitId="seu11" parameter="att23Array" value=""/>
+    <Variable id="var7" name="CriadorEvento" type="integer" unitId="dau1" parameter="data.role8_userOID" value=""/>
+    <Variable id="var8" name="UtilizadorAutenticado" type="integer" unitId="gtu3" parameter="gtu3.UserCtxParam" value=""/>
+  </Variables>
+  <Conditions>
+    <Condition id="cexpr7" name="VisibilidadeLinks" xml:space="preserve">return (EstadoFavorito == null)
+</Condition>    <Condition id="cexpr8" name="MostrarLinkRemo&#231;&#227;oEdi&#231;&#227;o" xml:space="preserve">return (UtilizadorAutenticado == CriadorEvento)</Condition>
+  </Conditions>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="dau1" preservedByForm="false" access="true">kcond24.att19</PageParam>
+      <PageParam unit="pwu3" preservedByForm="false">pwu3.current.att15</PageParam>
+      <PageParam unit="pwu3" preservedByForm="false">rcond1.att19</PageParam>
+      <PageParam unit="pwu3" preservedByForm="false">pwu3.block</PageParam>
+      <PageParam unit="pwu3" preservedByForm="false">pwu3.blockFactor</PageParam>
+      <PageParam unit="pwu3" preservedByForm="false">pwu3.blockWindow</PageParam>
+      <PageParam unit="pwu3" preservedByForm="false">pwu3.sortCriteria</PageParam>
+      <PageParam unit="seu11" preservedByForm="false">acond17</PageParam>
+      <PageParam unit="seu11" preservedByForm="false">kcond25.att19</PageParam>
+      <PageParam unit="tmu3" preservedByForm="false">tmu3.time</PageParam>
+      <PageParam unit="tmu3" preservedByForm="false">tmu3.date</PageParam>
+      <PageParam unit="tmu3" preservedByForm="false">tmu3.timeStamp</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>osp</PageParam>
+    </PageParams>
+    <NavigationAncestors>sv4|area2</NavigationAncestors>
+    <ModelName>P&#225;gina do Evento</ModelName>
+  </WRParameterService>
+</Descriptor>

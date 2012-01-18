@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.DeleteUnitService" name="Remo&#231;&#227;oEvento">
+  <Entity>ent5</Entity>
+  <CascadeDeleteRoles/>
+  <FetchMode keyCondition="kcond28">HQL</FetchMode>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <Secure>false</Secure>
+    <StartsTransaction>false</StartsTransaction>
+    <CheckPermission>true</CheckPermission>
+    <Localized>false</Localized>
+    <MasterPage/>
+    <ParentContainer>area3</ParentContainer>
+    <PermissionElement>sv4</PermissionElement>
+    <OperationParams>
+      <Params>sp|var9|link|osp|kcond28.att19|kcond29.att19</Params>
+    </OperationParams>
+    <SessionContextInits></SessionContextInits>
+    <OutgoingLinks>
+      <Link resultCode="success">oln21</Link>
+      <Link resultCode="error">kln18</Link>
+    </OutgoingLinks>
+    <NavigationAncestors>sv4|area3</NavigationAncestors>
+    <ModelName>Remo&#231;&#227;oEvento</ModelName>
+  </WRParameterService>
+</Descriptor>

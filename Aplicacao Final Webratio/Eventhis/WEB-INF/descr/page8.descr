@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Erro ao Inserir Newsletter">
+  <SiteView>sv1</SiteView>
+  <Secure>false</Secure>
+  <SecureFormAction>false</SecureFormAction>
+  <Localized>false</Localized>
+  <ParentContainer>sv1</ParentContainer>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv1</PermissionElement>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <SessionContextInits></SessionContextInits>
+  <ManualLinks>
+    <ManualLink>ln63</ManualLink>
+  </ManualLinks>
+  <PageContextInitServices/>
+  <PageContextInits></PageContextInits>
+  <NonContextualIncomingLinks>page8|page8.redirect|page8.link|page8.link.redirect|kln9|kln9.redirect</NonContextualIncomingLinks>
+  <UnitIncomingLinks/>
+  <LinkSequence/>
+  <UnitComputations refreshFormAllLinks="page8|page8.redirect|page8.link|page8.link.redirect|impl|impl.redirect|kln9|kln9.redirect">
+    <UnitComputation unit="mssu4"></UnitComputation>
+  </UnitComputations>
+  <InitTrees>
+    <Node unit="mssu4"/>
+  </InitTrees>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <LinkIdRequired>false</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="mssu4" preservedByForm="false">mssu4.shownMessages</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>osp</PageParam>
+    </PageParams>
+    <NavigationAncestors>sv1</NavigationAncestors>
+    <ModelName>Erro ao Inserir Newsletter</ModelName>
+  </WRParameterService>
+</Descriptor>

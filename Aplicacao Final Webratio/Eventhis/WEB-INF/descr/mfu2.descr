@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.operation.rtx.db.ModifyUnitService" name="AlterarUtilizador">
+  <BulkUpdate>false</BulkUpdate>
+  <Entity>User</Entity>
+  <ModifiedAttributes>email|att30|att9|att8|att32|att33|att34|password</ModifiedAttributes>
+  <ModifiedRoles/>
+  <FetchMode keyCondition="kcond15">HQL</FetchMode>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <Secure>false</Secure>
+    <StartsTransaction>false</StartsTransaction>
+    <CheckPermission>true</CheckPermission>
+    <Localized>false</Localized>
+    <MasterPage/>
+    <ParentContainer>sv4</ParentContainer>
+    <PermissionElement>sv4</PermissionElement>
+    <OperationParams>
+      <Params>sp|kcond15.userOID|mfu2.User2DefaultGroup.groupOID|link|mfu2.att8|mfu2.password|mfu2.att1|mfu2.email|mfu2.userName|mfu2.att30|mfu2.att9|mfu2.att1_name|mfu2.att32|osp|mfu2.att33|mfu2.att34|par36</Params>
+    </OperationParams>
+    <SessionContextInits></SessionContextInits>
+    <OutgoingLinks>
+      <Link resultCode="success">oln1</Link>
+      <Link resultCode="error">kln1</Link>
+    </OutgoingLinks>
+    <NavigationAncestors>sv4</NavigationAncestors>
+    <ModelName>AlterarUtilizador</ModelName>
+  </WRParameterService>
+</Descriptor>

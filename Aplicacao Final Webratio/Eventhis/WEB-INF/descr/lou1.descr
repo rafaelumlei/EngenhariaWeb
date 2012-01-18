@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.session.rtx.LogoutUnitService" name="LogoutAdmin">
+  <Unit siteView="sv2"/>
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <Secure>false</Secure>
+    <StartsTransaction>false</StartsTransaction>
+    <CheckPermission>true</CheckPermission>
+    <Localized>false</Localized>
+    <MasterPage/>
+    <ParentContainer>sv1</ParentContainer>
+    <PermissionElement>sv1</PermissionElement>
+    <OperationParams>
+      <Params>sp|link|osp|var2</Params>
+    </OperationParams>
+    <SessionContextInits></SessionContextInits>
+    <OutgoingLinks></OutgoingLinks>
+    <NavigationAncestors>sv1</NavigationAncestors>
+    <ModelName>LogoutAdmin</ModelName>
+  </WRParameterService>
+</Descriptor>
+ 

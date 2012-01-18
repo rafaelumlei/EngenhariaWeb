@@ -1,0 +1,8 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="100" gr:y="490" id="sv2#area5" name="Registo" landmark="false">
+  <OperationUnits>
+    <CreateUnit id="sv2#area5#cru7" name="AddUtilizador" gr:x="290" gr:y="7" entity="User">
+      <OKLink id="sv2#area5#cru7#oln23" name="OKLink3" to="sv2#page5" automaticCoupling="true" gr:bendpoints="-238,-55,142,132"/>
+      <KOLink id="sv2#area5#cru7#kln20" name="KOLink4" to="sv2#area5#page21#enu14" gr:bendpoints="143,44,-155,67"/>
+    </CreateUnit>
+  </OperationUnits>
+</Area>

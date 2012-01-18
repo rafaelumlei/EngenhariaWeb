@@ -1,0 +1,11 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="81" gr:y="441" id="sv4#area1" name="Edi&#231;&#227;o de Registo" landmark="true">
+  <OperationUnits>
+    <ModifyUnit id="sv4#area1#mfu3" name="AlterarUtilizador" gr:x="0" gr:y="40" entity="User">
+      <Selector id="sv4#area1#mfu3#su25" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#area1#mfu3#su25#kcond17" name="KeyCondition15" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="sv4#area1#mfu3#kln14" name="KOLink1" to="sv4#area1#page10" automaticCoupling="true" gr:bendpoints="91,62,-211,63"/>
+      <OKLink id="sv4#area1#mfu3#oln16" name="OKLink1" to="sv4#area2#page16" automaticCoupling="true" gr:bendpoints="80,-101,-798,-96;501,-95,-392,-109"/>
+    </ModifyUnit>
+  </OperationUnits>
+</Area>

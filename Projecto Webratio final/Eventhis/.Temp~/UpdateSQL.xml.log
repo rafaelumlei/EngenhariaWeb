@@ -1,0 +1,26 @@
+[02 Jan 2012 23:22:31] DEBUG Executing SQL script
+[02 Jan 2012 23:22:31] INFO ================================================================================
+[02 Jan 2012 23:22:31] INFO outputPath= 'C:\WebRatio\WebRatio Personal 6.1.1\workspace\Eventhis\.Temp~\UpdateSQL.xml'
+[02 Jan 2012 23:22:31] INFO onError= 'continue'
+[02 Jan 2012 23:22:31] INFO statementSeparator= ';'
+[02 Jan 2012 23:22:31] INFO derby.system.home= 'C:\WebRatio\WebRatio Personal 6.1.1\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[02 Jan 2012 23:22:31] INFO password= ''
+[02 Jan 2012 23:22:31] INFO url= 'jdbc:mysql://localhost:3306/eventos'
+[02 Jan 2012 23:22:31] INFO username= 'root'
+[02 Jan 2012 23:22:31] INFO autoCommit= 'false'
+[02 Jan 2012 23:22:31] INFO outputLogPath= 'C:\WebRatio\WebRatio Personal 6.1.1\workspace\Eventhis\.Temp~\UpdateSQL.xml.log'
+[02 Jan 2012 23:22:31] INFO driverClass= 'com.mysql.jdbc.Driver'
+[02 Jan 2012 23:22:31] INFO encoding= ''
+[02 Jan 2012 23:22:31] INFO eventSocketPort= '49941'
+[02 Jan 2012 23:22:31] INFO sqlScript= 'C:\WebRatio\WebRatio Personal 6.1.1\workspace\Eventhis\.Temp~\UpdateSQL.sql'
+[02 Jan 2012 23:22:31] INFO ================================================================================
+[02 Jan 2012 23:22:31] INFO Connecting to the Database...
+[02 Jan 2012 23:22:31] INFO Database connection estabilished
+[02 Jan 2012 23:22:31] INFO transaction isolation: 4
+[02 Jan 2012 23:22:31] DEBUG ================================================================================
+[02 Jan 2012 23:22:31] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Personal 6.1.1\workspace\Eventhis\.Temp~\UpdateSQL.sql
+[02 Jan 2012 23:22:31] DEBUG Executing statement:  alter table `utilizador`  add column  `teste`  varchar(255)
+[02 Jan 2012 23:22:31] DEBUG ================================================================================
+[02 Jan 2012 23:22:31] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[02 Jan 2012 23:22:31] INFO Database connection closed
+[02 Jan 2012 23:22:31] DEBUG Total time: 372 milliseconds

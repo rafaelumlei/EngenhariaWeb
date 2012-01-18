@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-cascade="none" default-access="property" default-lazy="true" auto-import="true">
+  <class name="com.webratio.webapp.Utilizador" table="`utilizador`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="oid" column="`oid`" type="java.lang.Integer">
+      <generator class="com.webratio.rtx.hibernate.MaxPlusOneIncrementGenerator"/>
+    </id>
+    <property name="userName" column="`username`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="password" column="`password`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="email" column="`email`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="nome" column="`nome`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="foto" column="`foto`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="lat1" column="`lat`" type="java.lang.Double" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="lon1" column="`lon`" type="java.lang.Double" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="lat2" column="`lat2`" type="java.lang.Double" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="lon2" column="`lon2`" type="java.lang.Double" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <property name="testeRef" column="`teste`" type="java.lang.String" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+    <set name="groups" table="`user_group`" inverse="false" mutable="true" sort="unsorted" optimistic-lock="true" embed-xml="true">
+      <key on-delete="noaction">
+        <column name="`utilizador_oid`"/>
+      </key>
+      <many-to-many class="com.webratio.webapp.Grupo" not-found="exception" embed-xml="true" unique="false">
+        <column name="`grupo_oid`"/>
+      </many-to-many>
+    </set>
+    <many-to-one name="defaultGroup" class="com.webratio.webapp.Grupo" update="true" insert="true" not-found="exception" unique="false" optimistic-lock="true" embed-xml="true">
+      <column name="`grupo_oid`"/>
+    </many-to-one>
+    <set name="utilizadorToComentario" inverse="true" mutable="true" sort="unsorted" optimistic-lock="true" embed-xml="true">
+      <key on-delete="noaction">
+        <column name="`utilizador_oid`"/>
+      </key>
+      <one-to-many class="com.webratio.webapp.Comentario" not-found="exception" embed-xml="true"/>
+    </set>
+    <set name="utilizadorToEvento" inverse="true" mutable="true" sort="unsorted" optimistic-lock="true" embed-xml="true">
+      <key on-delete="noaction">
+        <column name="`utilizador_oid`"/>
+      </key>
+      <one-to-many class="com.webratio.webapp.Evento" not-found="exception" embed-xml="true"/>
+    </set>
+    <set name="marca" table="`favoritos`" inverse="false" mutable="true" sort="unsorted" optimistic-lock="true" embed-xml="true">
+      <key on-delete="noaction">
+        <column name="`utilizador_oid`"/>
+      </key>
+      <many-to-many class="com.webratio.webapp.Evento" not-found="exception" embed-xml="true" unique="false">
+        <column name="`evento_idevento`"/>
+      </many-to-many>
+    </set>
+  </class>
+  <!-- mapping for relationship 'groups[User2Group]' -->
+  <class entity-name="Rel_Utilizador_to_groups" table="`user_group`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <composite-id mapped="false" unsaved-value="undefined">
+      <key-property name="source_oid" column="`utilizador_oid`" type="java.lang.Integer"/>
+      <key-property name="target_oid" column="`grupo_oid`" type="java.lang.Integer"/>
+    </composite-id>
+  </class>
+  <!-- mapping for relationship 'defaultGroup[User2DefaultGroup]' -->
+  <class entity-name="Rel_Utilizador_to_defaultGroup" table="`utilizador`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="source_oid" column="`oid`" type="java.lang.Integer"/>
+    <property name="target_oid" column="`grupo_oid`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+  <!-- mapping for relationship 'UtilizadorToComentario[role3]' -->
+  <class entity-name="Rel_Utilizador_to_utilizadorToComentario" table="`comentario`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="target_idcomentario" column="`idcomentario`" type="java.lang.Integer"/>
+    <property name="source_oid" column="`utilizador_oid`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+  <!-- mapping for relationship 'UtilizadorToEvento[role7]' -->
+  <class entity-name="Rel_Utilizador_to_utilizadorToEvento" table="`evento`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <id name="target_idevento" column="`idevento`" type="java.lang.Integer"/>
+    <property name="source_oid" column="`utilizador_oid`" type="java.lang.Integer" unique="false" optimistic-lock="true" lazy="false" generated="never"/>
+  </class>
+  <!-- mapping for relationship 'marca[role11]' -->
+  <class entity-name="Rel_Utilizador_to_marca" table="`favoritos`" dynamic-update="true" dynamic-insert="true" mutable="true" polymorphism="implicit" select-before-update="false" optimistic-lock="version">
+    <composite-id mapped="false" unsaved-value="undefined">
+      <key-property name="source_oid" column="`utilizador_oid`" type="java.lang.Integer"/>
+      <key-property name="target_idevento" column="`evento_idevento`" type="java.lang.Integer"/>
+    </composite-id>
+  </class>
+</hibernate-mapping>

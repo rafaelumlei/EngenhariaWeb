@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.session.rtx.db.LoginUnitService" name="Login">
+  <!--Operation Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultOperationParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <Secure>false</Secure>
+    <StartsTransaction>false</StartsTransaction>
+    <CheckPermission>false</CheckPermission>
+    <Localized>false</Localized>
+    <MasterPage/>
+    <ParentContainer>sv2</ParentContainer>
+    <OperationParams>
+      <Params>lgu4.username|sp|lgu4.password|link|osp|lgu4.rememberCredentials</Params>
+    </OperationParams>
+    <SessionContextInits></SessionContextInits>
+    <OutgoingLinks>
+      <Link resultCode="error">kln13</Link>
+    </OutgoingLinks>
+    <NavigationAncestors>sv2</NavigationAncestors>
+    <ModelName>Login</ModelName>
+  </WRParameterService>
+</Descriptor>
+ 

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>page16</Target>
+  <Secure>false</Secure>
+  <SourcePage>page16</SourcePage>
+  <Source>gtu6</Source>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>false</StartPageIdRequiredByTarget>
+  <ChangesAlternative>false</ChangesAlternative>
+  <TargetContextParameters/>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <ManualContextPropagations>
+    <ManualContextPropagation targetParam="acond3" sourceUnit="gtu6" sourceParam="gtu6.UserCtxParam"/>
+  </ManualContextPropagations>
+  <PreservedContextParams>
+    <Params>kcond5.att19|pwu5.current.att15|pwu5.block|pwu5.blockFactor|pwu5.blockWindow|pwu5.sortCriteria|tmu1.time|tmu1.date|tmu1.timeStamp|kcond2.att19</Params>
+  </PreservedContextParams>
+</Descriptor>
+ 

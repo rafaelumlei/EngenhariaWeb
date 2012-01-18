@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>cru7</Target>
+  <Secure>false</Secure>
+  <SourcePage>page21</SourcePage>
+  <Source>enu14</Source>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>true</StartPageIdRequiredByTarget>
+  <ChangesAlternative>true</ChangesAlternative>
+  <TargetContextParameters/>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <ManualContextPropagations>
+    <ManualContextPropagation targetParam="cru7.email" sourceUnit="enu14" sourceParam="fld73"/>
+    <ManualContextPropagation targetParam="cru7.User2DefaultGroup.groupOID" value="1"/>
+    <ManualContextPropagation targetParam="cru7.att33" sourceUnit="enu14" sourceParam="fld75"/>
+    <ManualContextPropagation targetParam="cru7.att34" sourceUnit="enu14" sourceParam="fld76"/>
+    <ManualContextPropagation targetParam="cru7.att30" sourceUnit="enu14" sourceParam="fld74"/>
+    <ManualContextPropagation targetParam="cru7.userOID" value="NULL"/>
+    <ManualContextPropagation targetParam="cru7.password" sourceUnit="enu14" sourceParam="fld72"/>
+    <ManualContextPropagation targetParam="cru7.userName" sourceUnit="enu14" sourceParam="fld71"/>
+    <ManualContextPropagation targetParam="cru7.att8" sourceUnit="enu14" sourceParam="fld77"/>
+    <ManualContextPropagation targetParam="cru7.att9" sourceUnit="enu14" sourceParam="fld78"/>
+    <ManualContextPropagation targetParam="cru7.att1" sourceUnit="enu14" sourceParam="fld80"/>
+    <ManualContextPropagation targetParam="cru7.att32" value="nada"/>
+  </ManualContextPropagations>
+  <PreservedContextParams>
+    <Params>cru7.userOID|cru7.userName|cru7.password|cru7.email|cru7.att30|cru7.att32|cru7.att33|cru7.att34|cru7.att8|cru7.att9|cru7.att1|cru7.att1_name|cru7.User2DefaultGroup.groupOID</Params>
+  </PreservedContextParams>
+</Descriptor>
+ 

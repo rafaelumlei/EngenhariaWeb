@@ -1,0 +1,25 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1012" gr:y="321" id="sv4#area2" name="Visualiza&#231;&#227;o de Eventos" landmark="true">
+  <OperationUnits>
+    <LogoutUnit id="sv4#area2#lou2" name="LogoutUnit" gr:x="457" gr:y="402" siteView="sv2"/>
+    <ConnectUnit id="sv4#area2#cnu1" name="MarcarFavorito" gr:x="200" gr:y="8" relationship="rel6#role12">
+      <SourceSelector id="sv4#area2#cnu1#su28" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#area2#cnu1#su28#kcond18" name="KeyCondition4" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv4#area2#cnu1#su29" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#area2#cnu1#su29#kcond19" name="KeyCondition6" predicate="in" implied="false"/>
+      </TargetSelector>
+    </ConnectUnit>
+    <DisconnectUnit id="sv4#area2#dcnu3" name="DesmarcarFavorito" gr:x="420" gr:y="0" relationship="rel6#role12">
+      <SourceSelector id="sv4#area2#dcnu3#su30" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#area2#dcnu3#su30#kcond20" name="KeyCondition9" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv4#area2#dcnu3#su31" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#area2#dcnu3#su31#kcond21" name="KeyCondition10" predicate="in" implied="false"/>
+      </TargetSelector>
+    </DisconnectUnit>
+    <CreateUnit id="sv4#area2#cru5" name="CriarComentario" gr:x="820" gr:y="566" entity="ent4" skipBlankRecords="false">
+      <OKLink id="sv4#area2#cru5#oln14" name="OKLink6" to="sv4#area2#page14" automaticCoupling="true" gr:bendpoints="89,-54,20,248"/>
+      <KOLink id="sv4#area2#cru5#kln15" name="KOLink7" to="sv4#area2#page14" automaticCoupling="true" gr:bendpoints="-70,-38,-70,271;-56,-57,-56,252"/>
+    </CreateUnit>
+  </OperationUnits>
+</Area>

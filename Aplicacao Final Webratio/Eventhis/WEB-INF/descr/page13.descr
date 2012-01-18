@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultPageService" name="Favoritos">
+  <SiteView>sv4</SiteView>
+  <Secure>false</Secure>
+  <SecureFormAction>false</SecureFormAction>
+  <Localized>false</Localized>
+  <ParentContainer>area2</ParentContainer>
+  <CheckPermission>true</CheckPermission>
+  <PermissionElement>sv4</PermissionElement>
+  <Alternatives/>
+  <ProtectedSubPages/>
+  <SessionContextInits>
+    <SessionContextToPageInit source="UserCtxParam" target="gtu2.UserCtxParam"/>
+  </SessionContextInits>
+  <ManualLinks>
+    <ManualLink activatedOperation="dcnu4">ln67</ManualLink>
+    <ManualLink>ln68</ManualLink>
+    <ManualLink>ln70</ManualLink>
+    <ManualLink activatedOperation="lou2">ln71</ManualLink>
+  </ManualLinks>
+  <PageContextInitServices/>
+  <PageContextInits></PageContextInits>
+  <NonContextualIncomingLinks>page13|page13.redirect|page13.link|page13.link.redirect|ln90|oln15|oln15.redirect|kln16|kln16.redirect</NonContextualIncomingLinks>
+  <UnitIncomingLinks/>
+  <LinkSequence>ln69</LinkSequence>
+  <PageContextPropagations link="ln69">
+    <PageContextPropagation targetParam="acond16" sourceUnit="gtu2" sourceParam="gtu2.UserCtxParam"/>
+  </PageContextPropagations>
+  <UnitComputations refreshFormAllLinks="page13|page13.redirect|page13.link|page13.link.redirect|impl|impl.redirect|ln90|oln15|oln15.redirect|kln16|kln16.redirect">
+    <UnitComputation unit="mciu2" formBased="true">
+      <RefreshForm link="ln69"/>
+    </UnitComputation>
+    <UnitComputation unit="gtu2"></UnitComputation>
+  </UnitComputations>
+  <InitTrees>
+    <Node unit="gtu2" contextParameters="UserCtxParam" type="get">
+      <Node unit="mciu2" fromLink="ln69"/>
+    </Node>
+  </InitTrees>
+  <Variables></Variables>
+  <Conditions></Conditions>
+  <!--Page Parameter Service-->
+  <WRParameterService service="com.webratio.rtx.core.DefaultPageParameterService">
+    <LinkIdRequired>true</LinkIdRequired>
+    <PageParams>
+      <PageParam unit="mciu2" preservedByForm="false">acond16</PageParam>
+      <PageParam>link</PageParam>
+      <PageParam>osp</PageParam>
+    </PageParams>
+    <NavigationAncestors>sv4|area2</NavigationAncestors>
+    <ModelName>Favoritos</ModelName>
+  </WRParameterService>
+</Descriptor>
+ 

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<Descriptor service="com.webratio.units.content.rtx.MultiMessageUnitService" name="Falhou">
-  <Message xml:space="preserve">O Envio dos emails falhou.</Message>
-</Descriptor>
- 

@@ -1,9 +1,0 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Guests" homePage="sv2#page11" landmarks="sv2#page4 sv2#page5">
-  <OperationUnits>
-    <CreateUnit gr:x="540" gr:y="420" id="sv2#cru2" name="AddUtilizador" entity="User">
-      <OKLink id="sv2#cru2#oln3" name="OKLink3" to="sv2#page11" automaticCoupling="true"/>
-      <KOLink id="sv2#cru2#kln5" name="KOLink4" to="sv2#page12#enu5" gr:bendpoints="143,44,-155,67"/>
-    </CreateUnit>
-    <LoginUnit id="sv2#lgu4" name="Login" landmark="false" secure="false" customDescriptor="false" gr:x="10" gr:y="250"/>
-  </OperationUnits>
-</SiteView>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>page2</Target>
+  <Secure>false</Secure>
+  <SourcePage>page2</SourcePage>
+  <Source>seu8</Source>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>false</StartPageIdRequiredByTarget>
+  <ChangesAlternative>false</ChangesAlternative>
+  <TargetContextParameters/>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <ManualContextPropagations>
+    <ManualContextPropagation targetParam="fld2_slot" sourceUnit="seu8" sourceParam="emailArray"/>
+    <ManualContextPropagation targetParam="fld4_slot" sourceUnit="seu8" sourceParam="att32Array"/>
+    <ManualContextPropagation targetParam="fld13_slot" sourceUnit="seu8" sourceParam="att8Array"/>
+    <ManualContextPropagation targetParam="fld5_slot" sourceUnit="seu8" sourceParam="att33Array"/>
+    <ManualContextPropagation targetParam="fld14_slot" sourceUnit="seu8" sourceParam="att34Array"/>
+    <ManualContextPropagation targetParam="fld12_slot" sourceUnit="seu8" sourceParam="att9Array"/>
+    <ManualContextPropagation targetParam="fld3_slot" sourceUnit="seu8" sourceParam="att30Array"/>
+    <ManualContextPropagation targetParam="fld1_slot" sourceUnit="seu8" sourceParam="passwordArray"/>
+    <ManualContextPropagation targetParam="fld27_slot" sourceUnit="seu8" sourceParam="passwordArray"/>
+    <ManualContextPropagation sourceUnit="seu8" targetParam="par134" sourceParam="userOIDArray"/>
+  </ManualContextPropagations>
+  <PreservedContextParams>
+    <Params/>
+  </PreservedContextParams>
+</Descriptor>

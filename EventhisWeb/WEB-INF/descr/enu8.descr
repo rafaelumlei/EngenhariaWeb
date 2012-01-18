@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<Descriptor service="com.webratio.units.content.rtx.EntryUnitService" name="Login">
-  <FormFields>
-    <Field id="fld29" name="userName" type="string" subType="" localized="false"></Field>
-    <Field id="fld30" name="password" type="password" subType="" localized="false"></Field>
-  </FormFields>
-  <WRValidation links="ln19|ln22"/>
-</Descriptor>

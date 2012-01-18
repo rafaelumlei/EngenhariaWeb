@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.rtx.core.DefaultLinkService">
+  <Target>page1</Target>
+  <Secure>false</Secure>
+  <SourcePage>page1</SourcePage>
+  <Source>seu7</Source>
+  <StartsTransaction>false</StartsTransaction>
+  <EndsTransaction>false</EndsTransaction>
+  <StartPageIdRequiredByTarget>false</StartPageIdRequiredByTarget>
+  <ChangesAlternative>false</ChangesAlternative>
+  <TargetContextParameters/>
+  <ReachableAlternativePages></ReachableAlternativePages>
+  <ManualContextPropagations>
+    <ManualContextPropagation targetParam="sfld1_presel" value="$$NULL$$"/>
+    <ManualContextPropagation targetParam="sfld1_label" sourceUnit="seu7" sourceParam="att7Array"/>
+    <ManualContextPropagation targetParam="sfld1_output" sourceUnit="seu7" sourceParam="att6Array"/>
+  </ManualContextPropagations>
+  <PreservedContextParams>
+    <Params>kcond14.att19|fld15_slot|fld16_slot|fld17_slot|fld18_slot|fld24_slot|fld25_slot|var6</Params>
+  </PreservedContextParams>
+</Descriptor>
+ 
