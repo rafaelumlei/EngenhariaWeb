@@ -1,0 +1,2 @@
+Nota: executando com o webratio não dá para consultar os eventos 
+usando o google maps.

@@ -1,0 +1,6 @@
+1- Colocar a pasta Eventhis na pasta das aplicações web do Tomcat, pois
+este é o resultado final da aplicação, executando com o Webratio perder-se-iam
+configurações realizadas usando javascript (script de clinte);
+2- Executar script de criação da base de dados, usando o MySql;
+3- Iniciar o TomCat, e abrir localhost:8080/Eventhis/ para experimentar a
+aplicação.
