@@ -1,0 +1,18 @@
+Esta aplicação foi posta a correr numa conta gratuita online, 
+encontrando-se disponível no endereço: http://eventhis.site11.com/.
+
+Se for necessário colocá-la a correr localmente é necessário
+criar uma base de dados, usando para isso o script sql que está 
+na presente directoria, e efectuar alterações no ficheiro
+/eventhis/protected/config/main.php, mais especificamente 
+na entrada 'db', na qual se devem definir os dados relativos 
+à base de dados.
+A configuração referida só é necessária no caso de ter sido
+alterado o conteúdo do script sql.
+
+O conteúdo desta pasta, exceptuando-se este ficheiro e o do script sql, 
+deve ser posteriormente colocado na pasta htdocs (directoria onde se 
+guardam as páginas de internet, nome varia de servidor para servidor) do 
+servidor HTTP usado com suporte para a linguagem de servidor PHP.
+
+Gratos pela atenção.
